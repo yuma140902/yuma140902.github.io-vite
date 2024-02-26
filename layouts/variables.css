@@ -21,4 +21,48 @@
   --color-gray-700: hsl(0deg, 0%, 30%);
   --color-gray-800: hsl(0deg, 0%, 20%);
   --color-gray-900: hsl(0deg, 0%, 10%);
+
+  --color-bluegray-100: hsl(210deg, 17%, 90%);
+  --color-bluegray-200: hsl(210deg, 17%, 82%);
+  --color-bluegray-300: hsl(210deg, 17%, 70%);
+  --color-bluegray-400: hsl(210deg, 4%, 62%);
+  --color-bluegray-500: hsl(215deg, 8%, 47%);
+  --color-bluegray-600: hsl(215deg, 8%, 40%);
+  --color-bluegray-700: hsl(222deg, 6%, 30%);
+  --color-bluegray-750: hsl(240deg, 4%, 25%);
+  --color-bluegray-800: hsl(240deg, 4%, 20%);
+  --color-bluegray-900: hsl(240deg, 4%, 10%);
+
+  --color-background-highlight:      var(--color-primary-800);
+  --color-background:                var(--color-bluegray-800);
+  --color-codeblock:                 var(--color-bluegray-700);
+  --color-header:                    var(--color-primary-500);
+  --color-link-hover:                var(--color-gray-200);
+  --color-link:                      var(--color-gray-300);
+  --color-link-underline:            var(--color-primary-500);
+  --color-shadow:                    var(--color-gray-900);
+  --color-sidebar-background:        var(--color-bluegray-750);
+  --color-text-dimmed:               var(--color-bluegray-400);
+  --color-text:                      var(--color-bluegray-200);
+  --color-ui-background-active:      var(--color-bluegray-750);
+  --color-ui-background-hover:       var(--color-bluegray-750);
+  --color-ui-background:             var(--color-bluegray-800);
+  --color-ui-border:                 var(--color-gray-700);
+  --color-ui-card-background:        var(--color-bluegray-800);
+  --color-ui-card-border-highlight:  var(--color-primary-700);
+  --color-ui-card-header-background: var(--color-bluegray-750);
+}
+
+#sidebar::-webkit-scrollbar{
+   width: 4px;
+}
+#sidebar::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+#sidebar::-webkit-scrollbar-thumb{
+  background-color: transparent;
+}
+#sidebar:hover::-webkit-scrollbar-thumb{
+  background-color: var(--color-text-dimmed);
+  border-radius: 2px;
 }

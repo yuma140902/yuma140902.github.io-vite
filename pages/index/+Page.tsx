@@ -40,6 +40,7 @@ export default function Page() {
       <Lorem />
       <Lorem />
       <Lorem />
+      END OF CONTENT
     </>
   );
 }
