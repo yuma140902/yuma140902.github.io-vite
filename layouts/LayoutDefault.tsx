@@ -7,9 +7,13 @@ export default function LayoutDefault({
 }: {
   children: React.ReactNode;
 }) {
-  return <Content>{children}</Content>;
+  return (
+    <div className="min-h-screen">
+      <Content>{children}</Content>
+    </div>
+  );
 }
 
 function Content({ children }: { children: React.ReactNode }) {
-  return <div className="">{children}</div>;
+  return <div className="max-w-5xl mx-auto">{children}</div>;
 }
