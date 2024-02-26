@@ -11,13 +11,24 @@ export default function LayoutDefault({
   return (
     <div className="min-h-screen font-sans">
       <Header />
-      <Content>{children}</Content>
+      <div className="flex flex-nowrap flex-col lg:flex-row-reverse">
+        <div className="flex-grow">
+          <Content>{children}</Content>
+        </div>
+        <div className="flex-grow-0">
+          <Sidebar />
+        </div>
+      </div>
     </div>
   );
 }
 
 function Content({ children }: { children: React.ReactNode }) {
   return <div className="max-w-5xl mx-auto top-12">{children}</div>;
+}
+
+function Sidebar() {
+  return <div className="bg-red-100 w-full lg:w-52 lg:h-full">sidebar</div>;
 }
 
 function Header() {
