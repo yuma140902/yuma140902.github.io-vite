@@ -50,7 +50,7 @@ function Content({ children }: { children: React.ReactNode }) {
 
 function Sidebar() {
   return (
-    <div className="bg-red-100 w-full lg:w-52 lg:min-h-full">
+    <div className="bg-blue-500 w-full lg:w-52 lg:min-h-full">
       BEGINNING OF SIDEBAR
       <Lorem />
       <Lorem />
