@@ -1,5 +1,5 @@
 import { Menu } from 'react-daisyui';
-import { type Project as ProjectType } from '../src/projects';
+import { type ProjectType } from '../src/projects';
 import { SidebarLink } from './SidebarLink';
 
 export function ProjectMenuItem({ project }: { project: ProjectType }) {

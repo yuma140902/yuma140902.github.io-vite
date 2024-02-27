@@ -1,7 +1,4 @@
-import {
-  type Deployment as DeploymentType,
-  deployments,
-} from '../src/deployments';
+import { type DeploymentType, deployments } from '../src/deployments';
 import { Card } from './Card';
 import { Link } from './Link';
 

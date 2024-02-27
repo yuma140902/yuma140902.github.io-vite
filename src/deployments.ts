@@ -1,11 +1,11 @@
-export type Deployment = {
+export type DeploymentType = {
   url: string;
   name?: string;
   badge: string;
   repo?: string;
 };
 
-export const deployments: Deployment[] = [
+export const deployments: DeploymentType[] = [
   {
     url: '/',
     badge:

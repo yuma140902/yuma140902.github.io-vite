@@ -1,4 +1,4 @@
-export type Project = {
+export type ProjectType = {
   name: string;
   description: string;
   repo: string;
@@ -18,7 +18,7 @@ export type Project = {
   sidebar_title?: string;
 };
 
-export const main_projects: Project[] = [
+export const main_projects: ProjectType[] = [
   {
     name: 'Reverie',
     description:

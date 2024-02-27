@@ -1,11 +1,11 @@
-export type Content = {
+export type ContentType = {
   slug: string;
   title: string;
   url: string;
   outside: boolean;
 };
 
-export const contents: Content[] = [
+export const contents: ContentType[] = [
   {
     slug: 'neovim-bench',
     title: 'Neovimのベンチマーク',
