@@ -21,8 +21,7 @@ export function Link({
           : 'underline hover:decoration-primary-tm'
       }
     >
-      {children}
-      &nbsp;
+      {children}&nbsp;
       {outside ? <span className="i-carbon-launch h-3.5 w-3.5" /> : undefined}
     </a>
   );

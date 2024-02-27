@@ -22,6 +22,7 @@ export default {
         'neutral-content-tm': 'var(--color-neutral-content)',
         'base-tm': {
           100: 'var(--color-base-100)',
+          150: 'var(--color-base-150)',
           200: 'var(--color-base-200)',
           300: 'var(--color-base-300)',
         },
@@ -52,6 +53,7 @@ export default {
           neutral: '#abb2bf',
           'neutral-content': '#282c34',
           'base-100': '#282c34',
+          'base-150': '#2e323b',
           'base-200': '#3e4451',
           'base-300': '#545862',
           'base-content': '#abb2bf',
@@ -66,6 +68,7 @@ export default {
           neutral: '#3a3c43',
           'neutral-content': '#f9f9f9',
           'base-100': '#f9f9f9',
+          'base-150': '#f0f0f0',
           'base-200': '#cdcecf',
           'base-300': '#a2a4a6',
           'base-content': '#3a3c43',
