@@ -5,7 +5,7 @@ import { themeChange } from 'theme-change';
 import React, { useEffect } from 'react';
 import { ThemeSelector } from '../components/ThemeSelector';
 import { Badge, Button, Divider, Menu } from 'react-daisyui';
-import { Link } from '../components/Link';
+import { SidebarLink } from '../components/SidebarLink';
 import contents from './contents.yaml';
 import projects from './projects.yaml';
 
@@ -60,38 +60,38 @@ function Sidebar() {
     <div className="bg-sidebar-color w-full lg:w-60 ">
       <Menu className="menu-vertical md:menu-horizontal lg:menu-vertical max-w-full">
         <Menu.Item>
-          <Link href="/">
+          <SidebarLink href="/">
             <span className="i-carbon-home w-5 h-5" />
             Home
-          </Link>
+          </SidebarLink>
         </Menu.Item>
         <Menu.Item>
-          <Link href="/profile">
+          <SidebarLink href="/profile">
             <span className="i-carbon-user-avatar w-5 h-5" />
             About Me
-          </Link>
+          </SidebarLink>
         </Menu.Item>
         <Menu.Item>
-          <Link href="/apps">
+          <SidebarLink href="/apps">
             <span className="i-carbon-apps w-5 h-5" />
             ウェブアプリ
-          </Link>
+          </SidebarLink>
         </Menu.Item>
         <Menu.Item>
           <Menu.Details
             label={
               <>
                 <span className="i-icon-park-outline-hammer-and-anvil w-5 h-5" />
-                <Link href="/works/">Projects</Link>
+                <SidebarLink href="/works/">Projects</SidebarLink>
               </>
             }
           >
             {projects.projects.map((project) =>
               project.repo ? (
                 <Menu.Item key={project.name}>
-                  <Link href={project.repo} outside>
+                  <SidebarLink href={project.repo} outside>
                     {project.sidebar_title ?? project.name}
-                  </Link>
+                  </SidebarLink>
                 </Menu.Item>
               ) : undefined
             )}
@@ -109,18 +109,18 @@ function Sidebar() {
           >
             {contents.contents.map((content) => (
               <Menu.Item key={content.slug}>
-                <Link href={content.url} outside={content.outside}>
+                <SidebarLink href={content.url} outside={content.outside}>
                   {content.title}
-                </Link>
+                </SidebarLink>
               </Menu.Item>
             ))}
           </Menu.Details>
         </Menu.Item>
         <Menu.Item>
-          <Link href="/services">
+          <SidebarLink href="/services">
             <span className="i-carbon-bare-metal-server w-5 h-5" />
             サービス一覧
-          </Link>
+          </SidebarLink>
         </Menu.Item>
       </Menu>
     </div>

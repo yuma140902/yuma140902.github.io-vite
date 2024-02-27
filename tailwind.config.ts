@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss';
 import daisyui from 'daisyui';
+import typography from '@tailwindcss/typography';
 import { iconsPlugin, getIconCollections } from '@egoist/tailwindcss-icons';
 
 export default {
@@ -77,9 +78,11 @@ export default {
     iconsPlugin({
       collections: getIconCollections([
         'carbon',
+        'simple-icons',
         'icon-park-twotone',
         'icon-park-outline',
       ]),
     }),
+    typography,
   ],
 } satisfies Config;

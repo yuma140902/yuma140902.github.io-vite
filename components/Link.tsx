@@ -1,31 +1,29 @@
-import React, { ReactNode } from 'react';
-import { usePageContext } from 'vike-react/usePageContext';
+import { ReactNode } from 'react';
 
 export function Link({
   href,
   outside,
+  noUnderline: no_underline,
   children,
 }: {
   href: string;
   outside?: boolean;
+  noUnderline?: boolean;
   children: ReactNode;
 }) {
-  const pageContext = usePageContext();
-  const { urlPathname } = pageContext;
-  const isActive =
-    href === '/' ? urlPathname === href : urlPathname.startsWith(href);
   return (
     <a
       href={href}
-      className={isActive ? 'active' : undefined}
-      target={outside ? '_blank' : ''}
+      target={outside ? '_blank' : '_self'}
+      className={
+        no_underline
+          ? 'no-underline hover:underline decoration-primary-tm'
+          : 'underline decoration-primary-tm'
+      }
     >
       {children}
-      {outside ? (
-        <div className="justify-self-end">
-          <span className="i-carbon-launch" />
-        </div>
-      ) : undefined}
+      &nbsp;
+      {outside ? <span className="i-carbon-launch h-3.5 w-3.5" /> : undefined}
     </a>
   );
 }
