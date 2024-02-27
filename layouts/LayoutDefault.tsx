@@ -1,6 +1,7 @@
 import './themes.css';
 import './scrollbar.css';
 import './tailwind.css';
+import { themeChange } from 'theme-change';
 import React, { useEffect, useState } from 'react';
 import { ThemeSelector, type ThemeId } from '../components/ThemeSelector';
 import { Button } from 'react-daisyui';
@@ -68,11 +69,9 @@ function Sidebar() {
 }
 
 function Header() {
-  const [theme, setTheme] = useState<ThemeId>('onedark'); // TODO: localStorage
-
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-  }, [theme]);
+    themeChange(false);
+  }, []);
 
   return (
     <header className="z-50 bg-header-color backdrop-blur-sm border-b border-solid border-header-border-color h-12 fixed top-0 w-full flex flex-row">
@@ -83,12 +82,7 @@ function Header() {
         </div>
       </div>
       <div className="flex-grow"></div>
-      <ThemeSelector
-        currentTheme={theme}
-        setTheme={(theme) => {
-          setTheme(theme);
-        }}
-      />
+      <ThemeSelector />
     </header>
   );
 }

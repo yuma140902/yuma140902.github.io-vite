@@ -7,10 +7,7 @@ export const themes: Theme[] = [
   { type: 'onelight', display: 'OneLight' },
 ];
 
-export function ThemeSelector(props: {
-  currentTheme: ThemeId;
-  setTheme: (theme: ThemeId) => void;
-}) {
+export function ThemeSelector() {
   return (
     <Dropdown className="bg-transparent" vertical="bottom" end>
       <Dropdown.Toggle className="group btn" button={false}>
@@ -20,11 +17,7 @@ export function ThemeSelector(props: {
       </Dropdown.Toggle>
       <Dropdown.Menu className="w-32">
         {themes.map((theme) => (
-          <Dropdown.Item
-            key={theme.type}
-            onClick={() => props.setTheme(theme.type)}
-            className={props.currentTheme === theme.type ? 'active' : ''}
-          >
+          <Dropdown.Item key={theme.type} data-set-theme={theme.type}>
             {theme.display}
           </Dropdown.Item>
         ))}
