@@ -1,4 +1,4 @@
-import './variables.css';
+import './themes.css';
 import './scrollbar.css';
 import './tailwind.css';
 import React, { useEffect, useState } from 'react';
