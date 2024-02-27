@@ -39,7 +39,7 @@ function Content({ children }: { children: React.ReactNode }) {
 function Sidebar() {
   return (
     <div className="bg-sidebar-color w-full lg:w-60 ">
-      <Menu className="menu-vertical md:menu-horizontal lg:menu-vertical max-w-full">
+      <Menu className="menu-vertical">
         <Menu.Item>
           <SidebarLink href="/">
             <span className="i-carbon-home w-5 h-5" />
