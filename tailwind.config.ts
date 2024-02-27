@@ -9,66 +9,38 @@ export default {
     'node_modules/react-daisyui/dist/**/*.js',
   ],
   theme: {
-    my_theme: {
-      colors: {
-        primary: {
-          100: 'var(--color-primary-100)',
-          200: 'var(--color-primary-200)',
-          300: 'var(--color-primary-300)',
-          400: 'var(--color-primary-400)',
-          450: 'var(--color-primary-450)',
-          500: 'var(--color-primary-500)',
-          600: 'var(--color-primary-600)',
-          700: 'var(--color-primary-700)',
-          800: 'var(--color-primary-800)',
-          900: 'var(--color-primary-900)',
-        },
-        gray: {
-          0: 'var(--color-gray-000)',
-          50: 'var(--color-gray-050)',
-          100: 'var(--color-gray-100)',
-          200: 'var(--color-gray-200)',
-          300: 'var(--color-gray-300)',
-          400: 'var(--color-gray-400)',
-          500: 'var(--color-gray-500)',
-          600: 'var(--color-gray-600)',
-          700: 'var(--color-gray-700)',
-          800: 'var(--color-gray-800)',
-          900: 'var(--color-gray-900)',
-        },
-        bluegray: {
-          100: 'var(--color-bluegray-100)',
-          200: 'var(--color-bluegray-200)',
-          300: 'var(--color-bluegray-300)',
-          400: 'var(--color-bluegray-400)',
-          500: 'var(--color-bluegray-500)',
-          600: 'var(--color-bluegray-600)',
-          700: 'var(--color-bluegray-700)',
-          800: 'var(--color-bluegray-800)',
-          900: 'var(--color-bluegray-900)',
-        },
-      },
-    },
     extend: {
-      textColor: {
-        'text-color': 'var(--color-text)',
-        'dimmed-text-color': 'var(--color-text-dimmed)',
+      colors: {
+        primary: 'var(--color-primary)',
+        'primary-content': 'var(--color-primary-content)',
+        secondary: 'var(--color-secondary)',
+        'secondary-content': 'var(--color-secondary-content)',
+        accent: 'var(--color-accent)',
+        'accent-content': 'var(--color-accent-content)',
+        neutral: 'var(--color-neutral)',
+        'neutral-content': 'var(--color-neutral-content)',
+        base: {
+          100: 'var(--color-base-100)',
+        },
+        'base-content': 'var(--color-base-content)',
       },
       backgroundColor: {
         'highlight-color': 'var(--color-background-highlight)',
         'background-color': 'var(--color-background)',
         'header-color':
-          'color-mix(in srgb, var(--color-primary-500) 30%, transparent)',
+          'color-mix(in srgb, var(--color-base-100) 30%, transparent)',
         'sidebar-color': 'var(--color-sidebar-background)',
       },
       borderColor: {
         'header-border-color':
-          'color-mix(in srgb, var(--color-primary-500) 45%, transparent)',
+          'color-mix(in srgb, var(--color-base-100) 45%, transparent)',
       },
     },
   },
   plugins: [
     daisyui,
-    iconsPlugin({ collections: getIconCollections(['carbon']) }),
+    iconsPlugin({
+      collections: getIconCollections(['carbon', 'icon-park-twotone']),
+    }),
   ],
 } satisfies Config;
