@@ -4,7 +4,8 @@ import './tailwind.css';
 import { themeChange } from 'theme-change';
 import React, { useEffect, useState } from 'react';
 import { ThemeSelector, type ThemeId } from '../components/ThemeSelector';
-import { Button } from 'react-daisyui';
+import { Button, Menu } from 'react-daisyui';
+import { Link } from '../components/Link';
 
 // TODO: tmp
 function Lorem() {
@@ -55,15 +56,44 @@ function Content({ children }: { children: React.ReactNode }) {
 function Sidebar() {
   return (
     <div className="bg-sidebar-color w-full lg:w-52 lg:min-h-full">
-      BEGINNING OF SIDEBAR
-      <Lorem />
-      <Lorem />
-      <Lorem />
-      <Lorem />
-      <Lorem />
-      <Lorem />
-      <Lorem />
-      END OF SIDEBAR
+      <Menu>
+        <Menu.Item>
+          <Link href="/">
+            <span className="i-carbon-home w-5 h-5" />
+            Home
+          </Link>
+        </Menu.Item>
+        <Menu.Item>
+          <Link href="/profile">
+            <span className="i-carbon-user-avatar w-5 h-5" />
+            About Me
+          </Link>
+        </Menu.Item>
+        <Menu.Item>
+          <Link href="/apps">
+            <span className="i-carbon-apps w-5 h-5" />
+            ウェブアプリ
+          </Link>
+        </Menu.Item>
+        <Menu.Item>
+          <Link href="/works">
+            <span className="i-icon-park-outline-hammer-and-anvil w-5 h-5" />
+            Projects
+          </Link>
+        </Menu.Item>
+        <Menu.Item>
+          <span>
+            <span className="i-carbon-document w-5 h-5" />
+            コンテンツ
+          </span>
+        </Menu.Item>
+        <Menu.Item>
+          <Link href="/services">
+            <span className="i-carbon-bare-metal-server w-5 h-5" />
+            サービス一覧
+          </Link>
+        </Menu.Item>
+      </Menu>
     </div>
   );
 }
@@ -77,7 +107,7 @@ function Header() {
     <header className="z-50 bg-header-color backdrop-blur-sm border-b border-solid border-header-border-color h-12 fixed top-0 w-full flex flex-row">
       <div className="flex items-center h-full">
         <div className="px-5 flex items-center">
-          <span className="i-icon-park-twotone-crab block px-5 w-5 h-5 bg-orange-500"></span>
+          <span className="i-icon-park-twotone-crab block px-5 w-6 h-6 bg-orange-500"></span>
           <span className="block">yuma14.net</span>
         </div>
       </div>

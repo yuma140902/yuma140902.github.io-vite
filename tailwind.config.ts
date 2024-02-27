@@ -74,7 +74,11 @@ export default {
   plugins: [
     daisyui,
     iconsPlugin({
-      collections: getIconCollections(['carbon', 'icon-park-twotone']),
+      collections: getIconCollections([
+        'carbon',
+        'icon-park-twotone',
+        'icon-park-outline',
+      ]),
     }),
   ],
 } satisfies Config;

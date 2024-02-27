@@ -18,8 +18,10 @@ export function ThemeSelector() {
       <Dropdown.Menu className="w-64">
         {themes.map((theme) => (
           <Dropdown.Item key={theme.type} data-set-theme={theme.type}>
-            <span data-theme={theme.type} className="p-1">
-              <span className="bg-primary text-primary-content">A</span>
+            <span data-theme={theme.type} className="p-1 rounded-sm">
+              <span className="bg-primary text-primary-content rounded-sm">
+                A
+              </span>
               <span>bc</span>
             </span>
             {theme.display}
