@@ -76,17 +76,39 @@ function Header() {
         </div>
       </div>
       <div className="flex-grow"></div>
-      <Dropdown className="bg-transparent" vertical="bottom" end>
-        <Dropdown.Toggle className="btn glass" button={false}>
-          <span className="i-carbon-settings w-5 h-5 hover:animate-spin">
-            設定
-          </span>
-        </Dropdown.Toggle>
-        <Dropdown.Menu className="w-32">
-          <Dropdown.Item>Item 1</Dropdown.Item>
-          <Dropdown.Item>Item 2</Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>
+      <ThemeSelector
+        currentTheme="light"
+        setTheme={(theme: string) => {
+          console.log('theme', theme);
+          document.documentElement.setAttribute('data-theme', theme);
+        }}
+      />
     </header>
+  );
+}
+
+function ThemeSelector(props: {
+  currentTheme: string;
+  setTheme: (theme: string) => void;
+}) {
+  return (
+    <Dropdown className="bg-transparent" vertical="bottom" end>
+      <Dropdown.Toggle className="btn glass" button={false}>
+        <span className="i-carbon-settings w-5 h-5 hover:animate-spin">
+          設定
+        </span>
+      </Dropdown.Toggle>
+      <Dropdown.Menu className="w-32">
+        <Dropdown.Item
+          onClick={() => props.setTheme('onedark')}
+          className="active"
+        >
+          OneDark
+        </Dropdown.Item>
+        <Dropdown.Item onClick={() => props.setTheme('onelight')}>
+          OneLight
+        </Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
   );
 }

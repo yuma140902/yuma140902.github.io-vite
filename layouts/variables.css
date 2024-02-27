@@ -11,3 +11,17 @@
   --color-base-200: #3e4451;
   --color-base-content: #abb2bf;
 }
+
+:root[data-theme='onelight'] {
+  --color-primary: #61afef;
+  --color-primary-content: #282c34;
+  --color-secondary: #c678dd;
+  --color-secondary-content: #282c34;
+  --color-accent: #98c379;
+  --color-accent-content: #282c34;
+  --color-neutral: #5c6370;
+  --color-neutral-content: #abb2bf;
+  --color-base-100: #282c34;
+  --color-base-200: #3e4451;
+  --color-base-content: #abb2bf;
+}
