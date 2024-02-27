@@ -36,6 +36,9 @@ export default {
       },
     },
   },
+  daisyui: {
+    themes: ['onedark', 'onelight'],
+  },
   plugins: [
     daisyui,
     iconsPlugin({
