@@ -46,9 +46,9 @@ export default {
         onedark: {
           primary: '#98c379',
           'primary-content': '#282c34',
-          secondary: '#c678dd',
+          secondary: '#61afef',
           'secondary-content': '#282c34',
-          accent: '#61afef',
+          accent: '#c678dd',
           'accent-content': '#282c34',
           neutral: '#abb2bf',
           'neutral-content': '#282c34',
@@ -61,9 +61,9 @@ export default {
         onelight: {
           primary: '#549e51',
           'primary-content': '#f9f9f9',
-          secondary: '#a22ea1',
+          secondary: '#3b7cf0',
           'secondary-content': '#f9f9f9',
-          accent: '#3b7cf0',
+          accent: '#a22ea1',
           'accent-content': '#f9f9f9',
           neutral: '#3a3c43',
           'neutral-content': '#f9f9f9',

@@ -1,9 +1,9 @@
 :root {
   --color-primary: #98c379;
   --color-primary-content: #282c34;
-  --color-secondary: #c678dd;
+  --color-secondary: #61afef;
   --color-secondary-content: #282c34;
-  --color-accent: #61afef;
+  --color-accent: #c678dd;
   --color-accent-content: #282c34;
   --color-neutral: #abb2bf;
   --color-neutral-content: #282c34;
@@ -17,9 +17,9 @@
 [data-theme='onelight'] {
   --color-primary: #549e51;
   --color-primary-content: #f9f9f9;
-  --color-secondary: #a22ea1;
+  --color-secondary: #3b7cf0;
   --color-secondary-content: #f9f9f9;
-  --color-accent: #3b7cf0;
+  --color-accent: #a22ea1;
   --color-accent-content: #f9f9f9;
   --color-neutral: #3a3c43;
   --color-neutral-content: #f9f9f9;
