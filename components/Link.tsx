@@ -16,9 +16,8 @@ export function Link({
       href={href}
       target={outside ? '_blank' : '_self'}
       className={
-        no_underline
-          ? 'no-underline hover:underline decoration-primary-tm'
-          : 'underline hover:decoration-primary-tm'
+        (no_underline ? 'no-underline' : '') +
+        'underline hover:decoration-primary-tm group'
       }
     >
       {children}&nbsp;
