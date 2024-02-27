@@ -7,8 +7,7 @@ import Layout from '../layouts/LayoutDefault';
 export default {
   Layout,
   Head,
-  // <title>
-  title: 'My Vike App',
+  title: 'yuma14.net',
   extends: vikeReact,
   lang: 'ja',
 } satisfies Config;
