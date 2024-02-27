@@ -1,38 +1,50 @@
 import React from 'react';
 import { Article } from '../../components/Article';
 import { Card } from '../../components/Card';
+import reverieEngineUrl from '../../assets/reverie.png';
+import webImageEditorUrl from '../../assets/web-image-editor.png';
+import { DeploymentList } from '../../components/Deployment';
 
 export default function Page() {
   return (
     <div>
-      <div className="flex flex-row flex-wrap gap-2 justify-center">
+      <div className="flex flex-row flex-wrap gap-2 justify-center items-stretch">
         <Card
           className="basis-full sm:basis-5/12 flex-grow"
           link="/profile"
           head={<h2 className="text-3xl">Profile</h2>}
         >
-          Profile
+          <div className="hero min-h-80">
+            <img
+              className="mask mask-circle h-24 w-24"
+              src="https://avatars.githubusercontent.com/u/23431077"
+            />
+          </div>
         </Card>
         <Card
           className="basis-full sm:basis-5/12 flex-grow"
           link="/works"
           head={<h2 className="text-3xl">Projects</h2>}
         >
-          Projects
+          <div className="hero min-h-80">
+            <img className="h-80 object-contain" src={reverieEngineUrl} />
+          </div>
         </Card>
         <Card
           className="basis-full sm:basis-5/12 flex-grow"
           link="/apps"
           head={<h2 className="text-3xl">ウェブアプリ</h2>}
         >
-          ウェブアプリ
+          <div className="hero min-h-80">
+            <img className="h-80 object-contain" src={webImageEditorUrl} />
+          </div>
         </Card>
         <Card
           className="basis-full sm:basis-5/12 flex-grow"
           link="/deploys"
           head={<h2 className="text-3xl">サービス一覧</h2>}
         >
-          サービス一覧
+          <div className="hero min-h-80">サービス一覧</div>
         </Card>
       </div>
       <Article>
