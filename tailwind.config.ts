@@ -26,7 +26,6 @@ export default {
       },
       backgroundColor: {
         'highlight-color': 'var(--color-background-highlight)',
-        'background-color': 'var(--color-background)',
         'header-color':
           'color-mix(in srgb, var(--color-base-100) 30%, transparent)',
         'sidebar-color': 'var(--color-sidebar-background)',

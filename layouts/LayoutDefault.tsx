@@ -28,7 +28,7 @@ export default function LayoutDefault({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen font-sans text-text-color bg-background-color">
+    <div className="min-h-screen font-sans text-base-content bg-base-100">
       <Header />
       <div className="flex flex-nowrap flex-col lg:flex-row-reverse lg:h-screen lg:fixed lg:top-0 lg:left-0 lg:right-0">
         <div className="flex-grow lg:overflow-auto pt-12">

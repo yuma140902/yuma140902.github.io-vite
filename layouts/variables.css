@@ -13,15 +13,15 @@
 }
 
 :root[data-theme='onelight'] {
-  --color-primary: #61afef;
-  --color-primary-content: #282c34;
-  --color-secondary: #c678dd;
-  --color-secondary-content: #282c34;
-  --color-accent: #98c379;
-  --color-accent-content: #282c34;
-  --color-neutral: #5c6370;
-  --color-neutral-content: #abb2bf;
-  --color-base-100: #282c34;
-  --color-base-200: #3e4451;
-  --color-base-content: #abb2bf;
+  --color-primary: #549e51;
+  --color-primary-content: #f9f9f9;
+  --color-secondary: #a22ea1;
+  --color-secondary-content: #f9f9f9;
+  --color-accent: #3b7cf0;
+  --color-accent-content: #f9f9f9;
+  --color-neutral: #3a3c43;
+  --color-neutral-content: #f9f9f9;
+  --color-base-100: #f9f9f9;
+  --color-base-200: #cdcecf;
+  --color-base-content: #3a3c43;
 }
