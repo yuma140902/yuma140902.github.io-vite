@@ -1,8 +1,13 @@
 import type { Config } from 'tailwindcss';
 import daisyui from 'daisyui';
+import { iconsPlugin, getIconCollections } from '@egoist/tailwindcss-icons';
 
 export default {
-  content: ['./{pages,layouts,components,src}/**/*.{html,js,jsx,ts,tsx,vue}'],
+  content: [
+    './{pages,layouts,components,src}/**/*.{html,js,jsx,ts,tsx,vue}',
+    'node_modules/daisyui/dist/**/*.js',
+    'node_modules/react-daisyui/dist/**/*.js',
+  ],
   theme: {
     my_theme: {
       colors: {
@@ -62,5 +67,8 @@ export default {
       },
     },
   },
-  plugins: [daisyui],
+  plugins: [
+    daisyui,
+    iconsPlugin({ collections: getIconCollections(['carbon']) }),
+  ],
 } satisfies Config;

@@ -3,6 +3,7 @@ import './scrollbar.css';
 import './tailwind.css';
 import React from 'react';
 import { Link } from '../components/Link';
+import { Dropdown } from 'react-daisyui';
 
 // TODO: tmp
 function Lorem() {
@@ -67,10 +68,27 @@ function Sidebar() {
 
 function Header() {
   return (
-    <header className="z-50 bg-header-color backdrop-blur-sm border-b border-solid border-header-border-color h-12 fixed top-0 w-full">
+    <header className="z-50 bg-header-color backdrop-blur-sm border-b border-solid border-header-border-color h-12 fixed top-0 w-full flex flex-row">
       <div className="flex items-center h-full">
         <div className="px-5">yuma14.net</div>
       </div>
+      <div className="flex-grow"></div>
+      <Dropdown
+        className="bg-transparent"
+        dataTheme="light"
+        vertical="bottom"
+        end
+      >
+        <Dropdown.Toggle className="btn glass" button={false}>
+          <span className="i-carbon-settings w-5 h-5 hover:animate-spin">
+            設定
+          </span>
+        </Dropdown.Toggle>
+        <Dropdown.Menu className="w-32">
+          <Dropdown.Item>Item 1</Dropdown.Item>
+          <Dropdown.Item>Item 2</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
     </header>
   );
 }
