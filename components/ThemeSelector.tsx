@@ -25,7 +25,8 @@ export function ThemeSelector() {
               <span className="bg-primary text-primary-content rounded-sm">
                 A
               </span>
-              <span>bc</span>
+              <span className="underline decoration-secondary">b</span>
+              <span className="text-accent">c</span>
             </span>
             {theme.display}
           </Dropdown.Item>
