@@ -1,48 +1,46 @@
 import React from 'react';
-import { Counter } from './Counter';
-
-function Lorem() {
-  return (
-    <p>
-      Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
-      labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
-      Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum
-      Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
-      Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex
-      occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat
-      officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in
-      Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non
-      excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco
-      ut ea consectetur et est culpa et culpa duis.
-    </p>
-  );
-}
+import { Article } from '../../components/Article';
+import { Link } from '../../components/Link';
 
 export default function Page() {
   return (
-    <>
-      <h1 className="font-bold text-3xl pb-4 bg-primary-tm text-primary-content-tm">
-        My Vike app
-      </h1>
-      This page is:
+    <Article>
+      <Link href="/profile">Profile</Link>
+      <Link href="/works">Projects</Link>
+      <Link href="/apps">ウェブアプリ</Link>
+      <Link href="/deploys">サービス一覧</Link>
+      <h2>更新履歴</h2>
+      最終更新: TODO
       <ul>
-        <li>Rendered to HTML.</li>
-        <li>
-          Interactive. <Counter />
-        </li>
+        <History date="2023/12/19" description="Tempura v0.5.0にアップデート" />
+        <History date="2023/10/08" description="ウェブアプリ一覧を追加" />
+        <History date="2023/07/12" description="画像追加" />
+        <History date="2023/05/17" description="更新" />
+        <History date="2023/04/30" description="gitとcloudを削除" />
+        <History date="2023/04/29" description="wwwを別サーバーへ移動" />
+        <History
+          date="2023/01/31"
+          description="Nextcloudインスタンス(非公開)を追加"
+        />
+        <History date="2023/01/31" description="サーバーのスペックを強化" />
+        <History
+          date="2022/11/18"
+          description="Giteaインスタンス(git.yuma14.net)を追加"
+        />
+        <History
+          date="2022/11/16"
+          description="About Me、つくったもの、WebTools、サービス一覧を追加。ダークテーマ対応"
+        />
+        <History date="2022/11/15" description="ドメイン取得" />
       </ul>
-      <Lorem />
-      <Lorem />
-      <Lorem />
-      <Lorem />
-      <Lorem />
-      <Lorem />
-      <Lorem />
-      <Lorem />
-      <Lorem />
-      <Lorem />
-      <Lorem />
-      END OF CONTENT
-    </>
+    </Article>
+  );
+}
+
+function History(props: { date: string; description: string }) {
+  return (
+    <li className="py-0 my-0">
+      {props.date} - {props.description}
+    </li>
   );
 }

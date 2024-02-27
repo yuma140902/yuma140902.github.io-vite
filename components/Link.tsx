@@ -18,7 +18,7 @@ export function Link({
       className={
         no_underline
           ? 'no-underline hover:underline decoration-primary-tm'
-          : 'underline decoration-primary-tm'
+          : 'underline hover:decoration-primary-tm'
       }
     >
       {children}
