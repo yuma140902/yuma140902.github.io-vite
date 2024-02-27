@@ -1,4 +1,5 @@
 import './variables.css';
+import './scrollbar.css';
 import './tailwind.css';
 import React from 'react';
 import { Link } from '../components/Link';
