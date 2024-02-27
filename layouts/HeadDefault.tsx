@@ -1,5 +1,5 @@
-import React from "react";
-import logoUrl from "../assets/logo.svg";
+import React from 'react';
+import logoUrl from '../assets/logo.svg';
 
 // Default <head> (can be overridden by pages)
 
