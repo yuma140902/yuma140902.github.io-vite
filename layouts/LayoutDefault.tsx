@@ -2,10 +2,12 @@ import './themes.css';
 import './scrollbar.css';
 import './tailwind.css';
 import { themeChange } from 'theme-change';
-import React, { useEffect, useState } from 'react';
-import { ThemeSelector, type ThemeId } from '../components/ThemeSelector';
-import { Button, Menu } from 'react-daisyui';
+import React, { useEffect } from 'react';
+import { ThemeSelector } from '../components/ThemeSelector';
+import { Badge, Button, Divider, Menu } from 'react-daisyui';
 import { Link } from '../components/Link';
+import contents from './contents.yaml';
+import projects from './projects.yaml';
 
 // TODO: tmp
 function Lorem() {
@@ -55,8 +57,8 @@ function Content({ children }: { children: React.ReactNode }) {
 
 function Sidebar() {
   return (
-    <div className="bg-sidebar-color w-full lg:w-52 lg:min-h-full">
-      <Menu>
+    <div className="bg-sidebar-color w-full lg:w-60 ">
+      <Menu className="menu-vertical md:menu-horizontal lg:menu-vertical max-w-full">
         <Menu.Item>
           <Link href="/">
             <span className="i-carbon-home w-5 h-5" />
@@ -76,16 +78,43 @@ function Sidebar() {
           </Link>
         </Menu.Item>
         <Menu.Item>
-          <Link href="/works">
-            <span className="i-icon-park-outline-hammer-and-anvil w-5 h-5" />
-            Projects
-          </Link>
+          <Menu.Details
+            label={
+              <>
+                <span className="i-icon-park-outline-hammer-and-anvil w-5 h-5" />
+                <Link href="/works/">Projects</Link>
+              </>
+            }
+          >
+            {projects.projects.map((project) =>
+              project.repo ? (
+                <Menu.Item key={project.name}>
+                  <Link href={project.repo} outside>
+                    {project.sidebar_title ?? project.name}
+                  </Link>
+                </Menu.Item>
+              ) : undefined
+            )}
+            <Divider />
+          </Menu.Details>
         </Menu.Item>
         <Menu.Item>
-          <span>
-            <span className="i-carbon-document w-5 h-5" />
-            コンテンツ
-          </span>
+          <Menu.Details
+            label={
+              <>
+                <span className="i-carbon-document w-5 h-5" />
+                コンテンツ
+              </>
+            }
+          >
+            {contents.contents.map((content) => (
+              <Menu.Item key={content.slug}>
+                <Link href={content.url} outside={content.outside}>
+                  {content.title}
+                </Link>
+              </Menu.Item>
+            ))}
+          </Menu.Details>
         </Menu.Item>
         <Menu.Item>
           <Link href="/services">
