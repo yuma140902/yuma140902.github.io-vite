@@ -13,8 +13,8 @@ export function ThemeSelector(props: {
 }) {
   return (
     <Dropdown className="bg-transparent" vertical="bottom" end>
-      <Dropdown.Toggle className="btn glass" button={false}>
-        <span className="i-carbon-settings w-5 h-5 hover:animate-spin">
+      <Dropdown.Toggle className="group btn" button={false}>
+        <span className="i-carbon-settings w-5 h-5 group-hover:animate-spin">
           設定
         </span>
       </Dropdown.Toggle>

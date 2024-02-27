@@ -3,11 +3,13 @@ import './scrollbar.css';
 import './tailwind.css';
 import React, { useEffect, useState } from 'react';
 import { ThemeSelector, type ThemeId } from '../components/ThemeSelector';
+import { Button } from 'react-daisyui';
 
 // TODO: tmp
 function Lorem() {
   return (
     <p>
+      <Button>Button</Button>
       Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
       labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
       Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum
