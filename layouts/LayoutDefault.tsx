@@ -6,8 +6,8 @@ import React, { useEffect } from 'react';
 import { ThemeSelector } from '../components/ThemeSelector';
 import { Divider, Menu } from 'react-daisyui';
 import { SidebarLink } from '../components/SidebarLink';
-import contents from './contents.yaml';
 import projects from './projects.yaml';
+import { contents } from '../src/contents';
 
 export default function LayoutDefault({
   children,
@@ -88,7 +88,7 @@ function Sidebar() {
               </>
             }
           >
-            {contents.contents.map((content) => (
+            {contents.map((content) => (
               <Menu.Item key={content.slug}>
                 <SidebarLink href={content.url} outside={content.outside}>
                   {content.title}
