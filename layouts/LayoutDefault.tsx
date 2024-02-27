@@ -6,8 +6,8 @@ import React, { useEffect } from 'react';
 import { ThemeSelector } from '../components/ThemeSelector';
 import { Divider, Menu } from 'react-daisyui';
 import { SidebarLink } from '../components/SidebarLink';
-import projects from './projects.yaml';
 import { contents } from '../src/contents';
+import { main_projects } from '../src/projects';
 
 export default function LayoutDefault({
   children,
@@ -67,7 +67,7 @@ function Sidebar() {
               </>
             }
           >
-            {projects.projects.map((project) =>
+            {main_projects.map((project) =>
               project.repo ? (
                 <Menu.Item key={project.name}>
                   <SidebarLink href={project.repo} outside>
