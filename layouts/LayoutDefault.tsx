@@ -1,4 +1,5 @@
 import './themes.css';
+import './selection.css';
 import './scrollbar.css';
 import './tailwind.css';
 import { themeChange } from 'theme-change';

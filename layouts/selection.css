@@ -1,0 +1,4 @@
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-accent-content);
+}
