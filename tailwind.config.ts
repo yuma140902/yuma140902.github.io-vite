@@ -33,7 +33,7 @@ export default {
       },
       borderColor: {
         'header-border-color':
-          'color-mix(in srgb, var(--color-base-100) 45%, transparent)',
+          'color-mix(in srgb, var(--color-base-200) 50%, transparent)',
       },
     },
   },

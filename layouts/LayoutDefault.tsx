@@ -68,7 +68,7 @@ function Sidebar() {
 
 function Header() {
   return (
-    <header className="z-50 bg-header-color backdrop-blur-md border-b border-solid border-header-border-color h-12 fixed top-0 w-full flex flex-row">
+    <header className="z-50 bg-header-color backdrop-blur-sm border-b border-solid border-header-border-color h-12 fixed top-0 w-full flex flex-row">
       <div className="flex items-center h-full">
         <div className="px-5 flex items-center">
           <span className="i-icon-park-twotone-crab block px-5 w-5 h-5 bg-orange-500"></span>
