@@ -9,10 +9,11 @@
   --color-neutral-content: #abb2bf;
   --color-base-100: #282c34;
   --color-base-200: #3e4451;
+  --color-base-300: #545862;
   --color-base-content: #abb2bf;
 }
 
-:root[data-theme='onelight'] {
+*[data-theme='onelight'] {
   --color-primary: #549e51;
   --color-primary-content: #f9f9f9;
   --color-secondary: #a22ea1;
@@ -23,5 +24,6 @@
   --color-neutral-content: #f9f9f9;
   --color-base-100: #f9f9f9;
   --color-base-200: #cdcecf;
+  --color-base-300: #a2a4a6;
   --color-base-content: #3a3c43;
 }

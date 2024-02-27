@@ -21,7 +21,7 @@ function Lorem() {
 export default function Page() {
   return (
     <>
-      <h1 className="font-bold text-3xl pb-4 bg-primary text-primary-content">
+      <h1 className="font-bold text-3xl pb-4 bg-primary-tm text-primary-content-tm">
         My Vike app
       </h1>
       This page is:
