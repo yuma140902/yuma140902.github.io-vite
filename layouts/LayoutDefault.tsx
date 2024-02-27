@@ -8,6 +8,8 @@ import { Divider, Menu } from 'react-daisyui';
 import { SidebarLink } from '../components/SidebarLink';
 import { contents } from '../src/contents';
 import { main_projects } from '../src/projects';
+import { ContentMenuItem } from '../components/Content';
+import { ProjectMenuItem } from '../components/Project';
 
 export default function LayoutDefault({
   children,
@@ -67,15 +69,9 @@ function Sidebar() {
               </>
             }
           >
-            {main_projects.map((project) =>
-              project.repo ? (
-                <Menu.Item key={project.name}>
-                  <SidebarLink href={project.repo} outside>
-                    {project.sidebar_title ?? project.name}
-                  </SidebarLink>
-                </Menu.Item>
-              ) : undefined
-            )}
+            {main_projects.map((project) => (
+              <ProjectMenuItem key={project.name} project={project} />
+            ))}
             <Divider />
           </Menu.Details>
         </Menu.Item>
@@ -89,11 +85,7 @@ function Sidebar() {
             }
           >
             {contents.map((content) => (
-              <Menu.Item key={content.slug}>
-                <SidebarLink href={content.url} outside={content.outside}>
-                  {content.title}
-                </SidebarLink>
-              </Menu.Item>
+              <ContentMenuItem key={content.slug} content={content} />
             ))}
           </Menu.Details>
         </Menu.Item>
