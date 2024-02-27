@@ -13,7 +13,7 @@
   --color-base-content: #abb2bf;
 }
 
-*[data-theme='onelight'] {
+[data-theme='onelight'] {
   --color-primary: #549e51;
   --color-primary-content: #f9f9f9;
   --color-secondary: #a22ea1;

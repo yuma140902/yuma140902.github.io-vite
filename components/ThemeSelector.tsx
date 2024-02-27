@@ -15,9 +15,13 @@ export function ThemeSelector() {
           設定
         </span>
       </Dropdown.Toggle>
-      <Dropdown.Menu className="w-32">
+      <Dropdown.Menu className="w-64">
         {themes.map((theme) => (
           <Dropdown.Item key={theme.type} data-set-theme={theme.type}>
+            <span data-theme={theme.type} className="p-1">
+              <span className="bg-primary text-primary-content">A</span>
+              <span>bc</span>
+            </span>
             {theme.display}
           </Dropdown.Item>
         ))}
