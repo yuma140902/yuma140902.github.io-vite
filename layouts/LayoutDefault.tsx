@@ -98,9 +98,9 @@ function Sidebar() {
           </Menu.Details>
         </Menu.Item>
         <Menu.Item>
-          <SidebarLink href="/services">
+          <SidebarLink href="/deploys">
             <span className="i-carbon-bare-metal-server w-5 h-5" />
-            サービス一覧
+            サービス一覧・デプロイ状況
           </SidebarLink>
         </Menu.Item>
       </Menu>
