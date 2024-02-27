@@ -9,28 +9,28 @@ export default function Page() {
         <Card
           className="basis-full sm:basis-5/12 flex-grow"
           link="/profile"
-          head={<h2>Profile</h2>}
+          head={<h2 className="text-3xl">Profile</h2>}
         >
           Profile
         </Card>
         <Card
           className="basis-full sm:basis-5/12 flex-grow"
           link="/works"
-          head={<h2>Projects</h2>}
+          head={<h2 className="text-3xl">Projects</h2>}
         >
           Projects
         </Card>
         <Card
           className="basis-full sm:basis-5/12 flex-grow"
           link="/apps"
-          head={<h2>ウェブアプリ</h2>}
+          head={<h2 className="text-3xl">ウェブアプリ</h2>}
         >
           ウェブアプリ
         </Card>
         <Card
           className="basis-full sm:basis-5/12 flex-grow"
           link="/deploys"
-          head={<h2>サービス一覧</h2>}
+          head={<h2 className="text-3xl">サービス一覧</h2>}
         >
           サービス一覧
         </Card>
