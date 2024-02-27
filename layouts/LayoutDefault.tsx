@@ -27,7 +27,7 @@ export default function LayoutDefault({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen font-sans">
+    <div className="min-h-screen font-sans text-text-color bg-background-color">
       <Header />
       <div className="flex flex-nowrap flex-col lg:flex-row-reverse lg:h-screen lg:fixed lg:top-0 lg:left-0 lg:right-0">
         <div className="flex-grow lg:overflow-auto pt-12">
@@ -50,7 +50,7 @@ function Content({ children }: { children: React.ReactNode }) {
 
 function Sidebar() {
   return (
-    <div className="bg-blue-500 w-full lg:w-52 lg:min-h-full">
+    <div className="bg-sidebar-color w-full lg:w-52 lg:min-h-full">
       BEGINNING OF SIDEBAR
       <Lorem />
       <Lorem />
@@ -66,7 +66,7 @@ function Sidebar() {
 
 function Header() {
   return (
-    <header className="z-50 bg-header-color backdrop-blur-sm border-b border-solid border-header-border-color text-white h-12 fixed top-0 w-full">
+    <header className="z-50 bg-header-color backdrop-blur-sm border-b border-solid border-header-border-color h-12 fixed top-0 w-full">
       <div className="flex items-center h-full">
         <div className="px-5">yuma14.net</div>
       </div>
