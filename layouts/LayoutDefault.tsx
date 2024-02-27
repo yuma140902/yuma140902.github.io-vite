@@ -1,9 +1,8 @@
 import './variables.css';
 import './scrollbar.css';
 import './tailwind.css';
-import React from 'react';
-import { Link } from '../components/Link';
-import { Dropdown } from 'react-daisyui';
+import React, { useEffect, useState } from 'react';
+import { ThemeSelector, type ThemeId } from '../components/ThemeSelector';
 
 // TODO: tmp
 function Lorem() {
@@ -67,6 +66,12 @@ function Sidebar() {
 }
 
 function Header() {
+  const [theme, setTheme] = useState<ThemeId>('onedark'); // TODO: localStorage
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
   return (
     <header className="z-50 bg-header-color backdrop-blur-sm border-b border-solid border-header-border-color h-12 fixed top-0 w-full flex flex-row">
       <div className="flex items-center h-full">
@@ -77,38 +82,11 @@ function Header() {
       </div>
       <div className="flex-grow"></div>
       <ThemeSelector
-        currentTheme="light"
-        setTheme={(theme: string) => {
-          console.log('theme', theme);
-          document.documentElement.setAttribute('data-theme', theme);
+        currentTheme={theme}
+        setTheme={(theme) => {
+          setTheme(theme);
         }}
       />
     </header>
-  );
-}
-
-function ThemeSelector(props: {
-  currentTheme: string;
-  setTheme: (theme: string) => void;
-}) {
-  return (
-    <Dropdown className="bg-transparent" vertical="bottom" end>
-      <Dropdown.Toggle className="btn glass" button={false}>
-        <span className="i-carbon-settings w-5 h-5 hover:animate-spin">
-          設定
-        </span>
-      </Dropdown.Toggle>
-      <Dropdown.Menu className="w-32">
-        <Dropdown.Item
-          onClick={() => props.setTheme('onedark')}
-          className="active"
-        >
-          OneDark
-        </Dropdown.Item>
-        <Dropdown.Item onClick={() => props.setTheme('onelight')}>
-          OneLight
-        </Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
   );
 }
