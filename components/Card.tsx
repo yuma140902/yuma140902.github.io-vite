@@ -7,17 +7,17 @@ function CardWithHead(props: {
 }) {
   return (
     <div className="w-full rounded border-solid border-base-tm-200 border hover:border-primary-tm">
-      <div className="pt-2 pl-2 pr-2 bg-base-tm-200 font-bold text-lg border-b border-b-base-tm-200">
+      <div className="pt-2 pl-2 pr-2 bg-base-tm-150 font-bold text-lg border-b border-b-base-tm-200">
         {props.head}
       </div>
-      <div className="pb-2 pl-2 pr-2 bg-base-tm-150">{props.children}</div>
+      <div className="pb-2 pl-2 pr-2">{props.children}</div>
     </div>
   );
 }
 
 function CardOnlyBody(props: { children: ReactNode; className: string }) {
   return (
-    <div className="p-2 w-full rounded border-solid border-base-tm-200 border hover:border-primary-tm bg-base-tm-150">
+    <div className="p-2 w-full rounded border-solid border-base-tm-200 border hover:border-primary-tm ">
       <div>{props.children}</div>
     </div>
   );
