@@ -17,7 +17,7 @@ export function Link({
       target={outside ? '_blank' : '_self'}
       className={
         (no_underline ? 'no-underline ' : 'underline ') +
-        'hover:underline hover:decoration-primary-tm text-secondary-tm group'
+        'hover:underline hover:decoration-primary-tm text-secondary group'
       }
     >
       {children}&nbsp;

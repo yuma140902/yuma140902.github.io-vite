@@ -53,3 +53,21 @@
   --color-b16-15: #986801;
 }
 
+[data-theme='monokai'] {
+  --color-b16-00: #272822;
+  --color-b16-01: #383830;
+  --color-b16-02: #49483e;
+  --color-b16-03: #75715e;
+  --color-b16-04: #a59f85;
+  --color-b16-05: #f8f8f2;
+  --color-b16-06: #f5f4f1;
+  --color-b16-07: #f9f8f5;
+  --color-b16-08: #f92672;
+  --color-b16-09: #fd971f;
+  --color-b16-10: #f4bf75;
+  --color-b16-11: #a6e22e;
+  --color-b16-12: #a1efe4;
+  --color-b16-13: #66d9ef;
+  --color-b16-14: #ae81ff;
+  --color-b16-15: #cc6633;
+}

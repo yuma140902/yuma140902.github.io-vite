@@ -94,6 +94,23 @@ export default {
           'base-content': '#3a3c43',
         },
       },
+      {
+        monokai: {
+          primary: '#a6e22e',
+          'primary-content': '#f8f8f2',
+          secondary: '#66d9ef',
+          'secondary-content': '#f8f8f2',
+          accent: '#ae81ff',
+          'accent-content': '#f8f8f2',
+          neutral: '#75715e',
+          'neutral-content': '#f8f8f2',
+          'base-100': '#272822',
+          'base-150': '#383830',
+          'base-200': '#49483e',
+          'base-300': '#75715e',
+          'base-content': '#f8f8f2',
+        },
+      },
     ],
   },
   plugins: [

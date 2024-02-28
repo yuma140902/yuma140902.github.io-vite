@@ -1,10 +1,11 @@
 import { Dropdown } from 'react-daisyui';
 
-export type ThemeId = 'onedark' | 'onelight';
+export type ThemeId = 'onedark' | 'onelight' | 'monokai';
 export type Theme = { type: ThemeId; display: string };
 export const themes: Theme[] = [
   { type: 'onedark', display: 'OneDark' },
   { type: 'onelight', display: 'OneLight' },
+  { type: 'monokai', display: 'Monokai' },
 ];
 
 export function ThemeSelector() {
