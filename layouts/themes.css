@@ -1,31 +1,55 @@
 :root {
-  --color-primary: #98c379;
-  --color-primary-content: #282c34;
-  --color-secondary: #61afef;
-  --color-secondary-content: #282c34;
-  --color-accent: #c678dd;
-  --color-accent-content: #282c34;
-  --color-neutral: #abb2bf;
-  --color-neutral-content: #282c34;
-  --color-base-100: #282c34;
-  --color-base-150: #2e323b;
-  --color-base-200: #3e4451;
-  --color-base-300: #545862;
-  --color-base-content: #abb2bf;
+  --color-primary: var(--color-b16-11);
+  --color-primary-content: var(--color-b16-00);
+  --color-secondary: var(--color--b16-13);
+  --color-secondary-content: var(--color-b16-00);
+  --color-accent: var(--color-b16-14);
+  --color-accent-content: var(--color-b16-00);
+  --color-neutral: var(--color-b16-05)
+  --color-neutral-content: var(--color-b16-00);
+  --color-base-100: var(--color-b16-00);
+  --color-base-150: var(--color-b16-01);
+  --color-base-200: var(--color-b16-02);
+  --color-base-300: var(--color-b16-03);
+  --color-base-content: var(--color-b16-05);
+}
+
+:root, [data-theme='onedark'] {
+  --color-b16-00: #282c34;
+  --color-b16-01: #353b45;
+  --color-b16-02: #3e4451;
+  --color-b16-03: #545862;
+  --color-b16-04: #565c64;
+  --color-b16-05: #abb2bf;
+  --color-b16-06: #b6bdca;
+  --color-b16-07: #c8ccd4;
+  --color-b16-08: #e06c75;
+  --color-b16-09: #d19a66;
+  --color-b16-10: #e5c07b;
+  --color-b16-11: #98c379;
+  --color-b16-12: #56b6c2;
+  --color-b16-13: #61afef;
+  --color-b16-14: #c678dd;
+  --color-b16-15: #be5046;
+
 }
 
 [data-theme='onelight'] {
-  --color-primary: #549e51;
-  --color-primary-content: #f9f9f9;
-  --color-secondary: #3b7cf0;
-  --color-secondary-content: #f9f9f9;
-  --color-accent: #a22ea1;
-  --color-accent-content: #f9f9f9;
-  --color-neutral: #3a3c43;
-  --color-neutral-content: #f9f9f9;
-  --color-base-100: #f9f9f9;
-  --color-base-150: #f0f0f0;
-  --color-base-200: #cdcecf;
-  --color-base-300: #a2a4a6;
-  --color-base-content: #3a3c43;
+  --color-b16-00: #fafafa;
+  --color-b16-01: #f0f0f1;
+  --color-b16-02: #e5e5e6;
+  --color-b16-03: #a0a1a7;
+  --color-b16-04: #696c77;
+  --color-b16-05: #383a42;
+  --color-b16-06: #202227;
+  --color-b16-07: #090a0b;
+  --color-b16-08: #ca1243;
+  --color-b16-09: #d75f00;
+  --color-b16-10: #c18401;
+  --color-b16-11: #50a14f;
+  --color-b16-12: #0184bc;
+  --color-b16-13: #4078f2;
+  --color-b16-14: #a626a4;
+  --color-b16-15: #986801;
 }
+

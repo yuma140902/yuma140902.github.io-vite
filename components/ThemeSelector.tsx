@@ -19,18 +19,43 @@ export function ThemeSelector() {
         </span>
       </Dropdown.Toggle>
       <Dropdown.Menu className="w-64">
-        {themes.map((theme) => (
-          <Dropdown.Item key={theme.type} data-set-theme={theme.type}>
-            <span data-theme={theme.type} className="p-1 rounded-sm">
-              <span className="bg-primary text-primary-content rounded-sm">
-                A
+        {themes.map((theme) => {
+          return (
+            <Dropdown.Item key={theme.type} data-set-theme={theme.type}>
+              <span
+                data-theme={theme.type}
+                className="p-1 rounded-sm flex flex-row gap-2"
+              >
+                <span className="grid grid-cols-8 grid-rows-2 gap-0">
+                  <span className="w-2 h-2 inline-block bg-b16-tm-0" />
+                  <span className="w-2 h-2 inline-block bg-b16-tm-1" />
+                  <span className="w-2 h-2 inline-block bg-b16-tm-2" />
+                  <span className="w-2 h-2 inline-block bg-b16-tm-3" />
+                  <span className="w-2 h-2 inline-block bg-b16-tm-4" />
+                  <span className="w-2 h-2 inline-block bg-b16-tm-5" />
+                  <span className="w-2 h-2 inline-block bg-b16-tm-6" />
+                  <span className="w-2 h-2 inline-block bg-b16-tm-7" />
+                  <span className="w-2 h-2 inline-block bg-b16-tm-8" />
+                  <span className="w-2 h-2 inline-block bg-b16-tm-9" />
+                  <span className="w-2 h-2 inline-block bg-b16-tm-10" />
+                  <span className="w-2 h-2 inline-block bg-b16-tm-11" />
+                  <span className="w-2 h-2 inline-block bg-b16-tm-12" />
+                  <span className="w-2 h-2 inline-block bg-b16-tm-13" />
+                  <span className="w-2 h-2 inline-block bg-b16-tm-14" />
+                  <span className="w-2 h-2 inline-block bg-b16-tm-15" />
+                </span>
+                <span>
+                  <span className="rounded-sm bg-primary text-primary-content">
+                    A
+                  </span>
+                  <span className="underline decoration-secondary">b</span>
+                  <span className="text-accent">c</span>
+                </span>
               </span>
-              <span className="underline decoration-secondary">b</span>
-              <span className="text-accent">c</span>
-            </span>
-            {theme.display}
-          </Dropdown.Item>
-        ))}
+              <span>{theme.display}</span>
+            </Dropdown.Item>
+          );
+        })}
       </Dropdown.Menu>
     </Dropdown>
   );
