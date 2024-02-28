@@ -128,6 +128,23 @@ export default {
           'base-content': '#93a1a1',
         },
       },
+      {
+        solarized_light: {
+          primary: '#dc322f',
+          'primary-content': '#586e75',
+          secondary: '#859900',
+          'secondary-content': '#586e75',
+          accent: '#268bd2',
+          'accent-content': '#586e75',
+          neutral: '#93a1a1',
+          'neutral-content': '#586e75',
+          'base-100': '#fdf6e3',
+          'base-150': '#eee8d5',
+          'base-200': '#93a1a1',
+          'base-300': '#839496',
+          'base-content': '#586e75',
+        },
+      },
     ],
   },
   plugins: [

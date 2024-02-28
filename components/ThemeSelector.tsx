@@ -1,12 +1,18 @@
 import { Dropdown } from 'react-daisyui';
 
-export type ThemeId = 'onedark' | 'onelight' | 'monokai' | 'solarized_dark';
+export type ThemeId =
+  | 'onedark'
+  | 'onelight'
+  | 'monokai'
+  | 'solarized_dark'
+  | 'solarized_light';
 export type Theme = { type: ThemeId; display: string };
 export const themes: Theme[] = [
   { type: 'onedark', display: 'OneDark' },
   { type: 'onelight', display: 'OneLight' },
   { type: 'monokai', display: 'Monokai' },
   { type: 'solarized_dark', display: 'Solarized Dark' },
+  { type: 'solarized_light', display: 'Solarized Light' },
 ];
 
 export function ThemeSelector() {

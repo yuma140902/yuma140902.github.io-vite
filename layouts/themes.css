@@ -98,3 +98,26 @@
   --color-secondary: var(--color-b16-11);
   --color-accent: var(--color-b16-13);
 }
+
+[data-theme='solarized_light'] {
+  --color-b16-00: #fdf6e3;
+  --color-b16-01: #eee8d5;
+  --color-b16-02: #93a1a1;
+  --color-b16-03: #839496;
+  --color-b16-04: #657b83;
+  --color-b16-05: #586e75;
+  --color-b16-06: #073642;
+  --color-b16-07: #002b36;
+  --color-b16-08: #dc322f;
+  --color-b16-09: #cb4b16;
+  --color-b16-10: #b58900;
+  --color-b16-11: #859900;
+  --color-b16-12: #2aa198;
+  --color-b16-13: #268bd2;
+  --color-b16-14: #6c71c4;
+  --color-b16-15: #d33682;
+
+  --color-primary: var(--color-b16-08);
+  --color-secondary: var(--color-b16-11);
+  --color-accent: var(--color-b16-13);
+}
