@@ -178,6 +178,22 @@ export default {
           'base-content': '#a9b7d6',
         },
       },
+      {
+        tokyo_night_light: {
+          primary: '#485e30',
+          secondary: '#166775',
+          accent: '#8c4351',
+          'primary-content': '#343b59',
+          'secondary-content': '#343b59',
+          'accent-content': '#343b59',
+          'neutral-content': '#343b59',
+          'base-100': '#d5d6db',
+          'base-150': '#cbccd1',
+          'base-200': '#dfe0e5',
+          'base-300': '#9699a3',
+          'base-content': '#343b59',
+        },
+      },
     ],
   },
   plugins: [

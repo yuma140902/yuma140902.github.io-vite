@@ -7,7 +7,8 @@ export type ThemeId =
   | 'solarized_dark'
   | 'solarized_light'
   | 'darcula'
-  | 'tokyo_night_dark';
+  | 'tokyo_night_dark'
+  | 'tokyo_night_light';
 export type Theme = { type: ThemeId; display: string };
 export const themes: Theme[] = [
   { type: 'onedark', display: 'OneDark' },
@@ -17,6 +18,7 @@ export const themes: Theme[] = [
   { type: 'solarized_light', display: 'Solarized Light' },
   { type: 'darcula', display: 'Darcula' },
   { type: 'tokyo_night_dark', display: 'Tokyo Night Dark' },
+  { type: 'tokyo_night_light', display: 'Tokyo Night Light' },
 ];
 
 export function ThemeSelector() {
