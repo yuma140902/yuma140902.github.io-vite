@@ -71,3 +71,22 @@
   --color-b16-14: #ae81ff;
   --color-b16-15: #cc6633;
 }
+
+[data-theme='solarized_dark'] {
+  --color-b16-00: #002b36;
+  --color-b16-01: #073642;
+  --color-b16-02: #586e75;
+  --color-b16-03: #657b83;
+  --color-b16-04: #839496;
+  --color-b16-05: #93a1a1;
+  --color-b16-06: #eee8d5;
+  --color-b16-07: #fdf6e3;
+  --color-b16-08: #dc322f;
+  --color-b16-09: #cb4b16;
+  --color-b16-10: #b58900;
+  --color-b16-11: #859900;
+  --color-b16-12: #2aa198;
+  --color-b16-13: #268bd2;
+  --color-b16-14: #6c71c4;
+  --color-b16-15: #d33682;
+}

@@ -1,11 +1,12 @@
 import { Dropdown } from 'react-daisyui';
 
-export type ThemeId = 'onedark' | 'onelight' | 'monokai';
+export type ThemeId = 'onedark' | 'onelight' | 'monokai' | 'solarized_dark';
 export type Theme = { type: ThemeId; display: string };
 export const themes: Theme[] = [
   { type: 'onedark', display: 'OneDark' },
   { type: 'onelight', display: 'OneLight' },
   { type: 'monokai', display: 'Monokai' },
+  { type: 'solarized_dark', display: 'Solarized Dark' },
 ];
 
 export function ThemeSelector() {
@@ -46,9 +47,7 @@ export function ThemeSelector() {
                   <span className="w-2 h-2 inline-block bg-b16-tm-15" />
                 </span>
                 <span>
-                  <span className="rounded-sm bg-primary text-primary-content">
-                    A
-                  </span>
+                  <span className="rounded-sm bg-primary text-b16-tm-0">A</span>
                   <span className="underline decoration-secondary">b</span>
                   <span className="text-accent">c</span>
                 </span>

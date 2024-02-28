@@ -111,6 +111,23 @@ export default {
           'base-content': '#f8f8f2',
         },
       },
+      {
+        solarized_dark: {
+          primary: '#859900',
+          'primary-content': '#93a1a1',
+          secondary: '#268bd2',
+          'secondary-content': '#93a1a1',
+          accent: '#6c71c4',
+          'accent-content': '#93a1a1',
+          neutral: '#586e75',
+          'neutral-content': '#93a1a1',
+          'base-100': '#002b36',
+          'base-150': '#073642',
+          'base-200': '#586e75',
+          'base-300': '#657b83',
+          'base-content': '#93a1a1',
+        },
+      },
     ],
   },
   plugins: [
