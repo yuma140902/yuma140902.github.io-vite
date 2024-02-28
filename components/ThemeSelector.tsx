@@ -5,7 +5,9 @@ export type ThemeId =
   | 'onelight'
   | 'monokai'
   | 'solarized_dark'
-  | 'solarized_light';
+  | 'solarized_light'
+  | 'darcula'
+  | 'tokyo_night_dark';
 export type Theme = { type: ThemeId; display: string };
 export const themes: Theme[] = [
   { type: 'onedark', display: 'OneDark' },
@@ -13,6 +15,8 @@ export const themes: Theme[] = [
   { type: 'monokai', display: 'Monokai' },
   { type: 'solarized_dark', display: 'Solarized Dark' },
   { type: 'solarized_light', display: 'Solarized Light' },
+  { type: 'darcula', display: 'Darcula' },
+  { type: 'tokyo_night_dark', display: 'Tokyo Night Dark' },
 ];
 
 export function ThemeSelector() {
@@ -26,7 +30,7 @@ export function ThemeSelector() {
           設定
         </span>
       </Dropdown.Toggle>
-      <Dropdown.Menu className="w-64">
+      <Dropdown.Menu className="w-72">
         {themes.map((theme) => {
           return (
             <Dropdown.Item key={theme.type} data-set-theme={theme.type}>
