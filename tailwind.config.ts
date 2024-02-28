@@ -96,11 +96,11 @@ export default {
       },
       {
         monokai: {
-          primary: '#a6e22e',
+          primary: '#f92672',
           'primary-content': '#f8f8f2',
-          secondary: '#66d9ef',
+          secondary: '#a6e22e',
           'secondary-content': '#f8f8f2',
-          accent: '#ae81ff',
+          accent: '#66d9ef',
           'accent-content': '#f8f8f2',
           neutral: '#75715e',
           'neutral-content': '#f8f8f2',
@@ -113,11 +113,11 @@ export default {
       },
       {
         solarized_dark: {
-          primary: '#859900',
+          primary: '#dc322f',
           'primary-content': '#93a1a1',
-          secondary: '#268bd2',
+          secondary: '#859900',
           'secondary-content': '#93a1a1',
-          accent: '#6c71c4',
+          accent: '#268bd2',
           'accent-content': '#93a1a1',
           neutral: '#586e75',
           'neutral-content': '#93a1a1',
