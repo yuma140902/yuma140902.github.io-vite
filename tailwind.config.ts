@@ -146,23 +146,6 @@ export default {
         },
       },
       {
-        darcula: {
-          primary: '#0184bc',
-          secondary: '#6a8759',
-          accent: '#9876aa',
-          neutral: '#323232',
-          'primary-content': '#a9b7c6',
-          'secondary-content': '#a9b7c6',
-          'accent-content': '#a9b7c6',
-          'neutral-content': '#a9b7c6',
-          'base-100': '#2b2b2b',
-          'base-150': '#323232',
-          'base-200': '#323232',
-          'base-300': '#606366',
-          'base-content': '#a9b7c6',
-        },
-      },
-      {
         tokyo_night_dark: {
           primary: '#9ece6a',
           secondary: '#0db9d7',
@@ -197,8 +180,8 @@ export default {
       {
         nord: {
           primary: '#81a1c1',
-          secondary: '#d08770',
-          accent: '#ebcb8b',
+          secondary: '#bf616a',
+          accent: '#8fbcbb',
           'primary-content': '#e5e9f0',
           'secondary-content': '#e5e9f0',
           'accent-content': '#e5e9f0',

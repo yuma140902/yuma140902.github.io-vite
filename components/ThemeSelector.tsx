@@ -6,7 +6,6 @@ export type ThemeId =
   | 'monokai'
   | 'solarized_dark'
   | 'solarized_light'
-  | 'darcula'
   | 'tokyo_night_dark'
   | 'tokyo_night_light'
   | 'nord';
@@ -17,7 +16,6 @@ export const themes: Theme[] = [
   { type: 'monokai', display: 'Monokai' },
   { type: 'solarized_dark', display: 'Solarized Dark' },
   { type: 'solarized_light', display: 'Solarized Light' },
-  { type: 'darcula', display: 'Darcula' },
   { type: 'tokyo_night_dark', display: 'Tokyo Night Dark' },
   { type: 'tokyo_night_light', display: 'Tokyo Night Light' },
   { type: 'nord', display: 'Nord' },

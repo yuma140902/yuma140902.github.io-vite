@@ -122,29 +122,6 @@
   --color-accent: var(--color-b16-13);
 }
 
-[data-theme='darcula'] {
-  --color-b16-00: #2b2b2b;
-  --color-b16-01: #323232;
-  --color-b16-02: #323232;
-  --color-b16-03: #606366;
-  --color-b16-04: #a4a3a3;
-  --color-b16-05: #a9b7c6;
-  --color-b16-06: #ffc66d;
-  --color-b16-07: #ffffff;
-  --color-b16-08: #4eade5;
-  --color-b16-09: #689757;
-  --color-b16-10: #bbb529;
-  --color-b16-11: #6a8759;
-  --color-b16-12: #629755;
-  --color-b16-13: #9876aa;
-  --color-b16-14: #cc7832;
-  --color-b16-15: #808080;
-
-  --color-primary: var(--color-b16-08);
-  --color-secondary: var(--color-b16-11);
-  --color-accent: var(--color-b16-13);
-}
-
 [data-theme='tokyo_night_dark'] {
   --color-b16-00: #1a1b26;
   --color-b16-01: #16161e;
