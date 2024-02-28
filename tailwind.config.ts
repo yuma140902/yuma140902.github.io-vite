@@ -182,8 +182,8 @@ export default {
       {
         nord: {
           primary: '#81a1c1',
-          secondary: '#bf616a',
-          accent: '#8fbcbb',
+          secondary: '#8fbcbb',
+          accent: '#bf616a',
           neutral: '#434c5e',
           'primary-content': '#e5e9f0',
           'secondary-content': '#e5e9f0',

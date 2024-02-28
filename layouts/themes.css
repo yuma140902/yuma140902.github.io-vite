@@ -187,8 +187,8 @@
   --color-b16-15: #5e81ac;
 
   --color-primary: var(--color-b16-13);
-  --color-secondary: var(--color-b16-08);
-  --color-accent: var(--color-b16-07);
+  --color-secondary: var(--color-b16-07);
+  --color-accent: var(--color-b16-08);
 }
 
 [data-theme='sakura'] {
