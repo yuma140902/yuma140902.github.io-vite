@@ -194,6 +194,22 @@ export default {
           'base-content': '#343b59',
         },
       },
+      {
+        nord: {
+          primary: '#81a1c1',
+          secondary: '#d08770',
+          accent: '#ebcb8b',
+          'primary-content': '#e5e9f0',
+          'secondary-content': '#e5e9f0',
+          'accent-content': '#e5e9f0',
+          'neutral-content': '#e5e9f0',
+          'base-100': '#2e3440',
+          'base-150': '#3b4252',
+          'base-200': '#434c5e',
+          'base-300': '#4c566a',
+          'base-content': '#e5e9f0',
+        },
+      },
     ],
   },
   plugins: [

@@ -8,7 +8,8 @@ export type ThemeId =
   | 'solarized_light'
   | 'darcula'
   | 'tokyo_night_dark'
-  | 'tokyo_night_light';
+  | 'tokyo_night_light'
+  | 'nord';
 export type Theme = { type: ThemeId; display: string };
 export const themes: Theme[] = [
   { type: 'onedark', display: 'OneDark' },
@@ -19,6 +20,7 @@ export const themes: Theme[] = [
   { type: 'darcula', display: 'Darcula' },
   { type: 'tokyo_night_dark', display: 'Tokyo Night Dark' },
   { type: 'tokyo_night_light', display: 'Tokyo Night Light' },
+  { type: 'nord', display: 'Nord' },
 ];
 
 export function ThemeSelector() {
@@ -58,13 +60,8 @@ export function ThemeSelector() {
                   <span className="w-2 h-2 inline-block bg-b16-tm-14" />
                   <span className="w-2 h-2 inline-block bg-b16-tm-15" />
                 </span>
-                <span>
-                  <span className="rounded-sm bg-primary text-b16-tm-0">A</span>
-                  <span className="underline decoration-secondary">b</span>
-                  <span className="text-accent">c</span>
-                </span>
+                <span>{theme.display}</span>
               </span>
-              <span>{theme.display}</span>
             </Dropdown.Item>
           );
         })}

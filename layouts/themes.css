@@ -190,3 +190,26 @@
   --color-secondary: var(--color-b16-10);
   --color-accent: var(--color-b16-15);
 }
+
+[data-theme='nord'] {
+  --color-b16-00: #2e3440;
+  --color-b16-01: #3b4252;
+  --color-b16-02: #434c5e;
+  --color-b16-03: #4c566a;
+  --color-b16-04: #d8dee9;
+  --color-b16-05: #e5e9f0;
+  --color-b16-06: #eceff4;
+  --color-b16-07: #8fbcbb;
+  --color-b16-08: #bf616a;
+  --color-b16-09: #d08770;
+  --color-b16-10: #ebcb8b;
+  --color-b16-11: #a3be8c;
+  --color-b16-12: #88c0d0;
+  --color-b16-13: #81a1c1;
+  --color-b16-14: #b48ead;
+  --color-b16-15: #5e81ac;
+
+  --color-primary: var(--color-b16-13);
+  --color-secondary: var(--color-b16-08);
+  --color-accent: var(--color-b16-07);
+}
