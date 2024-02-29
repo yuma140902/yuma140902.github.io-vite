@@ -5,7 +5,7 @@ import { Badge, Divider } from 'react-daisyui';
 export function Profile() {
   return (
     <div>
-      <h2>yuma14</h2>
+      <h1>yuma14</h1>
       <p>学生です。</p>
       <div>
         <Entry
