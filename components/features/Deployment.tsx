@@ -3,7 +3,7 @@ import { type DeploymentType, deployments } from '@/src/deployments';
 import { Card } from '@/components/common/Card';
 import { Link } from '@/components/common/Link';
 
-export function Deployment(props: DeploymentType) {
+function Deployment(props: DeploymentType) {
   return (
     <Card>
       <h3>
