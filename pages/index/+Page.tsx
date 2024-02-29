@@ -8,7 +8,7 @@ import { DeploymentList } from '../../components/Deployment';
 export default function Page() {
   return (
     <div>
-      <div className="flex flex-row flex-wrap gap-2 justify-center items-stretch">
+      <div className="flex flex-row flex-wrap gap-2 justify-center items-stretch mb-5">
         <Card
           className="basis-full sm:basis-5/12 flex-grow"
           link="/profile"
