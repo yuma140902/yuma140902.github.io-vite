@@ -1,9 +1,9 @@
+import { ReactNode } from 'react';
 import { Divider, Menu } from 'react-daisyui';
+import { usePageContext } from 'vike-react/usePageContext';
 
 import { ContentType, contents } from '@/src/contents';
 import { ProjectType, main_projects } from '@/src/projects';
-
-import { SidebarLink } from '@/components/SidebarLink';
 
 export function Sidebar() {
   return (
@@ -84,5 +84,21 @@ function ContentMenuItem({ content }: { content: ContentType }) {
         {content.title}
       </SidebarLink>
     </Menu.Item>
+  );
+}
+
+function SidebarLink({ href, outside, children }: { href: string; outside?: boolean; children: ReactNode }) {
+  const pageContext = usePageContext();
+  const { urlPathname } = pageContext;
+  const isActive = href === '/' ? urlPathname === href : urlPathname.startsWith(href);
+  return (
+    <a href={href} className={isActive ? 'active' : undefined} target={outside ? '_blank' : '_self'}>
+      {children}
+      {outside ? (
+        <div className="justify-self-end">
+          <span className="i-carbon-launch" />
+        </div>
+      ) : undefined}
+    </a>
   );
 }
