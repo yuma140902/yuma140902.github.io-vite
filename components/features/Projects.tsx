@@ -80,17 +80,17 @@ function Project({ project }: { project: ProjectType }) {
   );
 }
 
-export function ProjectGrid() {
+export function ProjectGrid({ projects }: { projects: ProjectType[] }) {
   return (
     <div className="flex flex-row gap-content-space flex-wrap justify-stretch items-stretch">
-      {main_projects.map((project) => (
+      {projects.map((project) => (
         <Project key={project.name} project={project} />
       ))}
     </div>
   );
 }
 
-export function Projects() {
+export function MainProjects() {
   return (
     <div>
       <div className="pb-content-space">
@@ -98,7 +98,7 @@ export function Projects() {
           <h1>作っているもの</h1>
         </Article>
       </div>
-      <ProjectGrid />
+      <ProjectGrid projects={main_projects} />
     </div>
   );
 }
