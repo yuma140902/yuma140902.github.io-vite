@@ -9,8 +9,8 @@ function Card(props: { link: string; head: ReactNode; children: ReactNode }) {
   return (
     <a href={props.link} className="no-underline basis-full sm:basis-5/12 flex-grow">
       <div className="h-full rounded border-solid border-base-tm-200 border hover:border-primary-tm">
-        <div className="p-2 bg-base-tm-150 font-bold text-lg border-b border-b-base-tm-200">{props.head}</div>
-        <div className="p-2">{props.children}</div>
+        <div className="p-card-space bg-base-tm-150 font-bold text-lg border-b border-b-base-tm-200">{props.head}</div>
+        <div className="p-card-space">{props.children}</div>
       </div>
     </a>
   );

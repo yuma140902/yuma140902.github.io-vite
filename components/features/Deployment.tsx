@@ -6,7 +6,7 @@ import { Link } from '@/components/common';
 
 function Card(props: { children: ReactNode }) {
   return (
-    <div className="p-2 h-full w-full rounded border-solid border-base-tm-200 border hover:border-primary-tm bg-base-tm-150">
+    <div className="p-card-space h-full w-full rounded border-solid border-base-tm-200 border hover:border-primary-tm bg-base-tm-150">
       <div className="h-full">{props.children}</div>
     </div>
   );

@@ -1,7 +1,7 @@
-import type { Config } from 'tailwindcss';
-import daisyui from 'daisyui';
+import { getIconCollections, iconsPlugin } from '@egoist/tailwindcss-icons';
 import typography from '@tailwindcss/typography';
-import { iconsPlugin, getIconCollections } from '@egoist/tailwindcss-icons';
+import daisyui from 'daisyui';
+import type { Config } from 'tailwindcss';
 
 export default {
   content: [
@@ -48,17 +48,16 @@ export default {
       },
       backgroundColor: {
         'highlight-color': 'var(--color-background-highlight)',
-        'header-color':
-          'color-mix(in srgb, var(--color-base-100) 30%, transparent)',
+        'header-color': 'color-mix(in srgb, var(--color-base-100) 30%, transparent)',
         'sidebar-color': 'var(--color-sidebar-background)',
       },
       borderColor: {
-        'header-border-color':
-          'color-mix(in srgb, var(--color-base-200) 50%, transparent)',
+        'header-border-color': 'color-mix(in srgb, var(--color-base-200) 50%, transparent)',
       },
       spacing: {
         header: '3rem',
         sidebar: '15rem',
+        'card-space': '0.5rem',
       },
     },
   },
@@ -222,12 +221,7 @@ export default {
   plugins: [
     daisyui,
     iconsPlugin({
-      collections: getIconCollections([
-        'carbon',
-        'simple-icons',
-        'icon-park-twotone',
-        'icon-park-outline',
-      ]),
+      collections: getIconCollections(['carbon', 'simple-icons', 'icon-park-twotone', 'icon-park-outline']),
     }),
     typography,
   ],
