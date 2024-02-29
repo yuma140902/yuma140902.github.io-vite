@@ -3,8 +3,8 @@ import React from 'react';
 import reverieEngineUrl from '@/assets/reverie.png';
 import webImageEditorUrl from '@/assets/web-image-editor.png';
 
-import { Article } from '@/components/Article';
-import { Card } from '@/components/Card';
+import { Article } from '@/components/common/Article';
+import { Card } from '@/components/common/Card';
 
 export default function Page() {
   return (

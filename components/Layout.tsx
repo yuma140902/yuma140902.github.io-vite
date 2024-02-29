@@ -5,10 +5,10 @@ import { themeChange } from 'theme-change';
 import { contents } from '@/src/contents';
 import { main_projects } from '@/src/projects';
 
-import { ContentMenuItem } from '@/components/Content';
-import { ProjectMenuItem } from '@/components/Project';
 import { SidebarLink } from '@/components/SidebarLink';
-import { ThemeSelector } from '@/components/ThemeSelector';
+import { ContentMenuItem } from '@/components/features/Content';
+import { ProjectMenuItem } from '@/components/features/Project';
+import { ThemeSelector } from '@/components/features/ThemeSelector';
 
 import '@/layouts/scrollbar.css';
 import '@/layouts/selection.css';

@@ -1,7 +1,7 @@
 import { AppType, main_apps, minor_apps } from '@/src/apps';
 
-import { Article } from '@/components/Article';
-import { Card } from '@/components/Card';
+import { Article } from '@/components/common/Article';
+import { Card } from '@/components/common/Card';
 
 function App({ app }: { app: AppType }) {
   return (
