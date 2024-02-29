@@ -26,22 +26,14 @@ export const themes: Theme[] = [
 export function ThemeSelector() {
   return (
     <Dropdown className="bg-transparent" vertical="bottom" end>
-      <Dropdown.Toggle
-        className="group btn bg-transparent border-transparent"
-        button={false}
-      >
-        <span className="i-carbon-settings w-5 h-5 group-hover:animate-spin">
-          設定
-        </span>
+      <Dropdown.Toggle className="group btn bg-transparent border-transparent" button={false}>
+        <span className="i-carbon-settings w-5 h-5 group-hover:animate-spin">設定</span>
       </Dropdown.Toggle>
       <Dropdown.Menu className="w-72">
         {themes.map((theme) => {
           return (
             <Dropdown.Item key={theme.type} data-set-theme={theme.type}>
-              <span
-                data-theme={theme.type}
-                className="p-1 rounded-sm flex flex-row gap-2"
-              >
+              <span data-theme={theme.type} className="p-1 rounded-sm flex flex-row gap-2">
                 <span className="grid grid-cols-8 grid-rows-2 gap-0">
                   <span className="w-2 h-2 inline-block bg-b16-tm-0" />
                   <span className="w-2 h-2 inline-block bg-b16-tm-1" />

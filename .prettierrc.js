@@ -5,6 +5,7 @@ const config = {
   semi: true,
   singleQuote: true,
   importOrder: [
+    '^@/assets/(.*)$',
     '^@/src/(.*)$',
     '^@/components/(.*)$',
     '^@/pages/(.*)$',

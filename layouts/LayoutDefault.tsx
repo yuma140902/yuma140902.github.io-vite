@@ -1,9 +1,5 @@
-import { Layout } from '../components/Layout';
+import { Layout } from '@/components/Layout';
 
-export default function LayoutDefault({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function LayoutDefault({ children }: { children: React.ReactNode }) {
   return <Layout>{children}</Layout>;
 }

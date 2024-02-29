@@ -1,6 +1,7 @@
-import { type DeploymentType, deployments } from '../src/deployments';
-import { Card } from './Card';
-import { Link } from './Link';
+import { type DeploymentType, deployments } from '@/src/deployments';
+
+import { Card } from '@/components/Card';
+import { Link } from '@/components/Link';
 
 export function Deployment(props: DeploymentType) {
   return (

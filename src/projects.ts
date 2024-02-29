@@ -21,8 +21,7 @@ export type ProjectType = {
 export const main_projects: ProjectType[] = [
   {
     name: 'Reverie',
-    description:
-      'Rust製の汎用3D/2Dゲームエンジン\n\nOpenGLを使っていて、WindowsとLinux上で動作する。',
+    description: 'Rust製の汎用3D/2Dゲームエンジン\n\nOpenGLを使っていて、WindowsとLinux上で動作する。',
     repo: 'https://github.com/yuma140902/Reverie',
     since: '2021年8月',
     hero: {
@@ -354,8 +353,7 @@ export const main_projects: ProjectType[] = [
   },
   {
     name: 'LibJsonModel',
-    description:
-      'Minecraft 1.7.10用のMOD。\n\n1.8以降で追加されたJSONモデルを読み込み、描画することができる。',
+    description: 'Minecraft 1.7.10用のMOD。\n\n1.8以降で追加されたJSONモデルを読み込み、描画することができる。',
     repo: 'https://github.com/yuma140902/LibJsonModel',
     since: '2023年7月',
     hero: {
@@ -510,8 +508,7 @@ export const main_projects: ProjectType[] = [
   },
   {
     name: 'Regend WebUI',
-    description:
-      'regendのフロントエンド。\n\nDFAをマウスで掴んでグリグリ動かして遊べる。',
+    description: 'regendのフロントエンド。\n\nDFAをマウスで掴んでグリグリ動かして遊べる。',
     repo: 'https://github.com/yuma140902/regend-webui',
     since: '2023年11月',
     hero: {
@@ -535,8 +532,7 @@ export const main_projects: ProjectType[] = [
   {
     name: 'LMML Music Macro Language',
     sidebar_title: 'LMML',
-    description:
-      'MML (Music Macro Language) の方言である独自言語LMMLの仕様と、パーサーやプレイヤーなどの実装',
+    description: 'MML (Music Macro Language) の方言である独自言語LMMLの仕様と、パーサーやプレイヤーなどの実装',
     repo: 'https://github.com/yuma140902/lmml',
     since: '2023年11月',
     hero: {

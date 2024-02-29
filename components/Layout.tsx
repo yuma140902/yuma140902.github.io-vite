@@ -5,6 +5,8 @@ import { themeChange } from 'theme-change';
 import { contents } from '@/src/contents';
 import { main_projects } from '@/src/projects';
 
+import { ContentMenuItem } from '@/components/Content';
+import { ProjectMenuItem } from '@/components/Project';
 import { SidebarLink } from '@/components/SidebarLink';
 import { ThemeSelector } from '@/components/ThemeSelector';
 
@@ -12,9 +14,6 @@ import '@/layouts/scrollbar.css';
 import '@/layouts/selection.css';
 import '@/layouts/tailwind.css';
 import '@/layouts/themes.css';
-
-import { ContentMenuItem } from './Content';
-import { ProjectMenuItem } from './Project';
 
 export function Layout(props: { children: React.ReactNode }) {
   return (

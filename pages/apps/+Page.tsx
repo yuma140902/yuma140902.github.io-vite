@@ -1,7 +1,7 @@
-import { Divider } from 'react-daisyui';
-import { Article } from '../../components/Article';
-import { Card } from '../../components/Card';
-import { AppType, main_apps, minor_apps } from '../../src/apps';
+import { AppType, main_apps, minor_apps } from '@/src/apps';
+
+import { Article } from '@/components/Article';
+import { Card } from '@/components/Card';
 
 function App({ app }: { app: AppType }) {
   return (
@@ -12,9 +12,7 @@ function App({ app }: { app: AppType }) {
       className="flex-grow-0 flex-shrink-0 block w-64 h-64 overflow-hidden"
     >
       <p className="">{app.copy}</p>
-      {app.img ? (
-        <img src={app.img} className="hero object-fit mt-2" />
-      ) : undefined}
+      {app.img ? <img src={app.img} className="hero object-fit mt-2" /> : undefined}
     </Card>
   );
 }

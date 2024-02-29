@@ -1,5 +1,5 @@
-import webImageEditorImg from '../assets/web-image-editor.png';
-import regendWebUiImg from '../assets/regend.gif';
+import regendWebUiImg from '@/assets/regend.gif';
+import webImageEditorImg from '@/assets/web-image-editor.png';
 
 export type AppType = {
   name: string;
@@ -83,8 +83,7 @@ export const minor_apps: AppType[] = [
     name: 'gomoku-elm',
     copy: 'Elmで実装された五目並べ',
     url: '/gomoku-elm/',
-    badge:
-      'https://img.shields.io/github/deployments/yuma140902/gomoku-elm/github-pages?logo=github&label=Deployment',
+    badge: 'https://img.shields.io/github/deployments/yuma140902/gomoku-elm/github-pages?logo=github&label=Deployment',
     outside: true,
   },
 ];

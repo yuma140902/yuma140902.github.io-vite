@@ -32,8 +32,7 @@ export const deployments: DeploymentType[] = [
   },
   {
     url: '/tempura-doc/',
-    badge:
-      'https://img.shields.io/github/deployments/yuma140902/tempura-doc/github-pages?logo=github&label=Deployment',
+    badge: 'https://img.shields.io/github/deployments/yuma140902/tempura-doc/github-pages?logo=github&label=Deployment',
     repo: 'https://github.com/yuma140902/tempura-doc',
   },
   {
@@ -46,14 +45,12 @@ export const deployments: DeploymentType[] = [
   {
     url: 'https://git.yuma14.net/eos',
     name: 'https://git.yuma14.net/',
-    badge:
-      'https://img.shields.io/badge/Cloudflare-Pages-blue?logo=cloudflarepages',
+    badge: 'https://img.shields.io/badge/Cloudflare-Pages-blue?logo=cloudflarepages',
   },
   {
     url: 'https://cloud.yuma14.net/eos',
     name: 'https://cloud.yuma14.net/',
-    badge:
-      'https://img.shields.io/badge/Cloudflare-Pages-blue?logo=cloudflarepages',
+    badge: 'https://img.shields.io/badge/Cloudflare-Pages-blue?logo=cloudflarepages',
   },
   {
     url: '/sanmoku-next-js/',
@@ -75,8 +72,7 @@ export const deployments: DeploymentType[] = [
   },
   {
     url: '/gomoku-elm/',
-    badge:
-      'https://img.shields.io/github/deployments/yuma140902/gomoku-elm/github-pages?logo=github&label=Deployment',
+    badge: 'https://img.shields.io/github/deployments/yuma140902/gomoku-elm/github-pages?logo=github&label=Deployment',
     repo: 'https://github.com/yuma140902/gomoku-elm',
   },
   {

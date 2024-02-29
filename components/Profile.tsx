@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
-import { Link } from './Link';
-import { Badge, Divider } from 'react-daisyui';
+
+import { Link } from '@/components/Link';
 
 export function Profile() {
   return (
@@ -39,9 +39,7 @@ export function Profile() {
         <Entry
           name="twtxt"
           url="https://yuma14.net/twtxt.txt"
-          icon={
-            <span className="i-carbon-txt w-5 h-5 align-middle text-base-content-tm group-hover:text-accent-tm" />
-          }
+          icon={<span className="i-carbon-txt w-5 h-5 align-middle text-base-content-tm group-hover:text-accent-tm" />}
         />
       </div>
     </div>

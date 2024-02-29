@@ -21,9 +21,7 @@ export function Link({
       }
     >
       {children}&nbsp;
-      {outside ? (
-        <span className="i-carbon-launch h-3.5 w-3.5 text-base-content-tm" />
-      ) : undefined}
+      {outside ? <span className="i-carbon-launch h-3.5 w-3.5 text-base-content-tm" /> : undefined}
     </a>
   );
 }
