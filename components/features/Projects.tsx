@@ -9,6 +9,8 @@ import {
   main_projects,
 } from '@/src/projects';
 
+import { Article } from '../common';
+
 function TechnologyBadge({ tech }: { tech: Technology }) {
   return (
     <span className={getTechnologyClass(tech) + ' ' + 'rounded px-2 text-sm cursor-default'}>
@@ -77,12 +79,26 @@ function Project({ project }: { project: ProjectType }) {
     </Card>
   );
 }
+
 export function ProjectGrid() {
   return (
     <div className="flex flex-row gap-content-space flex-wrap justify-stretch items-stretch">
       {main_projects.map((project) => (
         <Project key={project.name} project={project} />
       ))}
+    </div>
+  );
+}
+
+export function Projects() {
+  return (
+    <div>
+      <div className="pb-content-space">
+        <Article>
+          <h1>作っているもの</h1>
+        </Article>
+      </div>
+      <ProjectGrid />
     </div>
   );
 }
