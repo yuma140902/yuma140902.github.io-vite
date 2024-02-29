@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 function CardWithHead(props: { head: ReactNode; children: ReactNode; className: string }) {
   return (
-    <div className="h-full w-full rounded border-solid border-base-tm-200 border hover:border-primary-tm">
+    <div className={'rounded border-solid border-base-tm-200 border hover:border-primary-tm ' + props.className}>
       <div className="p-2 bg-base-tm-150 font-bold text-lg border-b border-b-base-tm-200">{props.head}</div>
       <div className="p-2">{props.children}</div>
     </div>

@@ -1,7 +1,17 @@
+import imgDotfiles from '@/assets/dotfiles.png';
+import imgLibJsonModel from '@/assets/libjsonmodel.png';
+import imgLmml from '@/assets/lmml.png';
+import imgLt from '@/assets/lt.png';
+import imgRegendWebUi from '@/assets/regend.gif';
+import imgReverie from '@/assets/reverie.png';
+import imgTempura from '@/assets/tempura.png';
+import imgUpToDateMod from '@/assets/uptodatemod.png';
+import imgWebImageEditor from '@/assets/web-image-editor.png';
+
 export type ProjectType = {
   name: string;
   description: string;
-  repo: string;
+  repo?: string;
   since: string;
   hero?: {
     image?: string;
@@ -25,7 +35,7 @@ export const main_projects: ProjectType[] = [
     repo: 'https://github.com/yuma140902/Reverie',
     since: '2021年8月',
     hero: {
-      image: '/works/img/reverie.png',
+      image: imgReverie,
     },
     badges: [
       {
@@ -75,7 +85,7 @@ export const main_projects: ProjectType[] = [
     repo: 'https://github.com/yuma140902/tempura',
     since: '2022年8月',
     hero: {
-      image: '/works/img/tempura.png',
+      image: imgTempura,
     },
     badges: [
       {
@@ -144,7 +154,7 @@ export const main_projects: ProjectType[] = [
     repo: 'https://github.com/yuma140902/UpToDateMod1.7.10',
     since: '2018年8月',
     hero: {
-      image: '/works/img/uptodatemod.png',
+      image: imgUpToDateMod,
     },
     badges: [
       {
@@ -357,7 +367,7 @@ export const main_projects: ProjectType[] = [
     repo: 'https://github.com/yuma140902/LibJsonModel',
     since: '2023年7月',
     hero: {
-      image: '/works/img/libjsonmodel.png',
+      image: imgLibJsonModel,
     },
     badges: [
       {
@@ -376,7 +386,7 @@ export const main_projects: ProjectType[] = [
     repo: 'https://github.com/yuma140902/web-image-editor',
     since: '2023年9月',
     hero: {
-      image: '/works/img/web-image-editor.png',
+      image: imgWebImageEditor,
       url: '/web-image-editor/',
     },
     badges: [
@@ -404,7 +414,7 @@ export const main_projects: ProjectType[] = [
     repo: 'https://github.com/yuma140902/lt',
     since: '2022年1月',
     hero: {
-      image: '/works/img/lt.png',
+      image: imgLt,
     },
     badges: [
       {
@@ -462,7 +472,7 @@ export const main_projects: ProjectType[] = [
     repo: 'https://github.com/yuma140902/dotfiles-public',
     since: '2023年7月(2019年12月)',
     hero: {
-      image: '/works/img/dotfiles.png',
+      image: imgDotfiles,
     },
     badges: [
       {
@@ -496,9 +506,6 @@ export const main_projects: ProjectType[] = [
     description: '正規表現をε-NFAおよびDFAに変換する',
     repo: 'https://github.com/yuma140902/regend',
     since: '2023年11月',
-    hero: {
-      image: '/works/img/regend-logo-light.png',
-    },
     badges: [
       {
         class: 'rust',
@@ -512,7 +519,7 @@ export const main_projects: ProjectType[] = [
     repo: 'https://github.com/yuma140902/regend-webui',
     since: '2023年11月',
     hero: {
-      image: '/works/img/regend.gif',
+      image: imgRegendWebUi,
     },
     badges: [
       {
@@ -537,7 +544,7 @@ export const main_projects: ProjectType[] = [
     since: '2023年11月',
     hero: {
       url: 'https://github.com/yuma140902/lmml/assets/23431077/dfad8777-ade5-4591-8804-a3968a2e14ea',
-      image: '/works/img/lmml.png',
+      image: imgLmml,
     },
     badges: [
       {
