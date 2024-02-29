@@ -1,6 +1,16 @@
+import { ReactNode } from 'react';
+
 import { type DeploymentType, deployments } from '@/src/deployments';
 
-import { Card, Link } from '@/components/common';
+import { Link } from '@/components/common';
+
+function Card(props: { children: ReactNode }) {
+  return (
+    <div className="p-2 h-full w-full rounded border-solid border-base-tm-200 border hover:border-primary-tm bg-base-tm-150">
+      <div className="h-full">{props.children}</div>
+    </div>
+  );
+}
 
 function Deployment(props: DeploymentType) {
   return (

@@ -1,6 +1,15 @@
+import { ReactNode } from 'react';
+
 import { ProjectType, main_projects } from '@/src/projects';
 
-import { Card } from '@/components/common';
+function Card(props: { head: ReactNode; children: ReactNode }) {
+  return (
+    <div className="rounded border-solid border-base-tm-200 border hover:border-primary-tm flex-grow flex-shrink basis-full md:basis-1/3">
+      <div className="p-2 bg-base-tm-150 font-bold text-lg border-b border-b-base-tm-200">{props.head}</div>
+      <div className="p-2">{props.children}</div>
+    </div>
+  );
+}
 
 function Image(props: ProjectType) {
   if (!props.hero) {
@@ -17,7 +26,7 @@ function Image(props: ProjectType) {
 
 function Project({ project }: { project: ProjectType }) {
   return (
-    <Card head={<div>{project.name}</div>} className="flex-grow flex-shrink basis-full md:basis-1/3">
+    <Card head={<div>{project.name}</div>}>
       <div className="hero">
         <Image {...project} />
         {project.description}
