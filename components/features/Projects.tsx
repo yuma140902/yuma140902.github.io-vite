@@ -25,7 +25,7 @@ function Card(props: {
   since?: string;
 }) {
   return (
-    <div className="rounded border-solid border-base-tm-200 border flex-grow flex-shrink basis-full md:basis-1/3 flex flex-col justify-stretch">
+    <div className="rounded border-solid border-base-tm-200 border hover:border-primary-tm flex-grow flex-shrink basis-full md:basis-1/3 flex flex-col justify-stretch">
       <div className="p-card-space bg-base-tm-150 border-b border-b-base-tm-200 flex-grow-0 flex-shrink-0">
         <div className="flex flex-row justify-stretch items-stretch">
           <div className="font-bold text-lg">{props.name}</div>
@@ -61,8 +61,8 @@ function Image(props: ProjectType) {
     return props.hero.image ? <img src={props.hero.image} className="object-fit" /> : undefined;
   }
   return (
-    <a href={props.hero.url ?? props.repo} target="_blank" rel="noopener noreferrer">
-      <img src={props.hero.image} className="object-fit" />
+    <a href={props.hero.url ?? props.repo} target="_blank" rel="noopener noreferrer" className="hero">
+      <img src={props.hero.image} className="object-fit max-h-64" />
     </a>
   );
 }
@@ -70,7 +70,7 @@ function Image(props: ProjectType) {
 function Project({ project }: { project: ProjectType }) {
   return (
     <Card name={project.name} repo={project.repo} technologies={project.technologies ?? []} since={project.since}>
-      <div className="hero h-full">
+      <div className="h-full">
         <Image {...project} />
         {project.description}
       </div>
