@@ -14,6 +14,7 @@
   "devDependencies": {
     "@iconify/json": "^2.2.187",
     "@tailwindcss/typography": "^0.5.10",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/react": "^18.2.58",
     "@types/react-dom": "^18.2.19",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
