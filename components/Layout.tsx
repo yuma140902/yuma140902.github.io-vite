@@ -2,14 +2,12 @@ import React, { useEffect } from 'react';
 import { Divider } from 'react-daisyui';
 import { themeChange } from 'theme-change';
 
-import { ThemeSelector } from '@/components/features';
+import { Sidebar, ThemeSelector } from '@/components/features';
 
 import '@/layouts/scrollbar.css';
 import '@/layouts/selection.css';
 import '@/layouts/tailwind.css';
 import '@/layouts/themes.css';
-
-import { Sidebar } from './features/Sidebar';
 
 export function Layout(props: { children: React.ReactNode }) {
   return (
