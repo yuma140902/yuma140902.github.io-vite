@@ -2,11 +2,11 @@ import vikeReact from 'vike-react/config';
 import type { Config } from 'vike/types';
 
 import Head from '@/layouts/HeadDefault';
-import Layout from '@/layouts/LayoutDefault';
+import { LayoutDefault } from '@/layouts/Layouts';
 
 // Default config (can be overridden by pages)
 export default {
-  Layout,
+  Layout: LayoutDefault,
   Head,
   title: 'yuma14.net',
   extends: vikeReact,

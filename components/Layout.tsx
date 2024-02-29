@@ -9,14 +9,14 @@ import '@/layouts/selection.css';
 import '@/layouts/tailwind.css';
 import '@/layouts/themes.css';
 
-export function Layout(props: { children: React.ReactNode }) {
+export function Layout(props: { wide: boolean; children: React.ReactNode }) {
   return (
     <div className="transition-colors min-h-screen font-sans text-base-content-tm bg-base-tm-100">
       <Header />
       <div className="flex flex-nowrap flex-col lg:flex-row-reverse lg:h-screen lg:fixed lg:top-0 lg:left-0 lg:right-0">
         <main className="flex-grow lg:overflow-auto pt-header">
           <div className="p-3">
-            <Content>{props.children}</Content>
+            <Content wide={props.wide}>{props.children}</Content>
           </div>
         </main>
         <nav id="sidebar" className="flex-grow-0 flex-shrink-0 lg:overflow-auto lg:mt-header">
@@ -28,8 +28,8 @@ export function Layout(props: { children: React.ReactNode }) {
   );
 }
 
-function Content({ children }: { children: React.ReactNode }) {
-  return <div className="max-w-5xl mx-auto">{children}</div>;
+function Content(props: { wide: boolean; children: React.ReactNode }) {
+  return <div className={(!props.wide ? 'max-w-5xl' : '') + ' ' + 'mx-auto'}>{props.children}</div>;
 }
 
 function Header() {
