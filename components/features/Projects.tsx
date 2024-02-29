@@ -1,14 +1,34 @@
 import { ReactNode } from 'react';
-import { Tooltip } from 'react-daisyui';
+import { Badge, Tooltip } from 'react-daisyui';
 
-import { ProjectType, main_projects } from '@/src/projects';
+import {
+  type ProjectType,
+  type Technology,
+  getTechnologyClass,
+  getTechnologyLabel,
+  main_projects,
+} from '@/src/projects';
 
-function Card(props: { head: ReactNode; children: ReactNode; repo?: string }) {
+function TechnologyBadge({ tech }: { tech: Technology }) {
   return (
-    <div className="rounded border-solid border-base-tm-200 border hover:border-primary-tm flex-grow flex-shrink basis-full md:basis-1/3">
-      <div className="p-card-space bg-base-tm-150 border-b border-b-base-tm-200">
+    <span className={getTechnologyClass(tech) + ' ' + 'rounded px-2 text-sm cursor-default'}>
+      {getTechnologyLabel(tech)}
+    </span>
+  );
+}
+
+function Card(props: {
+  name: ReactNode;
+  children: ReactNode;
+  repo?: string;
+  technologies: Technology[];
+  since?: string;
+}) {
+  return (
+    <div className="rounded border-solid border-base-tm-200 border flex-grow flex-shrink basis-full md:basis-1/3 flex flex-col justify-stretch">
+      <div className="p-card-space bg-base-tm-150 border-b border-b-base-tm-200 flex-grow-0 flex-shrink-0">
         <div className="flex flex-row justify-stretch items-stretch">
-          <div className="font-bold text-lg">{props.head}</div>
+          <div className="font-bold text-lg">{props.name}</div>
           <div className="flex-grow" />
           <div className="flex items-center">
             {props.repo ? (
@@ -21,7 +41,15 @@ function Card(props: { head: ReactNode; children: ReactNode; repo?: string }) {
           </div>
         </div>
       </div>
-      <div className="p-card-space">{props.children}</div>
+      <div className="p-card-space flex-grow">{props.children}</div>
+      <div className="p-card-space border-t border-t-base-tm-200 flex-grow-0 flex-shrink-0 flex flex-row gap-2">
+        {props.technologies.map((tech) => (
+          <TechnologyBadge tech={tech} />
+        ))}
+        {props.since ? (
+          <span className="text-neutral-content-tm text-sm cursor-default">{props.since} ～</span>
+        ) : undefined}
+      </div>
     </div>
   );
 }
@@ -41,8 +69,8 @@ function Image(props: ProjectType) {
 
 function Project({ project }: { project: ProjectType }) {
   return (
-    <Card head={project.name} repo={project.repo}>
-      <div className="hero">
+    <Card name={project.name} repo={project.repo} technologies={project.technologies ?? []} since={project.since}>
+      <div className="hero h-full">
         <Image {...project} />
         {project.description}
       </div>

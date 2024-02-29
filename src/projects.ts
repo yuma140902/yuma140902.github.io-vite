@@ -8,6 +8,19 @@ import imgTempura from '@/assets/tempura.png';
 import imgUpToDateMod from '@/assets/uptodatemod.png';
 import imgWebImageEditor from '@/assets/web-image-editor.png';
 
+export type Technology =
+  | 'rust'
+  | 'opengl'
+  | 'java'
+  | 'scala'
+  | 'minecraft'
+  | 'ts'
+  | 'opencv'
+  | 'latex'
+  | 'lua'
+  | 'tauri'
+  | 'wasm';
+
 export type ProjectType = {
   name: string;
   description: string;
@@ -17,16 +30,69 @@ export type ProjectType = {
     image?: string;
     url?: string;
   };
-  badges?: {
-    class: string;
-    label: string;
-  }[];
+  technologies?: Technology[];
   releases?: {
     date: string;
     version: string;
   }[];
   sidebar_title?: string;
 };
+
+export function getTechnologyLabel(tech: Technology): string {
+  switch (tech) {
+    case 'rust':
+      return 'Rust';
+    case 'opengl':
+      return 'OpenGL';
+    case 'java':
+      return 'Java';
+    case 'scala':
+      return 'Scala';
+    case 'minecraft':
+      return 'Minecraft';
+    case 'ts':
+      return 'TypeScript';
+    case 'opencv':
+      return 'OpenCV';
+    case 'latex':
+      return 'LaTeX';
+    case 'lua':
+      return 'Lua';
+    case 'tauri':
+      return 'Tauri';
+    case 'wasm':
+      return 'WebAssembly';
+  }
+}
+
+export function getTechnologyClass(tech: Technology): string {
+  switch (tech) {
+    case 'rust':
+      return 'bg-[#d19b7b] text-[#000000]';
+    case 'opengl':
+      return 'bg-[#52829f] text-[#ffffff]';
+    case 'java':
+      return 'bg-[#b07219] text-[#ffffff]';
+    case 'scala':
+      return 'bg-[#df352e] text-[#ffffff]';
+    case 'minecraft':
+      return 'bg-[#388d41] text-[#ffffff]';
+    case 'ts':
+      return 'bg-[#3076c3] text-[#ffffff]';
+    case 'opencv':
+      return 'bg-[#0101f7] text-[#ffffff]';
+    case 'latex':
+      return 'bg-[#0f807f] text-[#ffffff]';
+    case 'lua':
+      return 'bg-[#000080] text-[#ffffff]';
+    case 'tauri':
+      return 'bg-[#ffc337] text-[#000000]';
+    case 'wasm':
+      return 'bg-[#624de8] text-[#ffffff]';
+    default:
+      return 'bg-[#ff0000] text-[#0000ff]'; // TODO:
+  }
+}
 
 export const main_projects: ProjectType[] = [
   {
@@ -37,16 +103,7 @@ export const main_projects: ProjectType[] = [
     hero: {
       image: imgReverie,
     },
-    badges: [
-      {
-        class: 'rust',
-        label: 'Rust',
-      },
-      {
-        class: 'opengl',
-        label: 'OpenGL',
-      },
-    ],
+    technologies: ['rust', 'opengl'],
     releases: [
       {
         date: '2022/10/01',
@@ -87,12 +144,7 @@ export const main_projects: ProjectType[] = [
     hero: {
       image: imgTempura,
     },
-    badges: [
-      {
-        class: 'rust',
-        label: 'Rust',
-      },
-    ],
+    technologies: ['rust'],
     releases: [
       {
         date: '2023/11/10',
@@ -156,20 +208,7 @@ export const main_projects: ProjectType[] = [
     hero: {
       image: imgUpToDateMod,
     },
-    badges: [
-      {
-        class: 'java',
-        label: 'Java',
-      },
-      {
-        class: 'scala',
-        label: 'Scala',
-      },
-      {
-        class: 'minecraft',
-        label: 'Minecraft',
-      },
-    ],
+    technologies: ['java', 'scala', 'minecraft'],
     releases: [
       {
         date: '2023/02/22',
@@ -369,16 +408,7 @@ export const main_projects: ProjectType[] = [
     hero: {
       image: imgLibJsonModel,
     },
-    badges: [
-      {
-        class: 'java',
-        label: 'Java',
-      },
-      {
-        class: 'minecraft',
-        label: 'Minecraft',
-      },
-    ],
+    technologies: ['java', 'minecraft'],
   },
   {
     name: 'Web Image Editor',
@@ -389,24 +419,7 @@ export const main_projects: ProjectType[] = [
       image: imgWebImageEditor,
       url: '/web-image-editor/',
     },
-    badges: [
-      {
-        class: 'ts',
-        label: 'React',
-      },
-      {
-        class: 'ts',
-        label: 'TypeScript',
-      },
-      {
-        class: 'opencv',
-        label: 'OpenCV.js',
-      },
-      {
-        class: 'ts',
-        label: 'Vite',
-      },
-    ],
+    technologies: ['ts', 'ts', 'opencv', 'ts'],
   },
   {
     name: 'LaTeXのテンプレート集',
@@ -416,12 +429,7 @@ export const main_projects: ProjectType[] = [
     hero: {
       image: imgLt,
     },
-    badges: [
-      {
-        class: 'latex',
-        label: 'LaTeX',
-      },
-    ],
+    technologies: ['latex'],
   },
   {
     name: 'auto-split-direction.nvim',
@@ -430,12 +438,7 @@ export const main_projects: ProjectType[] = [
       'ウィンドウの分割方向を自動的に決定するNeovimプラグイン。\n\nウィンドウが縦長なら水平に、横長なら垂直に分割する。',
     repo: 'https://github.com/yuma140902/auto-split-direction.nvim',
     since: '2023年6月',
-    badges: [
-      {
-        class: 'lua',
-        label: 'Lua',
-      },
-    ],
+    technologies: ['lua'],
     releases: [
       {
         date: '2023/07/22',
@@ -449,12 +452,7 @@ export const main_projects: ProjectType[] = [
       '標準出力・標準エラー出力にランダムな文字列を出力するCLIツール。\n\nタイムスタンプをつけたり色をつけたりもできる。シェルスクリプトの動作確認に便利。',
     repo: 'https://github.com/yuma140902/random-output',
     since: '2022年7月',
-    badges: [
-      {
-        class: 'rust',
-        label: 'Rust',
-      },
-    ],
+    technologies: ['rust'],
     releases: [
       {
         date: '2023/02/14',
@@ -474,44 +472,21 @@ export const main_projects: ProjectType[] = [
     hero: {
       image: imgDotfiles,
     },
-    badges: [
-      {
-        class: 'lua',
-        label: 'Lua',
-      },
-    ],
+    technologies: ['lua'],
   },
   {
     name: 'gallery-viewer',
     description: 'gallery-dlが生成したメタデータを表示する',
     repo: 'https://github.com/yuma140902/gallery-viewer',
     since: '2023年2月',
-    badges: [
-      {
-        class: 'rust',
-        label: 'Rust',
-      },
-      {
-        class: 'ts',
-        label: 'TypeScript',
-      },
-      {
-        class: 'tauri',
-        label: 'Tauri',
-      },
-    ],
+    technologies: ['rust', 'ts', 'tauri'],
   },
   {
     name: 'regend',
     description: '正規表現をε-NFAおよびDFAに変換する',
     repo: 'https://github.com/yuma140902/regend',
     since: '2023年11月',
-    badges: [
-      {
-        class: 'rust',
-        label: 'Rust',
-      },
-    ],
+    technologies: ['rust'],
   },
   {
     name: 'Regend WebUI',
@@ -521,20 +496,7 @@ export const main_projects: ProjectType[] = [
     hero: {
       image: imgRegendWebUi,
     },
-    badges: [
-      {
-        class: 'rust',
-        label: 'Rust',
-      },
-      {
-        class: 'wasm',
-        label: 'WebAssembly',
-      },
-      {
-        class: 'ts',
-        label: 'React',
-      },
-    ],
+    technologies: ['rust', 'wasm', 'ts'],
   },
   {
     name: 'LMML Music Macro Language',
@@ -546,11 +508,6 @@ export const main_projects: ProjectType[] = [
       url: 'https://github.com/yuma140902/lmml/assets/23431077/dfad8777-ade5-4591-8804-a3968a2e14ea',
       image: imgLmml,
     },
-    badges: [
-      {
-        class: 'rust',
-        label: 'Rust',
-      },
-    ],
+    technologies: ['rust'],
   },
 ];
