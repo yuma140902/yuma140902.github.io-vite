@@ -30,6 +30,7 @@ export default function LayoutDefault({
           id="sidebar"
           className="flex-grow-0 flex-shrink-0 lg:overflow-auto lg:mt-12"
         >
+          <Divider vertical className="lg:hidden" />
           <Sidebar />
         </nav>
       </div>
