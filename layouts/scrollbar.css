@@ -8,6 +8,6 @@
   background-color: transparent;
 }
 #sidebar:hover::-webkit-scrollbar-thumb{
-  background-color: var(--color-text-dimmed);
+  background-color: var(--color-base-200);
   border-radius: 2px;
 }
