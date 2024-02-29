@@ -21,14 +21,14 @@ export default function LayoutDefault({
     <div className="transition-colors min-h-screen font-sans text-base-content-tm bg-base-tm-100">
       <Header />
       <div className="flex flex-nowrap flex-col lg:flex-row-reverse lg:h-screen lg:fixed lg:top-0 lg:left-0 lg:right-0">
-        <main className="flex-grow lg:overflow-auto pt-12">
+        <main className="flex-grow lg:overflow-auto pt-header">
           <div className="p-3">
             <Content>{children}</Content>
           </div>
         </main>
         <nav
           id="sidebar"
-          className="flex-grow-0 flex-shrink-0 lg:overflow-auto lg:mt-12"
+          className="flex-grow-0 flex-shrink-0 lg:overflow-auto lg:mt-header"
         >
           <Divider vertical className="lg:hidden" />
           <Sidebar />
@@ -44,7 +44,7 @@ function Content({ children }: { children: React.ReactNode }) {
 
 function Sidebar() {
   return (
-    <div className="bg-sidebar-color w-full lg:w-60 ">
+    <div className="bg-sidebar-color w-full lg:w-sidebar ">
       <Menu className="menu-vertical">
         <Menu.Item>
           <SidebarLink href="/">
@@ -110,7 +110,7 @@ function Header() {
   }, []);
 
   return (
-    <header className="z-50 bg-header-color backdrop-blur-sm border-b border-solid border-header-border-color h-12 fixed top-0 w-full flex flex-row">
+    <header className="z-50 bg-header-color backdrop-blur-sm border-b border-solid border-header-border-color h-header fixed top-0 w-full flex flex-row">
       <div className="flex items-center h-full">
         <div className="px-5 flex items-center">
           <span className="i-icon-park-twotone-crab block px-5 w-6 h-6 bg-orange-500"></span>

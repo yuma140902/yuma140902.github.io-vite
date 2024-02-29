@@ -56,6 +56,10 @@ export default {
         'header-border-color':
           'color-mix(in srgb, var(--color-base-200) 50%, transparent)',
       },
+      spacing: {
+        header: '3rem',
+        sidebar: '15rem',
+      },
     },
   },
   daisyui: {
