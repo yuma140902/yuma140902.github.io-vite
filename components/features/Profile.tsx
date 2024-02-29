@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { Link } from '@/components/common/Link';
+import { Link } from '@/components/common';
 
 export function Profile() {
   return (

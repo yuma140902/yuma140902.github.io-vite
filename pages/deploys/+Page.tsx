@@ -1,5 +1,5 @@
-import { Article } from '@/components/common/Article';
-import { DeploymentList } from '@/components/features/Deployment';
+import { Article } from '@/components/common';
+import { DeploymentList } from '@/components/features';
 
 export default function Page() {
   return (

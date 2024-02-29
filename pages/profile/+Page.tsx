@@ -1,5 +1,5 @@
-import { Article } from '@/components/common/Article';
-import { Profile } from '@/components/features/Profile';
+import { Article } from '@/components/common';
+import { Profile } from '@/components/features';
 
 export default function Page() {
   return (

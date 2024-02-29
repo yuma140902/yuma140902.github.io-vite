@@ -1,4 +1,4 @@
-import { Apps } from '@/components/features/Apps';
+import { Apps } from '@/components/features';
 
 export default function Page() {
   return <Apps />;

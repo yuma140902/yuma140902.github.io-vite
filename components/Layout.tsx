@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Divider } from 'react-daisyui';
 import { themeChange } from 'theme-change';
 
-import { ThemeSelector } from '@/components/features/ThemeSelector';
+import { ThemeSelector } from '@/components/features';
 
 import '@/layouts/scrollbar.css';
 import '@/layouts/selection.css';
