@@ -1,13 +1,7 @@
 import React, { useEffect } from 'react';
-import { Divider, Menu } from 'react-daisyui';
+import { Divider } from 'react-daisyui';
 import { themeChange } from 'theme-change';
 
-import { contents } from '@/src/contents';
-import { main_projects } from '@/src/projects';
-
-import { SidebarLink } from '@/components/SidebarLink';
-import { ContentMenuItem } from '@/components/features/Content';
-import { ProjectMenuItem } from '@/components/features/Project';
 import { ThemeSelector } from '@/components/features/ThemeSelector';
 
 import '@/layouts/scrollbar.css';

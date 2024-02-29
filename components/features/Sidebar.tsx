@@ -1,12 +1,9 @@
 import { Divider, Menu } from 'react-daisyui';
 
-import { contents } from '@/src/contents';
-import { main_projects } from '@/src/projects';
+import { ContentType, contents } from '@/src/contents';
+import { ProjectType, main_projects } from '@/src/projects';
 
 import { SidebarLink } from '@/components/SidebarLink';
-
-import { ContentMenuItem } from './Content';
-import { ProjectMenuItem } from './Project';
 
 export function Sidebar() {
   return (
@@ -67,5 +64,25 @@ export function Sidebar() {
         </Menu.Item>
       </Menu>
     </div>
+  );
+}
+
+function ProjectMenuItem({ project }: { project: ProjectType }) {
+  return project.repo ? (
+    <Menu.Item>
+      <SidebarLink href={project.repo} outside>
+        {project.sidebar_title ?? project.name}
+      </SidebarLink>
+    </Menu.Item>
+  ) : undefined;
+}
+
+function ContentMenuItem({ content }: { content: ContentType }) {
+  return (
+    <Menu.Item>
+      <SidebarLink href={content.url} outside={content.outside}>
+        {content.title}
+      </SidebarLink>
+    </Menu.Item>
   );
 }
