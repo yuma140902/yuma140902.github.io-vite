@@ -32,14 +32,19 @@ export function Sidebar() {
             label={
               <>
                 <span className="i-icon-park-outline-hammer-and-anvil w-5 h-5" />
-                <SidebarLink href="/works/">Projects</SidebarLink>
+                Projects
               </>
             }
           >
+            <Menu.Item>
+              <SidebarLink href="/works/">
+                <span className="i-carbon-list w-5 h-5" />
+                一覧
+              </SidebarLink>
+            </Menu.Item>
             {main_projects.map((project) => (
               <ProjectMenuItem key={project.name} project={project} />
             ))}
-            <Divider />
           </Menu.Details>
         </Menu.Item>
         <Menu.Item>
