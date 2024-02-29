@@ -1,16 +1,16 @@
-import '../layouts/themes.css';
-import '../layouts/selection.css';
-import '../layouts/scrollbar.css';
-import '../layouts/tailwind.css';
+import '@/layouts/themes.css';
+import '@/layouts/selection.css';
+import '@/layouts/scrollbar.css';
+import '@/layouts/tailwind.css';
 import { themeChange } from 'theme-change';
 import React, { useEffect } from 'react';
 import { ThemeSelector } from './ThemeSelector';
 import { Divider, Menu } from 'react-daisyui';
 import { SidebarLink } from './SidebarLink';
-import { contents } from '../src/contents';
-import { main_projects } from '../src/projects';
+import { contents } from '@/src/contents';
 import { ContentMenuItem } from './Content';
 import { ProjectMenuItem } from './Project';
+import { main_projects } from '@/src/projects';
 
 export function Layout(props: { children: React.ReactNode }) {
   return (
