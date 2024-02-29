@@ -58,6 +58,7 @@ export default {
         header: '3rem',
         sidebar: '15rem',
         'card-space': '0.5rem',
+        'content-space': '0.75rem',
       },
     },
   },

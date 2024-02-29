@@ -36,7 +36,7 @@ function Project({ project }: { project: ProjectType }) {
 }
 export function ProjectGrid() {
   return (
-    <div className="flex flex-row gap-3 flex-wrap justify-stretch items-stretch">
+    <div className="flex flex-row gap-content-space flex-wrap justify-stretch items-stretch">
       {main_projects.map((project) => (
         <Project key={project.name} project={project} />
       ))}

@@ -35,7 +35,7 @@ export function Apps() {
       <Article>
         <h1>ウェブアプリ</h1>
       </Article>
-      <div className="flex gap-3 flex-wrap my-3">
+      <div className="flex gap-content-space flex-wrap my-content-space">
         {all_apps.map((app) => (
           <App app={app} />
         ))}

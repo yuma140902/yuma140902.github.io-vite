@@ -15,7 +15,7 @@ export function Layout(props: { wide: boolean; children: React.ReactNode }) {
       <Header />
       <div className="flex flex-nowrap flex-col lg:flex-row-reverse lg:h-screen lg:fixed lg:top-0 lg:left-0 lg:right-0">
         <main className="flex-grow lg:overflow-auto pt-header">
-          <div className="p-3">
+          <div className="p-content-space">
             <Content wide={props.wide}>{props.children}</Content>
           </div>
         </main>

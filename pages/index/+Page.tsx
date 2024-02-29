@@ -19,7 +19,7 @@ function Card(props: { link: string; head: ReactNode; children: ReactNode }) {
 export default function Page() {
   return (
     <div>
-      <div className="flex flex-row flex-wrap gap-3 justify-center items-stretch mb-5">
+      <div className="flex flex-row flex-wrap gap-content-space justify-center items-stretch mb-5">
         <Card link="/profile" head={<h2 className="text-3xl">Profile</h2>}>
           <div className="hero min-h-80">
             <img className="mask mask-circle h-24 w-24" src="https://avatars.githubusercontent.com/u/23431077" />
