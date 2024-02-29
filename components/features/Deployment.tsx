@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 import { type DeploymentType, deployments } from '@/src/deployments';
 
-import { Link } from '@/components/common';
+import { Article, Link } from '@/components/common';
 
 function Card(props: { children: ReactNode }) {
   return (
@@ -39,6 +39,18 @@ export function DeploymentList() {
       {deployments.map((deployment) => (
         <Deployment key={deployment.name} {...deployment} />
       ))}
+    </div>
+  );
+}
+
+export function Deployments() {
+  return (
+    <div>
+      <Article>
+        <h1>デプロイ状況</h1>
+        <p className="mb-8">このサイトを構成する各コンポーネントのデプロイ状況</p>
+      </Article>
+      <DeploymentList />
     </div>
   );
 }
