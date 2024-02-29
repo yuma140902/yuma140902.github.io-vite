@@ -15,6 +15,7 @@
 }
 
 :root, [data-theme='onedark'] {
+  color-scheme: dark;
   --color-b16-00: #282c34;
   --color-b16-01: #353b45;
   --color-b16-02: #3e4451;
@@ -35,6 +36,7 @@
 }
 
 [data-theme='onelight'] {
+  color-scheme: light;
   --color-b16-00: #fafafa;
   --color-b16-01: #f0f0f1;
   --color-b16-02: #e5e5e6;
@@ -54,6 +56,7 @@
 }
 
 [data-theme='monokai'] {
+  color-scheme: dark;
   --color-b16-00: #272822;
   --color-b16-01: #383830;
   --color-b16-02: #49483e;
@@ -77,6 +80,7 @@
 }
 
 [data-theme='solarized_dark'] {
+  color-scheme: dark;
   --color-b16-00: #002b36;
   --color-b16-01: #073642;
   --color-b16-02: #586e75;
@@ -100,6 +104,7 @@
 }
 
 [data-theme='solarized_light'] {
+  color-scheme: light;
   --color-b16-00: #fdf6e3;
   --color-b16-01: #eee8d5;
   --color-b16-02: #93a1a1;
@@ -123,6 +128,7 @@
 }
 
 [data-theme='tokyo_night_dark'] {
+  color-scheme: dark;
   --color-b16-00: #1a1b26;
   --color-b16-01: #16161e;
   --color-b16-02: #2f3549;
@@ -146,6 +152,7 @@
 }
 
 [data-theme='tokyo_night_light'] {
+  color-scheme: light;
   --color-b16-00: #d5d6db;
   --color-b16-01: #cbccd1;
   --color-b16-02: #dfe0e5;
@@ -169,6 +176,7 @@
 }
 
 [data-theme='nord'] {
+  color-scheme: dark;
   --color-b16-00: #2e3440;
   --color-b16-01: #3b4252;
   --color-b16-02: #434c5e;
@@ -192,6 +200,7 @@
 }
 
 [data-theme='sakura'] {
+  color-scheme: light;
   --color-b16-00: #feedf3;
   --color-b16-01: #f8e2e7;
   --color-b16-02: #e0ccd1;
