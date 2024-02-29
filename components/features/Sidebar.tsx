@@ -16,13 +16,13 @@ export function Sidebar() {
           </SidebarLink>
         </Menu.Item>
         <Menu.Item>
-          <SidebarLink href="/profile">
+          <SidebarLink href="/profile/">
             <span className="i-carbon-user-avatar w-5 h-5" />
             About Me
           </SidebarLink>
         </Menu.Item>
         <Menu.Item>
-          <SidebarLink href="/apps">
+          <SidebarLink href="/apps/">
             <span className="i-carbon-apps w-5 h-5" />
             ウェブアプリ
           </SidebarLink>
@@ -57,7 +57,7 @@ export function Sidebar() {
           </Menu.Details>
         </Menu.Item>
         <Menu.Item>
-          <SidebarLink href="/deploys">
+          <SidebarLink href="/deploys/">
             <span className="i-carbon-bare-metal-server w-5 h-5" />
             サービス一覧・デプロイ状況
           </SidebarLink>
