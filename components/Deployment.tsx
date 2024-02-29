@@ -25,7 +25,7 @@ export function Deployment(props: DeploymentType) {
 
 export function DeploymentList() {
   return (
-    <div className="flex gap-2 flex-col">
+    <div className="flex gap-3 flex-col">
       {deployments.map((deployment) => (
         <Deployment key={deployment.name} {...deployment} />
       ))}

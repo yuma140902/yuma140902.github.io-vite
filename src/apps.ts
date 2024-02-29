@@ -1,10 +1,13 @@
+import webImageEditorImg from '../assets/web-image-editor.png';
+import regendWebUiImg from '../assets/regend.gif';
+
 export type AppType = {
   name: string;
   copy: string;
   badge?: string;
   img?: string;
   url: string;
-  outside?: boolean;
+  outside: boolean;
 };
 
 export const main_apps: AppType[] = [
@@ -14,6 +17,8 @@ export const main_apps: AppType[] = [
     url: '/web-image-editor/',
     badge:
       'https://img.shields.io/github/deployments/yuma140902/web-image-editor/github-pages?logo=github&label=Deployment',
+    outside: true,
+    img: webImageEditorImg,
   },
   {
     name: 'Diff Tool',
@@ -39,6 +44,8 @@ export const minor_apps: AppType[] = [
     url: '/regend-webui/',
     badge:
       'https://img.shields.io/github/deployments/yuma140902/regend-webui/github-pages?logo=github&label=Deployment',
+    outside: true,
+    img: regendWebUiImg,
   },
   {
     name: 'Sort Visualizer',
@@ -54,6 +61,7 @@ export const minor_apps: AppType[] = [
     url: '/sanmoku-next-js/',
     badge:
       'https://img.shields.io/github/deployments/yuma140902/sanmoku-next-js/github-pages?logo=github&label=Deployment',
+    outside: true,
   },
   {
     name: 'gomoku-react',
@@ -61,6 +69,7 @@ export const minor_apps: AppType[] = [
     url: '/gomoku-react/',
     badge:
       'https://img.shields.io/github/deployments/yuma140902/gomoku-react/github-pages?logo=github&label=Deployment',
+    outside: true,
   },
   {
     name: 'gomoku-blazor',
@@ -68,6 +77,7 @@ export const minor_apps: AppType[] = [
     url: '/gomoku-blazor/',
     badge:
       'https://img.shields.io/github/deployments/yuma140902/gomoku-blazor/github-pages?logo=github&label=Deployment',
+    outside: true,
   },
   {
     name: 'gomoku-elm',
@@ -75,5 +85,6 @@ export const minor_apps: AppType[] = [
     url: '/gomoku-elm/',
     badge:
       'https://img.shields.io/github/deployments/yuma140902/gomoku-elm/github-pages?logo=github&label=Deployment',
+    outside: true,
   },
 ];

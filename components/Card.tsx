@@ -6,7 +6,7 @@ function CardWithHead(props: {
   className: string;
 }) {
   return (
-    <div className="w-full rounded border-solid border-base-tm-200 border hover:border-primary-tm">
+    <div className="h-full w-full rounded border-solid border-base-tm-200 border hover:border-primary-tm">
       <div className="p-2 bg-base-tm-150 font-bold text-lg border-b border-b-base-tm-200">
         {props.head}
       </div>
@@ -17,8 +17,8 @@ function CardWithHead(props: {
 
 function CardOnlyBody(props: { children: ReactNode; className: string }) {
   return (
-    <div className="p-2 w-full rounded border-solid border-base-tm-200 border hover:border-primary-tm bg-base-tm-150">
-      <div>{props.children}</div>
+    <div className="p-2 h-full w-full rounded border-solid border-base-tm-200 border hover:border-primary-tm bg-base-tm-150">
+      <div className="h-full">{props.children}</div>
     </div>
   );
 }
@@ -45,12 +45,17 @@ export function Card(props: {
   head?: ReactNode;
   children: ReactNode;
   link?: string;
+  outside?: boolean;
   className?: string;
 }) {
   const className = props.className ?? '';
   if (props.link) {
     return (
-      <a href={props.link} className={'no-underline ' + className}>
+      <a
+        href={props.link}
+        className={'no-underline ' + className}
+        target={props.outside ? '_blank' : '_self'}
+      >
         <CardInternal head={props.head} className="">
           {props.children}
         </CardInternal>

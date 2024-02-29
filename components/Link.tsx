@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 export function Link({
   href,
   outside,
-  noUnderline: no_underline,
+  noUnderline: noUnderline,
   children,
 }: {
   href: string;
@@ -16,7 +16,7 @@ export function Link({
       href={href}
       target={outside ? '_blank' : '_self'}
       className={
-        (no_underline ? 'no-underline ' : 'underline ') +
+        (noUnderline ? 'no-underline ' : 'underline ') +
         'hover:underline hover:decoration-primary-tm text-secondary group'
       }
     >
