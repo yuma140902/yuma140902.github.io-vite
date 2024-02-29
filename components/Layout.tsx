@@ -26,10 +26,7 @@ export function Layout(props: { children: React.ReactNode }) {
             <Content>{props.children}</Content>
           </div>
         </main>
-        <nav
-          id="sidebar"
-          className="flex-grow-0 flex-shrink-0 lg:overflow-auto lg:mt-header"
-        >
+        <nav id="sidebar" className="flex-grow-0 flex-shrink-0 lg:overflow-auto lg:mt-header">
           <Divider vertical className="lg:hidden" />
           <Sidebar />
         </nav>
