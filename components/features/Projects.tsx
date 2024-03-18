@@ -28,7 +28,7 @@ function Card(props: {
 }) {
   return (
     <div className="rounded border-solid border-base-tm-200 border hover:border-primary-tm flex-grow flex-shrink basis-full md:basis-1/3 flex flex-col justify-stretch">
-      <div className="p-card-space bg-base-tm-150 border-b border-b-base-tm-200 flex-grow-0 flex-shrink-0">
+      <div className="p-card-space bg-base-tm-150 border-b border-b-base-tm-200 flex-grow-0 flex-shrink-0 rounded-t">
         <div className="flex flex-row justify-stretch items-stretch">
           <div className="font-bold text-lg">{props.name}</div>
           <div className="flex-grow" />
@@ -44,7 +44,7 @@ function Card(props: {
         </div>
       </div>
       <div className="p-card-space flex-grow">{props.children}</div>
-      <div className="p-card-space border-t border-t-base-tm-200 flex-grow-0 flex-shrink-0 flex flex-row gap-2">
+      <div className="p-card-space border-t border-t-base-tm-200 flex-grow-0 flex-shrink-0 flex flex-row gap-2 rounded-b">
         {props.technologies.map((tech) => (
           <TechnologyBadge tech={tech} />
         ))}

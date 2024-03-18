@@ -12,8 +12,10 @@ function Card(props: { link: string; outside: boolean; head: ReactNode; children
       target={props.outside ? '_blank' : '_self'}
     >
       <div className="h-full rounded border-solid border-base-tm-200 border hover:border-primary-tm">
-        <div className="p-card-space bg-base-tm-150 font-bold text-lg border-b border-b-base-tm-200">{props.head}</div>
-        <div className="p-card-space">{props.children}</div>
+        <div className="p-card-space bg-base-tm-150 font-bold text-lg border-b border-b-base-tm-200 rounded-t">
+          {props.head}
+        </div>
+        <div className="p-card-space rounded-b">{props.children}</div>
       </div>
     </a>
   );
