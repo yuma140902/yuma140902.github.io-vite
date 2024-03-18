@@ -17,9 +17,9 @@ export default defineConfig({
     vike({
       prerender: true,
       redirects: {
-        '/webtools/csv2tex.html': 'http://old.yuma14.net/webtools/csv2tex.html',
-        '/webtools/diff.html': 'http://old.yuma14.net/webtools/diff.html',
-        '/webtools/sort.html': 'http://old.yuma14.net/webtools/sort.html',
+        '/webtools/csv2tex.html': 'https://old.yuma14.net/webtools/csv2tex.html',
+        '/webtools/diff.html': 'https://old.yuma14.net/webtools/diff.html',
+        '/webtools/sort.html': 'https://old.yuma14.net/webtools/sort.html',
       },
     }),
   ],
