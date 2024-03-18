@@ -4,7 +4,7 @@ export default function HeadDefault() {
   return (
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="description" content="Demo showcasing Vike" />
+      <meta name="description" content="yuma14の個人サイト" />
       <meta property="og:image" content="/ogp.png" />
       <meta property="og:title" content="yuma14.net" />
       <meta property="og:locale" content="ja_JP" />
