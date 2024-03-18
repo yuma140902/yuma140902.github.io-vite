@@ -361,6 +361,10 @@ export const main_projects: ProjectType[] = [
     technologies: ['rust'],
     releases: [
       {
+        date: '2023/12/18',
+        version: 'v0.5.0',
+      },
+      {
         date: '2023/11/10',
         version: 'v0.4.3',
       },
