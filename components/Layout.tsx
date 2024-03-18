@@ -41,8 +41,12 @@ function Header() {
     <header className="z-50 bg-header-color backdrop-blur-sm border-b border-solid border-header-border-color h-header fixed top-0 w-full flex flex-row">
       <div className="flex items-center h-full">
         <div className="px-5 flex items-center">
-          <span className="i-icon-park-twotone-crab block px-5 w-6 h-6 bg-orange-500"></span>
-          <span className="block">yuma14.net</span>
+          <a href="/">
+            <span className="i-icon-park-twotone-crab block px-5 w-6 h-6 bg-orange-500"></span>
+          </a>
+          <a href="/">
+            <span className="block">yuma14.net</span>
+          </a>
         </div>
       </div>
       <div className="flex-grow"></div>
