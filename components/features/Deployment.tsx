@@ -48,7 +48,12 @@ export function Deployments() {
     <div>
       <Article>
         <h1>デプロイ状況</h1>
-        <p className="mb-8">このサイトを構成する各コンポーネントのデプロイ状況</p>
+        <p>このサイトを構成する各コンポーネントのデプロイ状況</p>
+        <ul className="mb-8">
+          <li>
+            <Link href="/services/">サービス一覧</Link>
+          </li>
+        </ul>
       </Article>
       <DeploymentList />
     </div>

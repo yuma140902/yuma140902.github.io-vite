@@ -35,22 +35,22 @@ export function Top() {
   return (
     <div>
       <div className="flex flex-row flex-wrap gap-content-space justify-center items-stretch mb-5">
-        <Card link="/profile" head={<h2 className="text-3xl">Profile</h2>}>
+        <Card link="/profile/" head={<h2 className="text-3xl">Profile</h2>}>
           <div className="hero min-h-80">
             <img className="mask mask-circle h-24 w-24" src="https://avatars.githubusercontent.com/u/23431077" />
           </div>
         </Card>
-        <Card link="/works" head={<h2 className="text-3xl">Projects</h2>}>
+        <Card link="/works/" head={<h2 className="text-3xl">Projects</h2>}>
           <div className="hero min-h-80">
             <img className="h-80 object-contain" src={reverieEngineUrl} />
           </div>
         </Card>
-        <Card link="/apps" head={<h2 className="text-3xl">ウェブアプリ</h2>}>
+        <Card link="/apps/" head={<h2 className="text-3xl">ウェブアプリ</h2>}>
           <div className="hero min-h-80">
             <img className="h-80 object-contain" src={webImageEditorUrl} />
           </div>
         </Card>
-        <Card link="/deploys" head={<h2 className="text-3xl">サービス一覧</h2>}>
+        <Card link="/services/" head={<h2 className="text-3xl">サービス一覧</h2>}>
           <div className="hero min-h-80">サービス一覧</div>
         </Card>
       </div>
