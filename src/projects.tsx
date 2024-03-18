@@ -1,3 +1,5 @@
+import React from 'react';
+
 import imgAaMakeHelper from '@/assets/aamakehelper.png';
 import imgAicUnity from '@/assets/aic_unity.png';
 import imgCc from '@/assets/cc.png';

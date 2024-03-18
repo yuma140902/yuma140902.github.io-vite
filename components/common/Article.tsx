@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 export function Article({ children }: { children: ReactNode }) {
   return (

@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 import { AppType, main_apps, minor_apps } from '@/src/apps';
 
@@ -39,7 +39,7 @@ export function Apps() {
       </Article>
       <div className="flex gap-content-space flex-wrap my-content-space">
         {all_apps.map((app) => (
-          <App app={app} />
+          <App key={app.name} app={app} />
         ))}
       </div>
     </div>

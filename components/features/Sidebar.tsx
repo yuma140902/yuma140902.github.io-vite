@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { Menu } from 'react-daisyui';
 import { usePageContext } from 'vike-react/usePageContext';
 

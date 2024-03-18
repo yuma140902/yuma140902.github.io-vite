@@ -1,3 +1,4 @@
+import React from 'react';
 import { Dropdown } from 'react-daisyui';
 
 export type ThemeId =

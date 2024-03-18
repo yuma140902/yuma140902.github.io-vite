@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { Tooltip } from 'react-daisyui';
 
 import {
@@ -44,7 +44,7 @@ function Card(props: { name: ReactNode; children: ReactNode; project: ProjectTyp
       </div>
       <div className="p-card-space flex-grow">{props.children}</div>
       <div className="p-card-space border-t border-t-base-tm-200 flex-grow-0 flex-shrink-0 flex flex-row gap-2 rounded-b">
-        {props.project.technologies?.map((tech) => <TechnologyBadge tech={tech} />)}
+        {props.project.technologies?.map((tech) => <TechnologyBadge key={tech} tech={tech} />)}
         <span className="text-neutral-content-tm text-sm cursor-default">
           {getSinceUntilText(props.project.since, props.project.until)}
         </span>
