@@ -77,18 +77,22 @@ function Project({ project }: { project: ProjectType }) {
         <Image {...project} />
         <Article>{project.description}</Article>
         {project.releases ? (
-          <div className="prose prose-li:my-0 prose-ul:my-0">
-            <details>
-              <summary>更新履歴</summary>
-              <ul>
-                {project.releases.map((release) => (
-                  <li key={release.version}>
-                    {release.date} - {release.version}
-                  </li>
-                ))}
-              </ul>
-            </details>
-          </div>
+          <details>
+            <summary>更新履歴</summary>
+            <ul className="timeline timeline-vertical timeline-compact">
+              {project.releases.map((release) => (
+                <li key={release.version}>
+                  <div className="timeline-start">{release.date}</div>
+                  <div className="timeline-middle">
+                    {' '}
+                    <span className="i-icon-park-twotone-check-one" />
+                  </div>
+                  <div className="timeline-end"> {release.version}</div>
+                  <hr />
+                </li>
+              ))}
+            </ul>
+          </details>
         ) : undefined}
       </div>
     </Card>
