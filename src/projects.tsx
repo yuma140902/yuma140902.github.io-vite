@@ -352,7 +352,7 @@ export const main_projects: ProjectType[] = [
   {
     name: 'Tempura SSG',
     description:
-      'Rust製のパイプラインベースの静的サイトジェネレーター。\n\nパイプラインを定義し、マークダウン、JSON、テンプレート、画像などを処理してウェブサイトを生成する。\n\nこのサイトもTempuraで作られている。',
+      'Rust製のパイプラインベースの静的サイトジェネレーター。パイプラインを定義し、マークダウン、JSON、テンプレート、画像などを処理してウェブサイトを生成する。',
     repo: 'https://github.com/yuma140902/tempura',
     since: '2022年8月',
     hero: {

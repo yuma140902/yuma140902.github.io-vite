@@ -61,6 +61,7 @@ export function Top() {
         </p>
       </Article>
       <ul className="timeline timeline-vertical mt-content-space">
+        <History date="2024/03/19" description="フレームワークをVikeに変更" />
         <History date="2023/12/19" description="Tempura v0.5.0にアップデート" />
         <History date="2023/10/08" description="ウェブアプリ一覧を追加" />
         <History date="2023/07/12" description="画像追加" />
