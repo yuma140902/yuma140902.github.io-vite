@@ -56,9 +56,11 @@ export function Top() {
       </div>
       <Article>
         <h2>更新履歴</h2>
-        最終更新: TODO
+        <p>
+          最終更新: {__BUILD_TIME__} (ブランチ: <code>{__GIT_BRANCH__}</code>、コミットID: <code>{__GIT_HASH__}</code>)
+        </p>
       </Article>
-      <ul className="timeline timeline-vertical">
+      <ul className="timeline timeline-vertical mt-content-space">
         <History date="2023/12/19" description="Tempura v0.5.0にアップデート" />
         <History date="2023/10/08" description="ウェブアプリ一覧を追加" />
         <History date="2023/07/12" description="画像追加" />
