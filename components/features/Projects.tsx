@@ -76,6 +76,20 @@ function Project({ project }: { project: ProjectType }) {
       <div className="h-full">
         <Image {...project} />
         <Article>{project.description}</Article>
+        {project.releases ? (
+          <div className="prose prose-li:my-0 prose-ul:my-0">
+            <details>
+              <summary>更新履歴</summary>
+              <ul>
+                {project.releases.map((release) => (
+                  <li key={release.version}>
+                    {release.date} - {release.version}
+                  </li>
+                ))}
+              </ul>
+            </details>
+          </div>
+        ) : undefined}
       </div>
     </Card>
   );
