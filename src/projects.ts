@@ -71,7 +71,15 @@ export type Technology =
   | 'hsp'
   | 'cpp'
   | 'applescript'
-  | 'nadeshiko';
+  | 'nadeshiko'
+  | 'gtk'
+  | 'webgl'
+  | 'electron'
+  | 'piston'
+  | 'javafx'
+  | 'qt'
+  | 'win32api'
+  | 'swift';
 
 export type ProjectType = {
   name: string;
@@ -161,6 +169,22 @@ export function getTechnologyLabel(tech: Technology): string {
       return 'AppleScript';
     case 'nadeshiko':
       return 'なでしこ';
+    case 'gtk':
+      return 'GTK';
+    case 'webgl':
+      return 'WebGL';
+    case 'electron':
+      return 'Electron';
+    case 'piston':
+      return 'Piston';
+    case 'javafx':
+      return 'JavaFX';
+    case 'qt':
+      return 'Qt';
+    case 'win32api':
+      return 'Win32 API';
+    case 'swift':
+      return 'Swift';
   }
 }
 
@@ -234,8 +258,24 @@ export function getTechnologyClass(tech: Technology): string {
       return 'bg-[#ffffff] text-[#000000]';
     case 'nadeshiko':
       return 'bg-[#ffecec] text-[#000000]';
+    case 'gtk':
+      return 'bg-[#83e820] text-[#000000]';
+    case 'webgl':
+      return 'bg-[#940000] text-[#ffffff]';
+    case 'electron':
+      return 'bg-[#333540] text-[#8df0e4]';
+    case 'piston':
+      return 'bg-[#ffffff] text-[#000000]';
+    case 'javafx':
+      return 'bg-[#e87408] text-[#000000]';
+    case 'qt':
+      return 'bg-[#3fc74f] text-[#ffffff]';
+    case 'win32api':
+      return 'bg-[#4684e8] text-[#ffffff]';
+    case 'swift':
+      return 'bg-[#fe4c2e] text-[#ffffff]';
     default:
-      return 'bg-[#ff0000] text-[#0000ff]'; // TODO:
+      return 'bg-[#ff0000] text-[#0000ff]';
   }
 }
 
@@ -1364,5 +1404,510 @@ export const archived_projects: ProjectType[] = [
     since: '2015年8月',
     until: '2016年5月',
     technologies: ['js'],
+  },
+];
+
+export const scrap_projects: ProjectType[] = [
+  {
+    name: 'WatchDog',
+    description: '絶対に終了しないプロセスを作りたかった',
+    since: '2023年3月',
+    technologies: ['csharp', 'wpf'],
+  },
+  {
+    name: 'sort_visualizer',
+    description:
+      'GTKでソートビジュアライザを作りたかった<br/>\n<a href="/webtools/sort.html">WebToolsのSort Visualizer</a>になった',
+    since: '2022年12月',
+    technologies: ['gtk'],
+  },
+  {
+    name: 't-prog',
+    description: 'Rustで型レベルプログラミングをしたかった',
+    since: '2022年9月',
+    technologies: ['rust'],
+  },
+  {
+    name: 's4installer',
+    description: 'dotfilesをインストールするツールを作りたかった',
+    since: '2022年2月',
+    technologies: ['rust'],
+  },
+  {
+    name: 'more_path_types',
+    description: '相対パス・絶対パスを型レベルで表現するライブラリを作りたかった',
+    since: '2022年2月',
+    technologies: ['rust'],
+  },
+  {
+    name: 'HideSideBarWhenNotMaximized',
+    description: 'Firefoxで、タブが1つだけのときサイドバーを非表示にする機能拡張を作りたかった',
+    since: '2022年1月',
+    technologies: ['js', 'fxaddon'],
+  },
+  {
+    name: 'core-rutils',
+    description: '',
+    since: '2022年1月',
+    technologies: ['rust'],
+  },
+  {
+    name: 'Words',
+    description: '',
+    since: '2021年12月',
+    technologies: ['csharp', 'wpf'],
+  },
+  {
+    name: 'banishment',
+    description: '',
+    since: '2021年12月',
+    technologies: ['pwsh'],
+  },
+  {
+    name: 'rasm',
+    description: '',
+    since: '2021年12月',
+    technologies: ['rust'],
+  },
+  {
+    name: 'pear-rs',
+    description: '',
+    since: '2021年11月',
+    technologies: ['rust'],
+  },
+  {
+    name: 'ReverieEngine-WebGL',
+    description: 'ReverieEngineをWebGLで動くようにしたかった',
+    since: '2021年10月',
+    repo: 'https://github.com/yuma140902/ReverieEngine-WebGL',
+    technologies: ['rust', 'webgl', 'wasm'],
+  },
+  {
+    name: 'xanadu',
+    description: 'ECS(Entity Component System)を実装してみたかった',
+    since: '2021年10月',
+    repo: 'https://github.com/yuma140902/Xanadu',
+    technologies: ['rust'],
+  },
+  {
+    name: 'ReverieIllustrations/ReverieManager',
+    description: '画像管理ソフトを作りたかった',
+    since: '2021年6月',
+    until: '2021年9月',
+    technologies: ['csharp', 'wpf'],
+  },
+  {
+    name: 'ReverieIllustrations/reverie-manager',
+    description: '画像管理ソフトを作りたかった',
+    since: '2021年5月',
+    until: '2021年6月',
+    technologies: ['electron'],
+  },
+  {
+    name: 'SuperNova',
+    description: '',
+    since: '2021年5月',
+    technologies: ['rust'],
+  },
+  {
+    name: 'silent_commander',
+    description: '完全に透明なランチャーを作りたかった',
+    since: '2021年5月',
+    technologies: ['rust'],
+  },
+  {
+    name: 'Star',
+    description: 'いい感じのMODになるはずだった',
+    since: '2021年4月',
+    technologies: ['java', 'minecraft'],
+  },
+  {
+    name: 'ReverieViewer',
+    description: '画像ビューアを作りたかった<br/>\n2年後にgallery-viewerとして完成させた',
+    since: '2021年2月',
+    technologies: ['electron'],
+  },
+  {
+    name: 'AviUtlMgr',
+    description: '環境を切り替えられるAviUtlのランチャーを作りたかった',
+    since: '2020年10月',
+    technologies: ['hsp'],
+  },
+  {
+    name: 'MCLauncherWPF',
+    description: 'Minecraftのランチャーが作りたかった',
+    since: '2020年10月',
+    technologies: ['csharp', 'wpf'],
+  },
+  {
+    name: 'VideoTortoise',
+    description: '動画管理ソフトを作りたかった',
+    since: '2020年7月',
+    technologies: ['csharp', 'wpf'],
+  },
+  {
+    name: 'StartProcessSuspended',
+    description: '',
+    since: '2020年5月',
+    technologies: ['cpp'],
+  },
+  {
+    name: 'snake_game',
+    description: 'Pistonを使ってゲームを作りたかった',
+    since: '2020年4月',
+    technologies: ['rust', 'piston'],
+  },
+  {
+    name: 'getninst',
+    description: '',
+    since: '2020年4月',
+    technologies: ['rust'],
+  },
+  {
+    name: 'zombieproc',
+    description: '',
+    since: '2020年4月',
+    technologies: ['rust'],
+  },
+  {
+    name: 'emeth',
+    description: '',
+    since: '2019年12月',
+    technologies: ['java'],
+  },
+  {
+    name: 'nabla',
+    description: '<a href="https://nablagame.com/" target="_blank">ナブラ演算子ゲーム</a>が遊べるサイトを作りたかった',
+    since: '2019年9月',
+    technologies: ['angular'],
+  },
+  {
+    name: 's4pear',
+    description: '',
+    since: '2019年8月',
+    technologies: ['java'],
+  },
+  {
+    name: 'youtube_download_button',
+    description: 'Youtubeの再生ページにダウンロードボタンを表示するFirefox機能拡張を作りたかった',
+    since: '2019年7月',
+    until: '2019年8月',
+    technologies: ['fxaddon'],
+  },
+  {
+    name: 'NablaCalc',
+    description: '',
+    since: '2019年5月',
+    technologies: ['csharp'],
+  },
+  {
+    name: 'WebCrawler',
+    description: 'Webページの見た目の差分を表示するツールを作りたかった',
+    since: '2019年4月',
+    technologies: ['csharp', 'winforms'],
+  },
+  {
+    name: 'Numeron',
+    description: '<a href="https://ja.wikipedia.org/wiki/Numer0n" target="_blank">Numer0n</a>のソルバーを作りたかった',
+    since: '2019年3月',
+    technologies: ['java'],
+  },
+  {
+    name: 'MemoryCard',
+    description: '',
+    since: '2019年3月',
+    technologies: ['csharp', 'wpf'],
+  },
+  {
+    name: 'SimpleGenerationsBackup',
+    description: '世代管理ができるバックアップソフトを作りたかった',
+    since: '2019年2月',
+    technologies: ['csharp', 'winforms'],
+  },
+  {
+    name: 'HoldingMarkPdf',
+    description: '',
+    since: '2018年10月',
+    until: '2018年12月',
+    technologies: ['java', 'javafx'],
+  },
+  {
+    name: 'IllustTags',
+    description: '5年の時を経てgallery-viewerになった',
+    since: '2018年10月',
+    technologies: ['csharp', 'winforms'],
+  },
+  {
+    name: 'ALife1',
+    description: '人工生命がワイワイする様子を眺めるソフトを作りたかった',
+    since: '2018年8月',
+    technologies: ['csharp', 'winforms'],
+  },
+  {
+    name: 'MusicPackageManager',
+    description: '',
+    since: '2018年7月',
+    technologies: ['csharp'],
+  },
+  {
+    name: 'eRename',
+    description: '',
+    since: '2018年6月',
+    technologies: ['csharp'],
+  },
+  {
+    name: 'Crypt',
+    description: '',
+    since: '2018年6月',
+    technologies: ['csharp', 'winforms'],
+  },
+  {
+    name: 'BooksBrowser',
+    description: '蔵書管理用のソフトを作りたかった',
+    since: '2018年4月',
+    technologies: ['csharp', 'winforms'],
+  },
+  {
+    name: 'PocketMoneySquares',
+    description: '家計簿アプリを作りたかった',
+    since: '2017年12月',
+    technologies: ['csharp', 'wpf'],
+  },
+  {
+    name: 'KsanMaker',
+    description: '算数の問題を無限に生成するツールを作りたかった',
+    since: '2017年12月',
+    technologies: ['csharp', 'winforms'],
+  },
+  {
+    name: 'WebCrawler',
+    description: '',
+    since: '2017年12月',
+    technologies: ['csharp', 'wpf'],
+  },
+  {
+    name: 'PCJammer',
+    description: '→ ShutdownCountdown',
+    since: '2017年10月',
+    technologies: ['csharp', 'wpf'],
+  },
+  {
+    name: 'MediaTortois',
+    description: '画像・動画管理ソフトを作りたかった',
+    since: '2017年9月',
+    technologies: ['csharp', 'wpf'],
+  },
+  {
+    name: 'TestChecker',
+    description: '',
+    since: '2017年2月',
+    technologies: ['csharp', 'winforms'],
+  },
+  {
+    name: 'QtCalc01',
+    description: 'Qtで電卓を作りたかった',
+    since: '2017年7月',
+    technologies: ['cpp', 'qt'],
+  },
+  {
+    name: 'MyWebCraler',
+    description: '',
+    since: '2017年7月',
+    technologies: ['csharp', 'wpf'],
+  },
+  {
+    name: 'CmdLauncherWin32',
+    description: 'CmdLauncherをWin32 APIに移植したかった',
+    since: '2017年6月',
+    technologies: ['cpp', 'win32api'],
+  },
+  {
+    name: 'JapaneseTextSearch',
+    description: '日本語の全文検索がしたかった',
+    since: '2017年6月',
+    technologies: ['csharp'],
+  },
+  {
+    name: 'eBookLibrary',
+    description: '',
+    since: '2017年6月',
+    technologies: ['csharp', 'wpf'],
+  },
+  {
+    name: 'mcalc',
+    description: '',
+    since: '2017年6月',
+    technologies: ['csharp'],
+  },
+  {
+    name: 'RealRecycleBin',
+    description: 'デスクトップのゴミ箱の見た目を、中身の量によって変えたかった',
+    since: '2017年6月',
+    technologies: ['csharp', 'wpf'],
+  },
+  {
+    name: 'DragAndSave',
+    description: '',
+    since: '2017年5月',
+    technologies: ['csharp', 'winforms'],
+  },
+  {
+    name: 'LaunchAt',
+    description: 'タスクスケジューラのわかりやすいフロントエンドが作りたかった',
+    since: '2017年4月',
+    technologies: ['csharp', 'wpf'],
+  },
+  {
+    name: 'BookReference',
+    description: '',
+    since: '2017年4月',
+    technologies: ['csharp', 'wpf'],
+  },
+  {
+    name: 'AnkiKun',
+    description: '単語帳アプリを作りたかった',
+    since: '2017年4月',
+    technologies: ['csharp'],
+  },
+  {
+    name: 'ClubLog',
+    description: '',
+    since: '2017年4月',
+    technologies: ['csharp', 'wpf'],
+  },
+  {
+    name: 'IMapMailCheck',
+    description: 'IMAPのクライアントを作りたかった',
+    since: '2017年4月',
+    technologies: ['csharp', 'wpf'],
+  },
+  {
+    name: 'CriptForm',
+    description: '',
+    since: '2017年4月',
+    technologies: ['csharp', 'winforms'],
+  },
+  {
+    name: 'FlexDataReader',
+    description: '',
+    since: '2017年3月',
+    until: '2017年4月',
+    technologies: ['csharp', 'wpf'],
+  },
+  {
+    name: 'Tierra',
+    description: 'トマス・S・レイのTierraを実装してみたかった',
+    since: '2017年3月',
+    technologies: ['java'],
+  },
+  {
+    name: 'CuiOnGui',
+    description: 'GUIからコマンドを実行できるソフトを作りたかった',
+    since: '2017年2月',
+    technologies: ['csharp', 'wpf'],
+  },
+  {
+    name: 'ConsoleCsvEditor',
+    description: 'CSVファイル専用のVimみたいなものを作りたかった',
+    since: '2017年2月',
+    technologies: ['java'],
+  },
+  {
+    name: 'TagExplorer',
+    description: '',
+    since: '2017年2月',
+    technologies: ['csharp', 'winforms'],
+  },
+  {
+    name: 'InfoBox.mini',
+    description: '',
+    since: '2017年2月',
+    technologies: ['csharp', 'wpf'],
+  },
+  {
+    name: 'ideaTree.mini',
+    description: 'コンパクトなアウトラインプロセッサを作りたかった',
+    since: '2017年1月',
+    until: '2017年2月',
+    technologies: ['csharp', 'wpf'],
+  },
+  {
+    name: 'SyncExplorer',
+    description: '2画面のファイラーを作りたかった',
+    since: '2017年1月',
+    technologies: ['csharp', 'winforms'],
+  },
+  {
+    name: 'LookOver',
+    description: '',
+    since: '2016年12月',
+    until: '2017年1月',
+    technologies: ['java', 'csharp', 'wpf'],
+  },
+  {
+    name: 'TrashMeter',
+    description: '',
+    since: '2017年5月',
+    technologies: ['csharp', 'winforms'],
+  },
+  {
+    name: 'SShougi',
+    description: '将棋ゲームが作りたかった',
+    since: '2016年12月',
+    technologies: ['cpp'],
+  },
+  {
+    name: 'PCInfo',
+    description: 'PCの情報を収集して表示するソフトを作りたかった',
+    since: '2016年12月',
+    technologies: ['csharp', 'winforms'],
+  },
+  {
+    name: 'OptionSwitcher',
+    description: 'コマンドライン引数のパーサーを作りたかった',
+    since: '2016年12月',
+    technologies: ['csharp'],
+  },
+  {
+    name: 'Dictionary',
+    description: '辞書ソフトが作りたかった',
+    since: '2016年11月',
+    technologies: ['csharp', 'winforms'],
+  },
+  {
+    name: 'Map',
+    description: 'デスクトップに常駐するタイプの地図アプリを作りたかった',
+    since: '2016年10月',
+    technologies: ['csharp', 'winforms'],
+  },
+  {
+    name: 'run',
+    description: 'Windows用に作った同名のプログラムをMac OSXに移植したかった',
+    since: '2016年10月',
+    technologies: ['swift'],
+  },
+  {
+    name: 'MultiUIApp',
+    description: '',
+    since: '2016年9月',
+    technologies: ['csharp', 'winforms'],
+  },
+  {
+    name: 'SearchStationJS',
+    description: '横断検索できるサイトを作りたかった',
+    since: '2016年9月',
+    technologies: ['js'],
+  },
+  {
+    name: 'WidgetImg',
+    description: '',
+    since: '2019年4月',
+    technologies: ['csharp', 'winforms'],
+  },
+  {
+    name: 'Questions',
+    description: '',
+    since: '2016年8月',
+    technologies: ['csharp', 'winforms'],
   },
 ];

@@ -9,6 +9,7 @@ import {
   getTechnologyClass,
   getTechnologyLabel,
   main_projects,
+  scrap_projects,
 } from '@/src/projects';
 
 import { Article, Link } from '../common';
@@ -103,6 +104,10 @@ export function MainProjects() {
             <Link href="/works/archives/">作っていたもの</Link>
           </h2>
           <p>今はもう更新していないもの</p>
+          <h2>
+            <Link href="/works/scraps/">ボツ</Link>
+          </h2>
+          <p>未完成のままやめてしまったもの</p>
         </Article>
       </div>
     </div>
@@ -119,6 +124,20 @@ export function ArchivedProjects() {
         </Article>
       </div>
       <ProjectGrid projects={archived_projects} />
+    </div>
+  );
+}
+
+export function ScrapProjects() {
+  return (
+    <div>
+      <div className="pb-content-space">
+        <Article>
+          <h1>ボツ</h1>
+          <p>未完成のままやめてしまったもの。下に行くほど古い</p>
+        </Article>
+      </div>
+      <ProjectGrid projects={scrap_projects} />
     </div>
   );
 }
