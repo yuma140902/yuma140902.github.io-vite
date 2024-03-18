@@ -20,8 +20,13 @@ export function Link({
         'hover:underline hover:decoration-primary-tm text-secondary group'
       }
     >
-      {children}&nbsp;
-      {outside ? <span className="i-carbon-launch h-3.5 w-3.5 text-base-content-tm" /> : undefined}
+      {children}
+      {outside ? (
+        <>
+          &nbsp;
+          <span className="i-carbon-launch h-3.5 w-3.5 text-base-content-tm" />
+        </>
+      ) : undefined}
     </a>
   );
 }
