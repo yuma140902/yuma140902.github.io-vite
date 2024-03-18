@@ -37,14 +37,23 @@ export function Sidebar() {
             }
           >
             <Menu.Item>
-              <SidebarLink href="/works/">
+              <SidebarLink href="/works/#">
                 <span className="i-carbon-list w-5 h-5" />
-                一覧
+                作っているもの
+              </SidebarLink>
+              <SidebarLink href="/works/archives/">
+                <span className="i-carbon-list w-5 h-5" />
+                作っていたもの
+              </SidebarLink>
+              <SidebarLink href="/works/scraps/">
+                <span className="i-carbon-list w-5 h-5" />
+                ボツ
+              </SidebarLink>
+              <SidebarLink href="/works/forks/">
+                <span className="i-carbon-list w-5 h-5" />
+                フォーク
               </SidebarLink>
             </Menu.Item>
-            {main_projects.map((project) => (
-              <ProjectMenuItem key={project.name} project={project} />
-            ))}
           </Menu.Details>
         </Menu.Item>
         <Menu.Item>
