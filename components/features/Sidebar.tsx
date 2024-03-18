@@ -1,9 +1,9 @@
 import { ReactNode } from 'react';
-import { Divider, Menu } from 'react-daisyui';
+import { Menu } from 'react-daisyui';
 import { usePageContext } from 'vike-react/usePageContext';
 
 import { ContentType, contents } from '@/src/contents';
-import { ProjectType, main_projects } from '@/src/projects';
+import { ProjectType } from '@/src/projects';
 
 export function Sidebar() {
   return (
