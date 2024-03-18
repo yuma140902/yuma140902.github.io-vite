@@ -75,7 +75,7 @@ function Project({ project }: { project: ProjectType }) {
     <Card project={project} name={project.name}>
       <div className="h-full">
         <Image {...project} />
-        {project.description}
+        <p className="pt-content-space">{project.description}</p>
       </div>
     </Card>
   );
