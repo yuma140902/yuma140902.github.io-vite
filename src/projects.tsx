@@ -37,6 +37,8 @@ import imgWebImageEditor from '@/assets/web-image-editor.png';
 import imgWebTools from '@/assets/webtools.png';
 import imgWikiView2 from '@/assets/wikiview2.png';
 
+import { Article, Link } from '@/components/common';
+
 export type Technology =
   | 'rust'
   | 'opengl'
@@ -83,7 +85,7 @@ export type Technology =
 
 export type ProjectType = {
   name: string;
-  description: string;
+  description: string | React.ReactNode;
   repo?: string;
   since?: string;
   until?: string;
@@ -109,8 +111,8 @@ export type ForkType = {
     repo: string;
     branch: string;
   };
-  description: string;
-  change: string;
+  description: string | React.ReactNode;
+  change: string | React.ReactNode;
 };
 
 export function getTechnologyLabel(tech: Technology): string {
@@ -725,8 +727,15 @@ export const main_projects: ProjectType[] = [
 export const archived_projects: ProjectType[] = [
   {
     name: 'WebTools',
-    description:
-      'ブラウザ上で動作する小物のツール群。<a href="https://github.com/yuma140902/tempura" target="_blank">Tempura</a>製。\n\nこのサイトと一体化したため独立したプロジェクトとしては更新終了\n\n- <a href="/webtools" target="_blank">WebTools - yuma14</a>',
+    description: (
+      <div>
+        ブラウザ上で動作する小物のツール群。
+        <Link href="https://github.com/yuma140902/tempura" outside>
+          Tempura
+        </Link>
+        製。このサイトと一体化したため独立したプロジェクトとしては更新終了
+      </div>
+    ),
     repo: 'https://github.com/yuma140902/webtools',
     since: '2022年11月',
     until: '2023年11月',
@@ -795,8 +804,15 @@ export const archived_projects: ProjectType[] = [
   },
   {
     name: 'BlockingIO',
-    description:
-      'マルチプレイオンライン3Dおにごっこゲーム。<a href="https://github.com/yuma140902/Reverie" target="_blank">ReverieEngine</a>製。',
+    description: (
+      <div>
+        マルチプレイオンライン3Dおにごっこゲーム。
+        <Link href="https://github.com/yuma140902/Reverie" outside>
+          ReverieEngine
+        </Link>
+        製。
+      </div>
+    ),
     repo: 'https://github.com/kcs1959/BlockingIO-client',
     since: '2021年10月',
     until: '2021年12月',
@@ -814,8 +830,7 @@ export const archived_projects: ProjectType[] = [
   },
   {
     name: 'RustyCraft',
-    description:
-      'Reverie Engineのデモとして作られたMinecraft風ゲーム(？)\n\n- [RustyCraft - yuma14](/works/rustycraft)',
+    description: 'Reverie Engineのデモとして作られたMinecraft風ゲーム(？)',
     repo: 'https://github.com/yuma140902/RustyCraft',
     since: '2021年8月',
     until: '2021年10月',
@@ -890,8 +905,17 @@ export const archived_projects: ProjectType[] = [
   },
   {
     name: 'MCResourcePackUtil',
-    description:
-      'Minecraftのテクスチャを読み込み、一括でフィルターをかけてリソースパック化するソフト。\n\nというのは建前で、実は<a href="https://resourcepack.net/traditional-beauty-resource-pack/#gsc.tab=0" target="_blank">TraditionalBeauty</a>というリソースパックを再現するためのソフト。\\\n本家はもう更新されていないが、このソフトを使うと(1.6.1以降の)任意のバージョンのMinecraftに対してTraditionalBeautyとほぼ同等のリソースパックを生成できる。',
+    description: (
+      <div>
+        Minecraftのテクスチャを読み込み、一括でフィルターをかけてリソースパック化するソフト。
+        <br />
+        というのは建前で、実は
+        <Link href="https://resourcepack.net/traditional-beauty-resource-pack/#gsc.tab=0" outside>
+          TraditionalBeauty
+        </Link>
+        というリソースパックを再現するためのソフト。本家はもう更新されていないが、このソフトを使うと(1.6.1以降の)任意のバージョンのMinecraftに対してTraditionalBeautyとほぼ同等のリソースパックを生成できる。
+      </div>
+    ),
     repo: 'https://github.com/yuma140902/MCResourcePackUtil',
     since: '2020年9月',
     until: '2023年6月',
@@ -908,8 +932,16 @@ export const archived_projects: ProjectType[] = [
   },
   {
     name: 'ProconHelper',
-    description:
-      '競プロ用のソフト。「コンパイル→stdin→stdoutの確認」のイテレーションを高速に回すことができる。\n\n<a href="https://github.com/kyuridenamida/atcoder-tools" target="_blank">AtCoder Tools</a>などの専門のツールには敵わないが、「この一問だけ普段使わない言語で解きたい」等の場合に役立つ。',
+    description: (
+      <div>
+        競プロ用のソフト。「コンパイル→stdin→stdoutの確認」のイテレーションを高速に回すことができる。
+        <br />
+        <Link href="https://github.com/kyuridenamida/atcoder-tools" outside>
+          AtCoder Tools
+        </Link>
+        などの専門のツールには敵わないが、「この一問だけ普段使わない言語で解きたい」等の場合に役立つ。
+      </div>
+    ),
     repo: 'https://github.com/yuma140902/ProconHelper',
     since: '2020年3月',
     until: '2021年4月',
@@ -1336,7 +1368,15 @@ export const archived_projects: ProjectType[] = [
   },
   {
     name: 'MyUtils3',
-    description: '小物のプログラムシリーズ\n\n- Counter\n- OnTimeRunner\n  - cronみたいなやつ',
+    description: (
+      <Article>
+        小物のプログラムシリーズ
+        <ul>
+          <li>Counter</li>
+          <li>OnTimeRunner - cronみたいなやつ</li>
+        </ul>
+      </Article>
+    ),
     since: '2016年8月',
     until: '2017年1月',
     hero: {
@@ -1430,8 +1470,13 @@ export const scrap_projects: ProjectType[] = [
   },
   {
     name: 'sort_visualizer',
-    description:
-      'GTKでソートビジュアライザを作りたかった<br/>\n<a href="/webtools/sort.html">WebToolsのSort Visualizer</a>になった',
+    description: (
+      <div>
+        GTKでソートビジュアライザを作りたかった
+        <br />
+        <Link href="/webtools/sort.html">WebToolsのSort Visualizer</Link>になった
+      </div>
+    ),
     since: '2022年12月',
     technologies: ['gtk'],
   },
@@ -1537,7 +1582,13 @@ export const scrap_projects: ProjectType[] = [
   },
   {
     name: 'ReverieViewer',
-    description: '画像ビューアを作りたかった<br/>\n2年後にgallery-viewerとして完成させた',
+    description: (
+      <div>
+        画像ビューアを作りたかった
+        <br />
+        2年後にgallery-viewerとして完成させた
+      </div>
+    ),
     since: '2021年2月',
     technologies: ['electron'],
   },
@@ -1591,7 +1642,14 @@ export const scrap_projects: ProjectType[] = [
   },
   {
     name: 'nabla',
-    description: '<a href="https://nablagame.com/" target="_blank">ナブラ演算子ゲーム</a>が遊べるサイトを作りたかった',
+    description: (
+      <div>
+        <Link href="https://nablagame.com/" outside>
+          ナブラ演算子ゲーム
+        </Link>
+        が遊べるサイトを作りたかった
+      </div>
+    ),
     since: '2019年9月',
     technologies: ['angular'],
   },
@@ -1622,7 +1680,14 @@ export const scrap_projects: ProjectType[] = [
   },
   {
     name: 'Numeron',
-    description: '<a href="https://ja.wikipedia.org/wiki/Numer0n" target="_blank">Numer0n</a>のソルバーを作りたかった',
+    description: (
+      <div>
+        <Link href="https://ja.wikipedia.org/wiki/Numer0n" outside>
+          Numer0n
+        </Link>
+        のソルバーを作りたかった
+      </div>
+    ),
     since: '2019年3月',
     technologies: ['java'],
   },
@@ -1938,7 +2003,14 @@ export const forks: ForkType[] = [
       branch: 'master',
     },
     description: "Snippet plugin for vim/nvim that supports LSP/VSCode's snippet format.",
-    change: '`<cmd>`マッピングの無い古いVimで動作するようにした',
+    change: (
+      <Article>
+        <code>
+          {'<'}cmd{'>'}
+        </code>
+        マッピングの無い古いVimで動作するようにした
+      </Article>
+    ),
   },
   {
     name: 'ctrlp-grep',
@@ -2005,6 +2077,10 @@ export const forks: ForkType[] = [
       branch: 'main',
     },
     description: 'Truecolor solarized theme for neovim in Lua using colorbuddy',
-    change: '`Normal`と`NormalNC`の色を同じにした',
+    change: (
+      <Article>
+        <code>Normal</code>と<code>NormalNC</code>の色を同じにした
+      </Article>
+    ),
   },
 ];

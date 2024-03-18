@@ -58,14 +58,14 @@ function Image(props: ProjectType) {
     return undefined;
   } else if (!props.hero.url && !props.repo) {
     return props.hero.image ? (
-      <div className="hero">
+      <div className="hero pb-content-space">
         <img src={props.hero.image} className="object-fit max-h-64" />
       </div>
     ) : undefined;
   }
   return (
     <a href={props.hero.url ?? props.repo} target="_blank" rel="noopener noreferrer" className="hero">
-      <img src={props.hero.image} className="object-fit max-h-64" />
+      <img src={props.hero.image} className="object-fit max-h-64 pb-content-space" />
     </a>
   );
 }
@@ -75,7 +75,7 @@ function Project({ project }: { project: ProjectType }) {
     <Card project={project} name={project.name}>
       <div className="h-full">
         <Image {...project} />
-        <p className="pt-content-space">{project.description}</p>
+        <Article>{project.description}</Article>
       </div>
     </Card>
   );
@@ -98,7 +98,7 @@ function Fork({ fork }: { fork: ForkType }) {
         {fork.name}
       </div>
       <div className="p-card-space border-t border-t-base-tm-200 flex-grow-0 flex-shrink-0 rounded-b">
-        <h4 className="font-bold text-lg">アップストリーム</h4>
+        <h4 className="font-bold text-lg ">アップストリーム</h4>
         <Link href={`https://github.com/${fork.upstream.repo}/tree/${fork.upstream.branch}`} outside>
           <span className="i-carbon-logo-github mr-1 align-middle text-base-content-tm group-hover:text-accent-tm" />
           {fork.upstream.repo}:{fork.upstream.branch}
@@ -107,7 +107,7 @@ function Fork({ fork }: { fork: ForkType }) {
           className="py-content-space"
           src={`https://img.shields.io/github/last-commit/${fork.upstream.repo}/${fork.upstream.branch}`}
         />
-        <h4 className="font-bold text-lg">ダウンストリーム</h4>
+        <h4 className="font-bold text-lg ">ダウンストリーム</h4>
         <Link href={`https://github.com/${fork.downstream.repo}/tree/${fork.downstream.branch}`} outside>
           <span className="i-carbon-logo-github mr-1 align-middle text-base-content-tm group-hover:text-accent-tm" />
           {fork.downstream.repo}:{fork.downstream.branch}
@@ -116,10 +116,10 @@ function Fork({ fork }: { fork: ForkType }) {
           className="py-content-space"
           src={`https://img.shields.io/github/last-commit/${fork.downstream.repo}/${fork.downstream.branch}`}
         />
-        <h4 className="font-bold text-lg">アップストリームの概要</h4>
-        <p className="py-content-space">{fork.description}</p>
-        <h4 className="font-bold text-lg">変更点・変更理由</h4>
-        <p className="py-content-space">{fork.change}</p>
+        <h4 className="font-bold text-lg ">アップストリームの概要</h4>
+        <p className="py-content-space prose">{fork.description}</p>
+        <h4 className="font-bold text-lg ">変更点・変更理由</h4>
+        <p className="py-content-space prose">{fork.change}</p>
       </div>
     </div>
   );

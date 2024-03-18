@@ -24,7 +24,7 @@ function Card(props: { link: string; outside: boolean; head: ReactNode; children
 function App({ app }: { app: AppType }) {
   return (
     <Card head={<div>{app.name}</div>} link={app.url} outside={app.outside}>
-      <p className="">{app.copy}</p>
+      <p className="prose">{app.copy}</p>
       {app.img ? <img src={app.img} className="hero object-fit mt-2" /> : undefined}
     </Card>
   );
