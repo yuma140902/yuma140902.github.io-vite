@@ -46,6 +46,7 @@ function Header() {
           </a>
           <a href="/">
             <span className="block">yuma14.net</span>
+            <span className="hidden" data-set-theme="" data-key="homepage-theme" />
           </a>
         </div>
       </div>
