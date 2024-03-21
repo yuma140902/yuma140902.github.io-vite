@@ -8,14 +8,14 @@ function Card(props: { link: string; outside: boolean; head: ReactNode; children
   return (
     <a
       href={props.link}
-      className="no-underline flex-grow-0 flex-shrink-0 block w-64 h-64 overflow-hidden"
+      className="no-underline flex-grow-0 flex-shrink-0 block w-64 overflow-hidden"
       target={props.outside ? '_blank' : '_self'}
     >
-      <div className="h-full rounded border-solid border-base-tm-200 border hover:border-primary-tm">
-        <div className="p-card-space bg-base-tm-150 font-bold text-lg border-b border-b-base-tm-200 rounded-t">
+      <div className="h-full rounded border-solid border-base-tm-200 border hover:border-primary-tm flex flex-col">
+        <div className="p-card-space bg-base-tm-150 font-bold text-lg border-b border-b-base-tm-200 rounded-t flex-grow-0 flex-shrink-0">
           {props.head}
         </div>
-        <div className="p-card-space rounded-b">{props.children}</div>
+        <div className="p-card-space rounded-b flex-grow">{props.children}</div>
       </div>
     </a>
   );
@@ -24,8 +24,12 @@ function Card(props: { link: string; outside: boolean; head: ReactNode; children
 function App({ app }: { app: AppType }) {
   return (
     <Card head={<div>{app.name}</div>} link={app.url} outside={app.outside}>
-      <p className="prose">{app.copy}</p>
-      {app.img ? <img src={app.img} className="hero object-fit mt-2" /> : undefined}
+      <div className="flex flex-col items-center h-full">
+        <p className="prose flex-grow-0 flex-shrink-0">{app.copy}</p>
+        <div className="flex-grow items-center flex">
+          {app.img ? <img src={app.img} className="object-contain flex-shrink h-full max-h-40 mt-2" /> : undefined}
+        </div>
+      </div>
     </Card>
   );
 }
