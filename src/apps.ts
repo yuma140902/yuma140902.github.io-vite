@@ -1,3 +1,4 @@
+import imgDiffTool from '@/assets/diff-tool/icon-512x512.png';
 import regendWebUiImg from '@/assets/regend.gif';
 import webImageEditorImg from '@/assets/web-image-editor.png';
 
@@ -27,6 +28,7 @@ export const main_apps: AppType[] = [
     badge:
       'https://img.shields.io/github/deployments/yuma140902/yuma140902.github.io/github-pages?logo=github&label=Deployment',
     outside: false,
+    img: imgDiffTool,
   },
   {
     name: 'CSV to LaTeX',
