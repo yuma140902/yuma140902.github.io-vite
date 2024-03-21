@@ -81,4 +81,15 @@ export const deployments: DeploymentType[] = [
       'https://img.shields.io/github/deployments/yuma140902/simple-canvas-game/github-pages?logo=github&label=Deployment',
     repo: 'https://github.com/yuma140902/simple-canvas-game',
   },
+  {
+    url: 'https://github.com/yuma140902/IPAInput',
+    badge: 'https://img.shields.io/github/deployments/yuma140902/IPAInput/github-pages?logo=github&label=Deployment',
+    repo: 'https://github.com/yuma140902/IPAInput',
+  },
+  {
+    url: 'https://old.yuma14.net/',
+    badge:
+      'https://img.shields.io/github/deployments/yuma140902/yuma14net-old/github-pages?logo=github&label=Deployment',
+    repo: 'https://github.com/yuma140902/yuma14net-old',
+  },
 ];
