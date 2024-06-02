@@ -92,4 +92,9 @@ export const deployments: DeploymentType[] = [
       'https://img.shields.io/github/deployments/yuma140902/yuma14net-old/github-pages?logo=github&label=Deployment',
     repo: 'https://github.com/yuma140902/yuma14net-old',
   },
+  {
+    url: '/typing/',
+    badge: 'https://img.shields.io/github/deployments/yuma140902/typing/github-pages?logo=github&label=Deployment',
+    repo: 'https://github.com/yuma140902/typing',
+  },
 ];

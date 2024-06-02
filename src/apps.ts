@@ -13,6 +13,14 @@ export type AppType = {
 
 export const main_apps: AppType[] = [
   {
+    name: 'Typing Game',
+    copy: 'タイピングゲーム',
+    url: '/typing/',
+    outside: true,
+    badge:
+      'https://img.shields.io/github/deployments/yuma140902/typing/github-pages?logo=github&label=Deployment',
+  },
+  {
     name: 'Web Image Editor',
     copy: 'ブラウザ上で画像編集',
     url: '/web-image-editor/',
