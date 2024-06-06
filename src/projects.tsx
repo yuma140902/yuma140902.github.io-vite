@@ -320,6 +320,10 @@ export const main_projects: ProjectType[] = [
     technologies: ['rust', 'opengl'],
     releases: [
       {
+        date: '2024/06/04',
+        version: 'v0.0.7',
+      },
+      {
         date: '2022/10/01',
         version: 'v0.0.6',
       },
