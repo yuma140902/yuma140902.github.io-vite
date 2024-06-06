@@ -11,6 +11,9 @@
   },
   "keywords": [],
   "author": "yuma14",
+  "imports": {
+    "#root/*": "./*.ts"
+  },
   "devDependencies": {
     "@iconify/json": "^2.2.187",
     "@tailwindcss/typography": "^0.5.10",

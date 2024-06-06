@@ -1,9 +1,9 @@
 import React, { ReactNode } from 'react';
 
-import reverieEngineUrl from '@/assets/reverie.png';
-import webImageEditorUrl from '@/assets/web-image-editor.png';
+import reverieEngineUrl from '#root/assets/reverie.png';
+import webImageEditorUrl from '#root/assets/web-image-editor.png';
 
-import { Article } from '@/components/common';
+import { Article } from '#root/components/common';
 
 function Card(props: { link: string; head: ReactNode; children: ReactNode }) {
   return (

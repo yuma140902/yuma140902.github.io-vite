@@ -12,7 +12,7 @@ import {
   getTechnologyLabel,
   main_projects,
   scrap_projects,
-} from '@/src/projects';
+} from '#root/src/projects';
 
 import { Article, Link } from '../common';
 

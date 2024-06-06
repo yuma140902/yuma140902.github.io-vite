@@ -1,6 +1,6 @@
-import imgDiffTool from '@/assets/diff-tool/icon-512x512.png';
-import regendWebUiImg from '@/assets/regend.gif';
-import webImageEditorImg from '@/assets/web-image-editor.png';
+import imgDiffTool from '#root/assets/diff-tool/icon-512x512.png';
+import regendWebUiImg from '#root/assets/regend.gif';
+import webImageEditorImg from '#root/assets/web-image-editor.png';
 
 export type AppType = {
   name: string;
@@ -17,8 +17,7 @@ export const main_apps: AppType[] = [
     copy: 'タイピングゲーム',
     url: '/typing/',
     outside: true,
-    badge:
-      'https://img.shields.io/github/deployments/yuma140902/typing/github-pages?logo=github&label=Deployment',
+    badge: 'https://img.shields.io/github/deployments/yuma140902/typing/github-pages?logo=github&label=Deployment',
   },
   {
     name: 'Web Image Editor',

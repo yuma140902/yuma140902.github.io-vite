@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Article, Link } from '@/components/common';
+import { Article, Link } from '#root/components/common';
 
 export default function Page() {
   return (

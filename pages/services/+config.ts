@@ -1,6 +1,6 @@
 import { Config } from 'vike/types';
 
-import { LayoutDefault } from '@/layouts/Layouts';
+import { LayoutDefault } from '#root/layouts/Layouts';
 
 export default {
   Layout: LayoutDefault,

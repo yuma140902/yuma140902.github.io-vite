@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Apps } from '@/components/features';
+import { Apps } from '#root/components/features';
 
 export default function Page() {
   return <Apps />;

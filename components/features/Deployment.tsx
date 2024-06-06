@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react';
 
-import { type DeploymentType, deployments } from '@/src/deployments';
+import { type DeploymentType, deployments } from '#root/src/deployments';
 
-import { Article, Link } from '@/components/common';
+import { Article, Link } from '#root/components/common';
 
 function Card(props: { children: ReactNode }) {
   return (

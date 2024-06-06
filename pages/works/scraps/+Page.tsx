@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ScrapProjects } from '@/components/features/Projects';
+import { ScrapProjects } from '#root/components/features/Projects';
 
 export default function Page() {
   return <ScrapProjects />;

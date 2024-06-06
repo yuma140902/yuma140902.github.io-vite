@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Deployments } from '@/components/features';
+import { Deployments } from '#root/components/features';
 
 export default function Page() {
   return <Deployments />;

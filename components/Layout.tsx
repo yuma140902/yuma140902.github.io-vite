@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import { Divider } from 'react-daisyui';
 import { themeChange } from 'theme-change';
 
-import { Sidebar, ThemeSelector } from '@/components/features';
+import { Sidebar, ThemeSelector } from '#root/components/features';
 
-import '@/layouts/scrollbar.css';
-import '@/layouts/selection.css';
-import '@/layouts/tailwind.css';
-import '@/layouts/themes.css';
+import '#root/layouts/scrollbar.css';
+import '#root/layouts/selection.css';
+import '#root/layouts/tailwind.css';
+import '#root/layouts/themes.css';
 
 export function Layout(props: { wide: boolean; children: React.ReactNode }) {
   return (

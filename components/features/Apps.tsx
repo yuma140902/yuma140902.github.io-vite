@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react';
 
-import { AppType, main_apps, minor_apps } from '@/src/apps';
+import { AppType, main_apps, minor_apps } from '#root/src/apps';
 
-import { Article } from '@/components/common';
+import { Article } from '#root/components/common';
 
 function Card(props: { link: string; outside: boolean; head: ReactNode; children: ReactNode }) {
   return (
