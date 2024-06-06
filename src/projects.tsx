@@ -728,6 +728,13 @@ export const main_projects: ProjectType[] = [
     },
     technologies: ['rust'],
   },
+  {
+    name: 'xanadu',
+    description: 'ECS (Entity Component System) ライブラリ',
+    since: '2021年10月',
+    repo: 'https://github.com/yuma140902/Xanadu',
+    technologies: ['rust'],
+  },
 ];
 
 export const archived_projects: ProjectType[] = [
@@ -1546,13 +1553,6 @@ export const scrap_projects: ProjectType[] = [
     since: '2021年10月',
     repo: 'https://github.com/yuma140902/ReverieEngine-WebGL',
     technologies: ['rust', 'webgl', 'wasm'],
-  },
-  {
-    name: 'xanadu',
-    description: 'ECS(Entity Component System)を実装してみたかった',
-    since: '2021年10月',
-    repo: 'https://github.com/yuma140902/Xanadu',
-    technologies: ['rust'],
   },
   {
     name: 'ReverieIllustrations/ReverieManager',
