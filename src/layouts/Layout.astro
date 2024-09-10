@@ -15,8 +15,9 @@ type NavItem = {
 const currentPath = Astro.url.pathname;
 const navItems: NavItem[] = [
   ['/', 'Home'],
-  ['/profile', 'Profile'],
-  ['/works', 'Works'],
+  ['/profile/', 'Profile'],
+  ['/works/', 'Works'],
+  ['/apps/', 'ウェブアプリ'],
 ].map(([url, text]) => ({
   url,
   text,
