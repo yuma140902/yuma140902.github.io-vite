@@ -1,5 +1,7 @@
 ---
 import 'chota';
+import { Icon } from 'astro-icon/components';
+
 interface Props {
 	title: string;
 }
@@ -49,10 +51,20 @@ const navItems: NavItem[] = [
       <nav class="nav">
         <div class="nav-left">
           <a class="brand" href="/">yuma14.net</a>
-          <div class="tabs">
+          <div class="tabs wide-menu">
             {navItems.map(item => 
               <a href={item.url} class={item.active ? "active" : ""}>{item.text}</a>
             )}
+          </div>
+          <div class="button clear narrow-menu">
+            <details class="dropdown">
+              <summary class="button outline"><Icon name="carbon:menu" title="Menu"/></summary>
+              <div class="card">
+              {navItems.map(item => 
+                <a href={item.url} class={item.active ? "active" : ""}>{item.text}</a>
+              )}
+              </div>
+            </details>
           </div>
         </div>
       </nav>
@@ -98,5 +110,16 @@ header {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-bottom: solid 1px #ffffff;
+}
+.narrow-menu {
+  display: none;
+}
+@media (max-width: 992px) {
+  .wide-menu {
+    display: none;
+  }
+  .narrow-menu {
+    display: flex;
+  }
 }
 </style>
