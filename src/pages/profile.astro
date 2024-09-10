@@ -34,6 +34,7 @@ async function getRecentRepos(username: string, repoCount: number): Promise<Repo
 }
 
 const repos = await getRecentRepos('yuma140902', 6);
+const currentDate = new Date().toISOString().split('T')[0];
 ---
 
 <MdLayout frontmatter={{
@@ -57,7 +58,7 @@ const repos = await getRecentRepos('yuma140902', 6);
     <img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=yuma140902&count_private=false&include_all_commits=true&theme=graywhite&hide_rank=true&hide_border=true&hide_title=true&show_icons=true" />
   </p>
 
-  <p><b>最近更新したリポジトリ</b></p>
+  <p><b>最近更新したリポジトリ</b> (データ更新: {currentDate})</p>
 
   <dl>
   {repos.map(repo => (
@@ -102,6 +103,6 @@ const repos = await getRecentRepos('yuma140902', 6);
 
   <h2><Icon name="carbon:txt" /> <a href="https://yuma14.net/twtxt.txt" target="_blank">twtxt</a></h2>
 
-  <p><a href="https://twtxt.readthedocs.io/en/stable/" target="_blank">twtxt</a> は<q cite="https://twtxt.readthedocs.io/en/stable/user/intro.html">ハッカーのための分散型ミニマリスト・マイクロブログ・サービス</q>です。私の twtxt 用のテキストファイルをこのサーバでホストしています。なお私はミニマリストではありません。</p>
+  <p><a href="https://twtxt.readthedocs.io/en/stable/" target="_blank">twtxt</a> は<q cite="https://twtxt.readthedocs.io/en/stable/user/intro.html">ハッカーのための分散型ミニマリスト・マイクロブログ・サービス</q>です。私の twtxt 用のテキストファイルをこのサーバでホストしています。</p>
 
 </MdLayout>

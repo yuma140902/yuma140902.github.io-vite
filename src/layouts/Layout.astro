@@ -5,6 +5,22 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+type NavItem = {
+  url: string;
+  text: string;
+  active: boolean;
+}
+
+const currentPath = Astro.url.pathname;
+const navItems: NavItem[] = [
+  ['/', 'Home'],
+  ['/profile', 'Profile'],
+].map(([url, text]) => ({
+  url,
+  text,
+  active: (url.length === 1 && currentPath === url) || (url.length > 1 && currentPath.startsWith(url)),
+}));
 ---
 
 <!doctype html>
@@ -27,16 +43,38 @@ const { title } = Astro.props;
 		<title>{title} - yuma14.net</title>
 	</head>
 	<body>
+    <header>
+      <nav class="nav">
+        <div class="nav-left">
+          <a class="brand" href="/">yuma14.net</a>
+          <div class="tabs">
+            {navItems.map(item => 
+              <a href={item.url} class={item.active ? "active" : ""}>{item.text}</a>
+            )}
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
 		<slot />
+    </main>
 	</body>
 </html>
 
 <style>
-body {
+main {
   padding-left: 3rem;
   padding-right: 3rem;
   max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border-bottom: solid 1px #ffffff;
 }
 </style>
