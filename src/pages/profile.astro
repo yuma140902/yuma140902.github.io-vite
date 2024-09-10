@@ -1,5 +1,6 @@
 ---
 import MdLayout from '../layouts/MdLayout.astro'
+import Link from '../components/Link.astro'
 import { Icon } from 'astro-icon/components'
 import { Octokit } from 'octokit'
 
@@ -44,12 +45,12 @@ const currentDate = new Date().toISOString().split('T')[0];
 }}>
   <p>学生です。</p>
 
-  <h2><Icon name="simple-icons:twitter" /> <a href="https://x.com/yuma140902" target="_blank">Twitter</a></h2>
+  <h2><Icon name="simple-icons:twitter" /> <Link url="https://x.com/yuma140902" no_icon>Twitter</Link></h2>
 
   <p>ご連絡は Twitter の DM へお願いします。</p>
   <p>このアカウントはほとんど使っていませんが、DM は見ています。</p>
 
-  <h2><Icon name="simple-icons:github" /> <a href="https://github.com/yuma140902" target="_blank">GitHub</a></h2>
+  <h2><Icon name="simple-icons:github" /> <Link url="https://github.com/yuma140902" no_icon>GitHub</Link></h2>
 
   <p>GitHub にコードを公開しています。最近は Rust で遊んでいます。</p>
 
@@ -63,7 +64,7 @@ const currentDate = new Date().toISOString().split('T')[0];
   <dl>
   {repos.map(repo => (
     <div>
-      <dt><a href={repo.url} target="_blank">{repo.name}</a></dt>
+      <dt><Link url={repo.url}>{repo.name}</a></dt>
       <dd>
         {(repo.description && repo.description.length > 0) && <q cite={repo.url}>{repo.description}</q>}
       </dd>
@@ -71,7 +72,7 @@ const currentDate = new Date().toISOString().split('T')[0];
   ))}
   </dl>
 
-  <h2><Icon name="simple-icons:zenn" /> <a href="https://zenn.dev/yuma14" target="_blank">Zenn</a></h2>
+  <h2><Icon name="simple-icons:zenn" /> <Link url="https://zenn.dev/yuma14" no_icon>Zenn</Link></h2>
 
   <p>記事を投稿しています。</p>
 
@@ -79,16 +80,16 @@ const currentDate = new Date().toISOString().split('T')[0];
 
   <dl>
     <div>
-      <dt><a href="https://zenn.dev/yuma14/articles/ddc-vim-with-lua" target="_blank">ddc.vimの解説とinit.luaでの設定方法</a></dt>
+      <dt><Link url="https://zenn.dev/yuma14/articles/ddc-vim-with-lua">ddc.vimの解説とinit.luaでの設定方法</Link></dt>
       <dd><q>この記事は筆者が<code>:help ddc</code>を読んだときのメモです。公式のドキュメント<code>:help ddc</code>を読もう！</q></dd>
-      <dt><a href="https://zenn.dev/yuma14/articles/ssh-pubkey-auth-to-conoha-vps" target="_blank">ConoHa VPSに公開鍵認証でSSH/SCP接続する手順</a></dt>
+      <dt><Link url="https://zenn.dev/yuma14/articles/ssh-pubkey-auth-to-conoha-vps">ConoHa VPSに公開鍵認証でSSH/SCP接続する手順</Link></dt>
       <dd><q>最近ConoHa VPSで新しくサーバーを立てて、公開鍵認証でSSH/SCP接続できるようにしたのでその手順を書いておきます。</q></dd>
-      <dt><a href="https://zenn.dev/yuma14/articles/sccache-rust-benchmark" target="_blank">sccacheでどのくらいRustのビルドを高速化できるのか (Windows)</a></dt>
+      <dt><Link url="https://zenn.dev/yuma14/articles/sccache-rust-benchmark">sccacheでどのくらいRustのビルドを高速化できるのか (Windows)</Link></dt>
       <dd><q>sccacheを使用することでWindow上でのRustプロジェクトのビルドをどのくらい高速化できるのか検証します。</q></dd>
     </div>
   </dl>
 
-  <h2><Icon name="simple-icons:qiita" /> <a href="https://qiita.com/yuma140902" target="_blank">Qiita</a></h2>
+  <h2><Icon name="simple-icons:qiita" /> <Link url="https://qiita.com/yuma140902" no_icon>Qiita</Link></h2>
 
   <p>記事を投稿しています。</p>
 
@@ -96,13 +97,13 @@ const currentDate = new Date().toISOString().split('T')[0];
 
   <dl>
     <div>
-      <dt><a href="https://qiita.com/yuma140902/items/d50e696bbef513405ef5" target="_blank">RustでMMLを実装した</a></dt>
+      <dt><Link url="https://qiita.com/yuma140902/items/d50e696bbef513405ef5">RustでMMLを実装した</Link></dt>
       <dd><q>Music Macro Language (MML) の方言を設計し、Rustで実装しました。</q></dd>
     </div>
   </dl>
 
-  <h2><Icon name="carbon:txt" /> <a href="https://yuma14.net/twtxt.txt" target="_blank">twtxt</a></h2>
+  <h2><Icon name="carbon:txt" /> <Link url="/twtxt.txt" no_icon>twtxt</Link></h2>
 
-  <p><a href="https://twtxt.readthedocs.io/en/stable/" target="_blank">twtxt</a> は<q cite="https://twtxt.readthedocs.io/en/stable/user/intro.html">ハッカーのための分散型ミニマリスト・マイクロブログ・サービス</q>です。私の twtxt 用のテキストファイルをこのサーバでホストしています。</p>
+  <p><Link url="https://twtxt.readthedocs.io/en/stable/">twtxt</Link> は<q cite="https://twtxt.readthedocs.io/en/stable/user/intro.html">ハッカーのための分散型ミニマリスト・マイクロブログ・サービス</q>です。私の twtxt 用のテキストファイルをこのサーバでホストしています。</p>
 
 </MdLayout>

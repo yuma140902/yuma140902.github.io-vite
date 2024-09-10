@@ -1,4 +1,5 @@
 ---
+/* マークダウンファイルを表示するときに用いるレイアウト */
 interface Props {
   frontmatter: {
     title: string;
@@ -30,3 +31,9 @@ function formatDate(date: string) {
   <hr />
   <slot />
 </Layout>
+
+<style>
+h1 {
+  margin-bottom: 0;
+}
+</style>

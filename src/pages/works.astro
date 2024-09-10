@@ -1,51 +1,28 @@
 ---
 import MdLayout from '../layouts/MdLayout.astro'
-import { Icon } from 'astro-icon/components'
-import Badge from '../components/Badge.astro'
 import { projects } from '../data/projects'
-
-function isExternal(url: string): boolean {
-  return url.startsWith('http')
-}
+import Project from '../components/features/Project.astro'
+import Link from '../components/Link.astro'
 ---
 
 <MdLayout frontmatter={{
-  title: "Projects",
+  title: "Works",
   create_date: "2022-11-16",
   update_date: "2024-09-10",
 }}>
   <h2>作っているもの</h2>
 
-  <div>
-  {projects.map(pj => 
-    <div>
-      <div class="pj-title-wrapper">
-        {pj.repo && <a href={pj.repo} target="_blank" class="repo"><Icon name="simple-icons:github" size="1.25em"/></a>}
-        <h3>{pj.name}</h3>
-        <span>
-          {pj.technologies?.map(t => 
-            <Badge t={t} />
-          )}
-        </span>
-      </div>
-      <p>
-        {pj.description}
-        {pj.url && <a href={pj.url} target={isExternal(pj.url) ? "_blank" : "_self"}>詳細</a>}
-      </p>
-    </div>
-  )}
-  </div>
+  <div> {projects.map(pj => <Project pj={pj}/>)} </div>
+
+  <hr />
+
+  <h2><Link url="/works/archives">作っていたもの</Link></h2>
+
+  <p>今はもう更新していないもの</p>
+
+  <h2><Link url="/works/scraps">ボツ</Link></h2>
+
+  <p>未完成のままやめてしまったもの</p>
+
 </MdLayout>
 
-<style>
-h3 {
-  display: inline;
-  padding-right: 1rem;
-}
-.pj-title-wrapper {
-  margin-bottom: 0.7em;
-}
-.repo {
-  color: var(--font-color);
-}
-</style>

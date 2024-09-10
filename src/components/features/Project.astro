@@ -1,0 +1,41 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { Project } from '../../data/projects';
+import Badge from '../Badge.astro';
+import Link from '../Link.astro';
+
+interface Props {
+  pj: Project;
+}
+
+const { pj } = Astro.props;
+---
+
+<div>
+  <div class="pj-title-wrapper">
+    {pj.repo && <a href={pj.repo} target="_blank" class="repo"><Icon name="simple-icons:github" title="GitHub" size="1.25em"/></a>}
+    <h3>{pj.name}</h3>
+    <span>
+      {pj.technologies?.map(t => 
+        <Badge t={t} />
+      )}
+    </span>
+  </div>
+  <p>
+    {pj.description}
+    {pj.url && <Link url={pj.url}>詳細</Link>}
+  </p>
+</div>
+
+<style>
+h3 {
+  display: inline;
+  padding-right: 1rem;
+}
+.pj-title-wrapper {
+  margin-bottom: 0.7em;
+}
+.repo {
+  color: var(--font-color);
+}
+</style>
