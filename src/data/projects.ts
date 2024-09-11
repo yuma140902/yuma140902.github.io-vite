@@ -28,7 +28,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     name: "Reverie",
-    description: "Rust製の汎用3D/2Dゲームエンジン",
+    description: "Rust 製の汎用 3D/2D ゲームエンジン",
     repo: "https://github.com/yuma140902/Reverie",
     since: "2021年8月",
     url: "/works/reverie/",
@@ -104,9 +104,9 @@ export const projects: Project[] = [
   },
   {
     name: "Tempura SSG",
-    description:
-      "Rust製のパイプラインベースの静的サイトジェネレーター。パイプラインを定義し、マークダウン、JSON、テンプレート、画像などを処理してウェブサイトを生成する。",
+    description: "Rust 製のパイプラインベースの静的サイトジェネレーター",
     repo: "https://github.com/yuma140902/tempura",
+    url: "/works/tempura/",
     since: "2022年8月",
     technologies: ["rust"],
     releases: [
