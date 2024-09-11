@@ -368,9 +368,9 @@ export const projects: Project[] = [
   },
   {
     name: "LibJsonModel",
-    description:
-      "Minecraft 1.7.10用のMOD。\n\n1.8以降で追加されたJSONモデルを読み込み、描画することができる。",
+    description: "Minecraft の MOD 開発のためのライブラリ",
     repo: "https://github.com/yuma140902/LibJsonModel",
+    url: "/works/libjsonmodel/",
     since: "2023年7月",
     technologies: ["java", "minecraft"],
   },
