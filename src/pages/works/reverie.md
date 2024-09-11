@@ -2,6 +2,9 @@
 layout: "../../layouts/WorkLayout.astro"
 name: Reverie
 ---
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/yuma140902/reverie/rust.yml?logo=github&label=CI)](https://github.com/yuma140902/reverie/actions/workflows/rust.yml)
+[![Crates.io Version](https://img.shields.io/crates/v/reverie-engine)](https://crates.io/crates/reverie-engine)
+[![docs.rs](https://img.shields.io/docsrs/reverie-engine?logo=docsdotrs)](https://docs.rs/reverie-engine/latest/reverie-engine/)
 
 Rust 製の汎用 3D/2D ゲームエンジン。OpenGL を使っていて、Windows と Linux 上で動作する。
 
