@@ -35,4 +35,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v1
     env:
-      GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
+      GITHUB_PAT: ${{ secrets.PAT }}
