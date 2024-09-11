@@ -383,6 +383,15 @@ export const projects: Project[] = [
     technologies: ["ts", "ts", "opencv", "ts"],
   },
   {
+    name: "LMML Music Macro Language",
+    description:
+      "MML (Music Macro Language) の方言である独自言語 LMML の仕様と、パーサーやプレイヤーなどの実装",
+    repo: "https://github.com/yuma140902/lmml",
+    since: "2023年11月",
+    url: "/works/lmml/",
+    technologies: ["rust"],
+  },
+  {
     name: "LaTeXのテンプレート集",
     description: "9種類のテンプレート",
     repo: "https://github.com/yuma140902/lt",
@@ -449,15 +458,6 @@ export const projects: Project[] = [
     repo: "https://github.com/yuma140902/regend-webui",
     since: "2023年11月",
     technologies: ["rust", "wasm", "ts"],
-  },
-  {
-    name: "LMML Music Macro Language",
-    description:
-      "MML (Music Macro Language) の方言である独自言語LMMLの仕様と、パーサーやプレイヤーなどの実装",
-    repo: "https://github.com/yuma140902/lmml",
-    since: "2023年11月",
-    url: "https://github.com/yuma140902/lmml/assets/23431077/dfad8777-ade5-4591-8804-a3968a2e14ea",
-    technologies: ["rust"],
   },
 ];
 
