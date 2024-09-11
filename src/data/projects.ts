@@ -170,8 +170,9 @@ export const projects: Project[] = [
   },
   {
     name: "UpToDateMod",
-    description: "MinecraftのMOD。祝4万ダウンロード",
+    description: "Minecraft の MOD",
     repo: "https://github.com/yuma140902/UpToDateMod1.7.10",
+    url: "/works/uptodatemod/",
     since: "2018年8月",
     technologies: ["java", "scala", "minecraft"],
     releases: [
