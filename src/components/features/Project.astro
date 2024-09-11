@@ -13,7 +13,7 @@ const { pj } = Astro.props;
 
 <div>
   <div class="pj-title-wrapper">
-    {pj.repo && <a href={pj.repo} target="_blank" class="repo"><Icon name="simple-icons:github" title="GitHub" size="1.25em"/></a>}
+    {pj.repo && <a href={pj.repo} class="repo"><Icon name="simple-icons:github" title="GitHub" size="1.25em"/></a>}
     <h3>{pj.name}</h3>
     <span>
       {pj.technologies?.map(t => 

@@ -13,7 +13,7 @@ const { app } = Astro.props;
 <div class="col-12 col-4-md col-3-lg parent">
   <h2>{app.name}</h2>
   <p>{app.copy}</p>
-  <a href={app.url} target={app.outside ? "_blank" : "_self"}>
+  <a href={app.url}>
     <div class="spacing">{app.img ? <Image src={app.img} alt="open app"/> : <Icon name="carbon:cics-program" title="open app" size="10rem" />}</div>
   </a>
 </div>

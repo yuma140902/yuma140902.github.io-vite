@@ -1,22 +1,10 @@
 ---
-import { Icon } from 'astro-icon/components'
-
 interface Props {
   url: string;
   no_icon?: boolean;
 }
 
-function isExternal(url: string): boolean {
-  return url.startsWith('http')
-}
-
-const { url, no_icon } = Astro.props;
+const { url } = Astro.props;
 ---
 
-<a href={url} target={isExternal(url) ? '_blank' : '_self'}><slot /> {isExternal(url) && !no_icon && <Icon class="icon" name="carbon:launch" size="1.5rem"/>}</a>
-
-<style>
-.icon {
-  vertical-align: baseline;
-}
-</style>
+<a href={url}><slot /></a>
