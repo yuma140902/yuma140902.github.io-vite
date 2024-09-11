@@ -2,6 +2,7 @@ import type { ImageMetadata } from "astro";
 import imgWebImageEditor from "../images/web-image-editor-icon.png";
 import imgDiffTool from "../images/difftool-icon-512x512.png";
 import imgRegendWebUi from "../images/regend-logo-light.png";
+import imgTyping from "../images/typing.png";
 
 export type App = {
   name: string;
@@ -18,6 +19,7 @@ export const main_apps: App[] = [
     copy: "タイピングゲーム",
     url: "/typing/",
     outside: true,
+    img: imgTyping,
     badge:
       "https://img.shields.io/github/deployments/yuma140902/typing/github-pages?logo=github&label=Deployment",
   },
