@@ -1,0 +1,40 @@
+---
+import Layout from './Layout.astro';
+
+/* マークダウンファイルを表示するときに用いるレイアウト */
+interface Props {
+  frontmatter: {
+    title: string;
+    create_date?: string
+    update_date?: string;
+    description?: string;
+  }
+}
+
+const { frontmatter } = Astro.props;
+
+function formatDate(date: string) {
+  return new Date(date).toISOString().split('T')[0];
+}
+---
+
+<Layout title={frontmatter.title}>
+  <h1>{frontmatter.title}</h1>
+  <p>
+    {frontmatter.create_date && 
+    <>追加日時: 
+      <time datetime={frontmatter.create_date}>{formatDate(frontmatter.create_date)}</time>&nbsp;&nbsp;</> }
+    {frontmatter.update_date && 
+    <>更新日時: 
+      <time datetime={frontmatter.update_date}>{formatDate(frontmatter.update_date)}</time>&nbsp;&nbsp;</> }
+    <a href="../">../ 上の階層へ戻る</a>
+  </p>
+  <hr />
+  <slot />
+</Layout>
+
+<style>
+h1 {
+  margin-bottom: 0;
+}
+</style>

@@ -1,0 +1,28 @@
+---
+import MdLayout from '../layouts/MdLayout.astro'
+import { projects } from '../data/projects'
+import Project from '../components/features/Project.astro'
+import Link from '../components/Link.astro'
+---
+
+<MdLayout frontmatter={{
+  title: "Works",
+  create_date: "2022-11-16",
+  update_date: "2024-09-10",
+}}>
+  <h2>作っているもの</h2>
+
+  <div> {projects.map(pj => <Project pj={pj}/>)} </div>
+
+  <hr />
+
+  <h2><Link url="/works/archives/">作っていたもの</Link></h2>
+
+  <p>今はもう更新していないもの</p>
+
+  <h2><Link url="/works/scraps/">ボツ</Link></h2>
+
+  <p>未完成のままやめてしまったもの</p>
+
+</MdLayout>
+

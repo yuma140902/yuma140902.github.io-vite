@@ -1,0 +1,109 @@
+---
+import MdLayout from '../layouts/MdLayout.astro'
+import Link from '../components/Link.astro'
+import { Icon } from 'astro-icon/components'
+import { Octokit } from 'octokit'
+
+type Repo = {
+  name: string;
+  url: string;
+  description: string | null;
+}
+
+if (!import.meta.env.GITHUB_PAT) {
+  throw new Error('GITHUB_PAT is not set');
+}
+const octokit = new Octokit({ auth: import.meta.env.GITHUB_PAT });
+
+async function getRecentRepos(username: string, repoCount: number): Promise<Repo[]> {
+  const repos = await octokit.rest.repos.listForUser({
+    username,
+    sort: 'pushed',
+    per_page: repoCount
+  });
+
+  let repoList: Repo[] = [];
+  for (const repo of repos.data) {
+    repoList.push({
+      name: repo.name,
+      url: repo.html_url,
+      description: repo.description,
+    })
+  }
+
+  return repoList;
+}
+
+const repos = await getRecentRepos('yuma140902', 6);
+const currentDate = new Date().toISOString().split('T')[0];
+---
+
+<MdLayout frontmatter={{
+  title: "Profile - yuma14",
+  create_date: "2022-11-16",
+  update_date: "2024-09-10"
+}}>
+  <p>学生です。</p>
+
+  <h2><Icon name="simple-icons:twitter" /> <Link url="https://x.com/yuma140902" no_icon>Twitter</Link></h2>
+
+  <p>ご連絡は Twitter の DM へお願いします。</p>
+  <p>このアカウントはほとんど使っていませんが、DM は見ています。</p>
+
+  <h2><Icon name="simple-icons:github" /> <Link url="https://github.com/yuma140902" no_icon>GitHub</Link></h2>
+
+  <p>GitHub にコードを公開しています。最近は Rust で遊んでいます。</p>
+
+  <p>
+    <img alt="Most Used Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yuma140902&layout=compact&theme=graywhite&hide_border=true" />
+    <img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=yuma140902&count_private=false&include_all_commits=true&theme=graywhite&hide_rank=true&hide_border=true&hide_title=true&show_icons=true" />
+  </p>
+
+  <p><b>最近更新したリポジトリ</b> (データ更新: {currentDate})</p>
+
+  <dl>
+  {repos.map(repo => (
+    <div>
+      <dt><Link url={repo.url}>{repo.name}</a></dt>
+      <dd>
+        {(repo.description && repo.description.length > 0) && <q cite={repo.url}>{repo.description}</q>}
+      </dd>
+    </div>
+  ))}
+  </dl>
+
+  <h2><Icon name="simple-icons:zenn" /> <Link url="https://zenn.dev/yuma14" no_icon>Zenn</Link></h2>
+
+  <p>記事を投稿しています。</p>
+
+  <p><b>最近の記事</b></p>
+
+  <dl>
+    <div>
+      <dt><Link url="https://zenn.dev/yuma14/articles/ddc-vim-with-lua">ddc.vimの解説とinit.luaでの設定方法</Link></dt>
+      <dd><q>この記事は筆者が<code>:help ddc</code>を読んだときのメモです。公式のドキュメント<code>:help ddc</code>を読もう！</q></dd>
+      <dt><Link url="https://zenn.dev/yuma14/articles/ssh-pubkey-auth-to-conoha-vps">ConoHa VPSに公開鍵認証でSSH/SCP接続する手順</Link></dt>
+      <dd><q>最近ConoHa VPSで新しくサーバーを立てて、公開鍵認証でSSH/SCP接続できるようにしたのでその手順を書いておきます。</q></dd>
+      <dt><Link url="https://zenn.dev/yuma14/articles/sccache-rust-benchmark">sccacheでどのくらいRustのビルドを高速化できるのか (Windows)</Link></dt>
+      <dd><q>sccacheを使用することでWindow上でのRustプロジェクトのビルドをどのくらい高速化できるのか検証します。</q></dd>
+    </div>
+  </dl>
+
+  <h2><Icon name="simple-icons:qiita" /> <Link url="https://qiita.com/yuma140902" no_icon>Qiita</Link></h2>
+
+  <p>記事を投稿しています。</p>
+
+  <p><b>最近の記事</b></p>
+
+  <dl>
+    <div>
+      <dt><Link url="https://qiita.com/yuma140902/items/d50e696bbef513405ef5">RustでMMLを実装した</Link></dt>
+      <dd><q>Music Macro Language (MML) の方言を設計し、Rustで実装しました。</q></dd>
+    </div>
+  </dl>
+
+  <h2><Icon name="carbon:txt" /> <Link url="/twtxt.txt" no_icon>twtxt</Link></h2>
+
+  <p><Link url="https://twtxt.readthedocs.io/en/stable/">twtxt</Link> は<q cite="https://twtxt.readthedocs.io/en/stable/user/intro.html">ハッカーのための分散型ミニマリスト・マイクロブログ・サービス</q>です。私の twtxt 用のテキストファイルをこのサーバでホストしています。</p>
+
+</MdLayout>

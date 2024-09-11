@@ -1,0 +1,15 @@
+---
+import MdLayout from '../layouts/MdLayout.astro'
+import { main_apps } from '../data/apps'
+import App from '../components/features/App.astro'
+---
+
+<MdLayout frontmatter={{
+  title: "ウェブアプリ一覧",
+  create_date: "2022-11-16",
+  update_date: "2024-09-11",
+}}>
+  <div class="row">
+    {main_apps.map(app => <App app={app} />)}
+  </div>
+</MdLayout>
