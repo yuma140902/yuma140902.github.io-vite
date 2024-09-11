@@ -5,6 +5,7 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://yuma14.net",
   integrations: [icon()],
   redirects: {
     "/deploys/": "/monitor/",
