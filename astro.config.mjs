@@ -16,4 +16,11 @@ export default defineConfig({
     "/webtools/diff.html": "https://old.yuma14.net/webtools/diff.html",
     "/webtools/csv2tex.html": "https://old.yuma14.net/webtools/csv2tex.html",
   },
+  markdown: {
+    shikiConfig: {
+      theme: "one-light",
+      wrap: true,
+    },
+    syntaxHighlight: "shiki",
+  },
 });

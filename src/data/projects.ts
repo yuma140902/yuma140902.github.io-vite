@@ -69,6 +69,40 @@ export const projects: Project[] = [
     ],
   },
   {
+    name: "xanadu",
+    description: "Rust 製の Entity Component System (ECS) ライブラリ",
+    since: "2021年10月",
+    repo: "https://github.com/yuma140902/Xanadu",
+    url: "/works/xanadu/",
+    technologies: ["rust"],
+    releases: [
+      {
+        date: "2021/10/09",
+        version: "v0.0.0",
+      },
+      {
+        date: "2024/04/22",
+        version: "v0.0.1",
+      },
+      {
+        date: "2024/04/23",
+        version: "v0.0.2",
+      },
+      {
+        date: "2024/04/24",
+        version: "v0.0.3",
+      },
+      {
+        date: "2024/05/09",
+        version: "v0.0.4",
+      },
+      {
+        date: "2024/05/11",
+        version: "v0.0.5",
+      },
+    ],
+  },
+  {
     name: "Tempura SSG",
     description:
       "Rust製のパイプラインベースの静的サイトジェネレーター。パイプラインを定義し、マークダウン、JSON、テンプレート、画像などを処理してウェブサイトを生成する。",
@@ -422,13 +456,6 @@ export const projects: Project[] = [
     repo: "https://github.com/yuma140902/lmml",
     since: "2023年11月",
     url: "https://github.com/yuma140902/lmml/assets/23431077/dfad8777-ade5-4591-8804-a3968a2e14ea",
-    technologies: ["rust"],
-  },
-  {
-    name: "xanadu",
-    description: "ECS (Entity Component System) ライブラリ",
-    since: "2021年10月",
-    repo: "https://github.com/yuma140902/Xanadu",
     technologies: ["rust"],
   },
 ];
