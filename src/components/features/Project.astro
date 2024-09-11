@@ -23,7 +23,7 @@ const { pj } = Astro.props;
   </div>
   <p>
     {pj.description}
-    {pj.url && <Link url={pj.url}>詳細</Link>}
+    {pj.url && <><br /><Link url={pj.url}>詳細...</Link></>}
   </p>
 </div>
 
