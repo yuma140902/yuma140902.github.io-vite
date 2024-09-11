@@ -1,5 +1,6 @@
 ---
-layout: "../../layouts/MdLayout.astro"
+layout: "../../layouts/WorkLayout.astro"
+name: RustyCraft
 ---
 マインクラフトっぽいゲームです。今はまだ動き回ることしかできないのでゲームとは言えないかもしれません。W、A、S、Dキーで移動、スペースでジャンプ、マウスで視点の回転ができます。ゲームエンジンを使わず、OpenGLを直接使ってゲームを作るという目標で制作しています。
 

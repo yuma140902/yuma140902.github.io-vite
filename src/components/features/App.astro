@@ -14,7 +14,7 @@ const { app } = Astro.props;
   <h2>{app.name}</h2>
   <p>{app.copy}</p>
   <a href={app.url}>
-    <div class="spacing">{app.img ? <Image src={app.img} alt="open app"/> : <Icon name="carbon:cics-program" title="open app" size="10rem" />}</div>
+    <div class="spacing">{app.img ? <Image src={app.img} alt="open app" class="manual"/> : <Icon name="carbon:cics-program" title="open app" size="10rem" />}</div>
   </a>
 </div>
 
@@ -22,7 +22,7 @@ const { app } = Astro.props;
 h2 {
   margin-bottom: 0;
 }
-img {
+img.manual {
   max-width: 100%;
   object-fit: contain;
   height: 16rem;

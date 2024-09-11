@@ -28,10 +28,10 @@ export type Project = {
 export const projects: Project[] = [
   {
     name: "Reverie",
-    description:
-      "Rust製の汎用3D/2Dゲームエンジン\n\nOpenGLを使っていて、WindowsとLinux上で動作する。",
+    description: "Rust製の汎用3D/2Dゲームエンジン",
     repo: "https://github.com/yuma140902/Reverie",
     since: "2021年8月",
+    url: "/works/reverie/",
     technologies: ["rust", "opengl"],
     releases: [
       {

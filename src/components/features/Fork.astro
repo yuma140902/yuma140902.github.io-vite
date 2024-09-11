@@ -20,6 +20,7 @@ const { fork } = Astro.props;
       </a>
       <img src={`https://img.shields.io/github/last-commit/${fork.upstream.repo}/${fork.upstream.branch}`} 
         alt={`Last commit of ${fork.upstream.repo}`}
+        class="manual"
       />
     </p>
     <p>
@@ -31,6 +32,7 @@ const { fork } = Astro.props;
       </a>
       <img src={`https://img.shields.io/github/last-commit/${fork.downstream.repo}/${fork.downstream.branch}`} 
         alt={`Last commit of ${fork.downstream.repo}`}
+        class="manual"
       />
     </p>
     <p><b>アップストリームの概要</b></p>
@@ -41,7 +43,7 @@ const { fork } = Astro.props;
 </div>
 
 <style>
-img {
+img.manual {
   vertical-align: sub;
 }
 .content {
