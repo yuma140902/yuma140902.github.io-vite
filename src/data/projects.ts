@@ -379,7 +379,7 @@ export const projects: Project[] = [
     description: "ブラウザ上で動作する画像エディタ",
     repo: "https://github.com/yuma140902/web-image-editor",
     since: "2023年9月",
-    url: "/web-image-editor/",
+    url: "/works/web-image-editor/",
     technologies: ["ts", "ts", "opencv", "ts"],
   },
   {

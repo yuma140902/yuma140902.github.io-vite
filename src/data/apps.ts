@@ -1,5 +1,5 @@
 import type { ImageMetadata } from "astro";
-import imgWebImageEditor from "../images/web-image-editor.png";
+import imgWebImageEditor from "../images/web-image-editor-icon.png";
 import imgDiffTool from "../images/difftool-icon-512x512.png";
 import imgRegendWebUi from "../images/regend-logo-light.png";
 
