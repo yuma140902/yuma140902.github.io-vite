@@ -1,5 +1,6 @@
 /* 表形式のデータの相互変換を行うウェブアプリ */
 
+import { useLocalStorage } from "@uidotdev/usehooks";
 import { useState } from "react";
 
 type InputType = "csv";
@@ -51,6 +52,8 @@ function convert(inputType: InputType, outputType: OutputType, text: string) {
     case "csv":
       table = csvToTable(text);
       break;
+    default:
+      throw new Error("Unknown input type: " + inputType);
   }
 
   switch (outputType) {
@@ -74,6 +77,8 @@ function convert(inputType: InputType, outputType: OutputType, text: string) {
       return tableToJson(table, false);
     case "json-minify":
       return tableToJson(table, true);
+    default:
+      throw new Error("Unknown output type: " + outputType);
   }
 }
 
@@ -164,8 +169,14 @@ function tableToJson(table: Table, minify: boolean): string {
 }
 
 export const TableConv: React.FC = () => {
-  const [inputType, setInputType] = useState<InputType>("csv");
-  const [outputType, setOutputType] = useState<OutputType>("tsv-no-quote");
+  const [inputType, setInputType] = useLocalStorage<InputType>(
+    "apps-table-input-type",
+    "csv"
+  );
+  const [outputType, setOutputType] = useLocalStorage<OutputType>(
+    "apps-table-output-type",
+    "tsv-no-quote"
+  );
   const [inputText, setInputText] = useState("");
 
   let outputText: string = "";
