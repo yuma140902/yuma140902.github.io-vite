@@ -1,6 +1,6 @@
 /* 表形式のデータの相互変換を行うウェブアプリ */
 
-import { useLocalStorage } from "@uidotdev/usehooks";
+import { useDebounce, useLocalStorage } from "@uidotdev/usehooks";
 import { useState } from "react";
 
 type InputType = "csv" | "json";
@@ -206,11 +206,12 @@ export const TableConv: React.FC = () => {
     "tsv-no-quote"
   );
   const [inputText, setInputText] = useState("");
+  const debouncedInputText = useDebounce(inputText, 300);
 
   let outputText: string = "";
   let error = false;
   try {
-    outputText = convert(inputType, outputType, inputText);
+    outputText = convert(inputType, outputType, debouncedInputText);
   } catch (e: any) {
     error = true;
     outputText = (e as Error).message;
