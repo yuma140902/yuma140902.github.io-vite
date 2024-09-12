@@ -4,11 +4,12 @@ import { defineConfig } from "astro/config";
 import icon from "astro-icon";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://yuma14.net",
-  integrations: [icon()],
+  integrations: [icon(), sitemap()],
   redirects: {
     "/deploys/": "/monitor/",
     "/services/": "/monitor/",
