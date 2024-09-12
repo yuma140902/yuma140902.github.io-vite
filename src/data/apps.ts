@@ -61,7 +61,7 @@ export const main_apps: App[] = [
   {
     name: "Sort Visualizer",
     copy: "ソートアルゴリズムを可視化",
-    url: "/webtools/sort.html",
+    url: "/apps/sort/",
     badge:
       "https://img.shields.io/github/deployments/yuma140902/yuma140902.github.io/github-pages?logo=github&label=Deployment",
     outside: false,

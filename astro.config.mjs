@@ -16,7 +16,7 @@ export default defineConfig({
     "/services/": "/monitor/",
     "/works/forks/": "/monitor/",
     "/webtools/": "/apps/",
-    "/webtools/sort.html": "https://old.yuma14.net/webtools/sort.html",
+    "/webtools/sort.html": "/apps/sort/",
     "/webtools/diff.html": "https://old.yuma14.net/webtools/diff.html",
     "/webtools/csv2tex.html": "/apps/table/",
   },
