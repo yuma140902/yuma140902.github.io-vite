@@ -22,8 +22,13 @@ async function getRecentRepos(username: string, repoCount: number): Promise<Repo
     per_page: repoCount
   });
 
+  const denyList = ['yuma140902.github.io'];
+
   let repoList: Repo[] = [];
   for (const repo of repos.data) {
+    if (denyList.includes(repo.name)) {
+      continue;
+    }
     repoList.push({
       name: repo.name,
       url: repo.html_url,
@@ -34,7 +39,7 @@ async function getRecentRepos(username: string, repoCount: number): Promise<Repo
   return repoList;
 }
 
-const repos = await getRecentRepos('yuma140902', 6);
+const repos = await getRecentRepos('yuma140902', 7);
 const currentDate = new Date().toISOString().split('T')[0];
 ---
 
