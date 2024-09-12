@@ -2,7 +2,6 @@
 import { Icon } from 'astro-icon/components';
 import type { Project } from '../../data/projects';
 import Badge from '../Badge.astro';
-import Link from '../Link.astro';
 
 interface Props {
   pj: Project;
@@ -11,7 +10,7 @@ interface Props {
 const { pj } = Astro.props;
 ---
 
-<div>
+<div class="pj-root">
   <div class="pj-title-wrapper">
     {pj.repo && <a href={pj.repo} class="repo"><Icon name="simple-icons:github" title="GitHub" size="1.25em"/></a>}
     <h3>{pj.name}</h3>
@@ -23,7 +22,7 @@ const { pj } = Astro.props;
   </div>
   <p>
     {pj.description}
-    {pj.url && <><br /><Link url={pj.url}>詳細...</Link></>}
+    {pj.url && <><br /><a href={pj.url} class="details-link">詳細...</a></>}
   </p>
 </div>
 
@@ -37,5 +36,21 @@ h3 {
 }
 .repo {
   color: var(--font-color);
+  z-index: 1;
+  position: sticky;
+}
+.pj-root {
+  position: relative;
+}
+a.details-link {
+  display: block;
+}
+a.details-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 </style>
