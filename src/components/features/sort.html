@@ -1,0 +1,1224 @@
+<script type="module">
+  (function () {
+    function r(e, n, t) {
+      function o(i, f) {
+        if (!n[i]) {
+          if (!e[i]) {
+            var c = "function" == typeof require && require;
+            if (!f && c) return c(i, !0);
+            if (u) return u(i, !0);
+            var a = new Error("Cannot find module '" + i + "'");
+            throw ((a.code = "MODULE_NOT_FOUND"), a);
+          }
+          var p = (n[i] = {exports: {}});
+          e[i][0].call(
+            p.exports,
+            function (r) {
+              var n = e[i][1][r];
+              return o(n || r);
+            },
+            p,
+            p.exports,
+            r,
+            e,
+            n,
+            t
+          );
+        }
+        return n[i].exports;
+      }
+      for (
+        var u = "function" == typeof require && require, i = 0;
+        i < t.length;
+        i++
+      )
+        o(t[i]);
+      return o;
+    }
+    return r;
+  })()(
+    {
+      1: [
+        function (require, module, exports) {
+          window.Colormap = require("colormap");
+        },
+        {colormap: 3},
+      ],
+      2: [
+        function (require, module, exports) {
+          module.exports = {
+            jet: [
+              {index: 0, rgb: [0, 0, 131]},
+              {index: 0.125, rgb: [0, 60, 170]},
+              {index: 0.375, rgb: [5, 255, 255]},
+              {index: 0.625, rgb: [255, 255, 0]},
+              {index: 0.875, rgb: [250, 0, 0]},
+              {index: 1, rgb: [128, 0, 0]},
+            ],
+
+            hsv: [
+              {index: 0, rgb: [255, 0, 0]},
+              {index: 0.169, rgb: [253, 255, 2]},
+              {index: 0.173, rgb: [247, 255, 2]},
+              {index: 0.337, rgb: [0, 252, 4]},
+              {index: 0.341, rgb: [0, 252, 10]},
+              {index: 0.506, rgb: [1, 249, 255]},
+              {index: 0.671, rgb: [2, 0, 253]},
+              {index: 0.675, rgb: [8, 0, 253]},
+              {index: 0.839, rgb: [255, 0, 251]},
+              {index: 0.843, rgb: [255, 0, 245]},
+              {index: 1, rgb: [255, 0, 6]},
+            ],
+
+            hot: [
+              {index: 0, rgb: [0, 0, 0]},
+              {index: 0.3, rgb: [230, 0, 0]},
+              {index: 0.6, rgb: [255, 210, 0]},
+              {index: 1, rgb: [255, 255, 255]},
+            ],
+
+            spring: [
+              {index: 0, rgb: [255, 0, 255]},
+              {index: 1, rgb: [255, 255, 0]},
+            ],
+
+            summer: [
+              {index: 0, rgb: [0, 128, 102]},
+              {index: 1, rgb: [255, 255, 102]},
+            ],
+
+            autumn: [
+              {index: 0, rgb: [255, 0, 0]},
+              {index: 1, rgb: [255, 255, 0]},
+            ],
+
+            winter: [
+              {index: 0, rgb: [0, 0, 255]},
+              {index: 1, rgb: [0, 255, 128]},
+            ],
+
+            bone: [
+              {index: 0, rgb: [0, 0, 0]},
+              {index: 0.376, rgb: [84, 84, 116]},
+              {index: 0.753, rgb: [169, 200, 200]},
+              {index: 1, rgb: [255, 255, 255]},
+            ],
+
+            copper: [
+              {index: 0, rgb: [0, 0, 0]},
+              {index: 0.804, rgb: [255, 160, 102]},
+              {index: 1, rgb: [255, 199, 127]},
+            ],
+
+            greys: [
+              {index: 0, rgb: [0, 0, 0]},
+              {index: 1, rgb: [255, 255, 255]},
+            ],
+
+            yignbu: [
+              {index: 0, rgb: [8, 29, 88]},
+              {index: 0.125, rgb: [37, 52, 148]},
+              {index: 0.25, rgb: [34, 94, 168]},
+              {index: 0.375, rgb: [29, 145, 192]},
+              {index: 0.5, rgb: [65, 182, 196]},
+              {index: 0.625, rgb: [127, 205, 187]},
+              {index: 0.75, rgb: [199, 233, 180]},
+              {index: 0.875, rgb: [237, 248, 217]},
+              {index: 1, rgb: [255, 255, 217]},
+            ],
+
+            greens: [
+              {index: 0, rgb: [0, 68, 27]},
+              {index: 0.125, rgb: [0, 109, 44]},
+              {index: 0.25, rgb: [35, 139, 69]},
+              {index: 0.375, rgb: [65, 171, 93]},
+              {index: 0.5, rgb: [116, 196, 118]},
+              {index: 0.625, rgb: [161, 217, 155]},
+              {index: 0.75, rgb: [199, 233, 192]},
+              {index: 0.875, rgb: [229, 245, 224]},
+              {index: 1, rgb: [247, 252, 245]},
+            ],
+
+            yiorrd: [
+              {index: 0, rgb: [128, 0, 38]},
+              {index: 0.125, rgb: [189, 0, 38]},
+              {index: 0.25, rgb: [227, 26, 28]},
+              {index: 0.375, rgb: [252, 78, 42]},
+              {index: 0.5, rgb: [253, 141, 60]},
+              {index: 0.625, rgb: [254, 178, 76]},
+              {index: 0.75, rgb: [254, 217, 118]},
+              {index: 0.875, rgb: [255, 237, 160]},
+              {index: 1, rgb: [255, 255, 204]},
+            ],
+
+            bluered: [
+              {index: 0, rgb: [0, 0, 255]},
+              {index: 1, rgb: [255, 0, 0]},
+            ],
+
+            rdbu: [
+              {index: 0, rgb: [5, 10, 172]},
+              {index: 0.35, rgb: [106, 137, 247]},
+              {index: 0.5, rgb: [190, 190, 190]},
+              {index: 0.6, rgb: [220, 170, 132]},
+              {index: 0.7, rgb: [230, 145, 90]},
+              {index: 1, rgb: [178, 10, 28]},
+            ],
+
+            picnic: [
+              {index: 0, rgb: [0, 0, 255]},
+              {index: 0.1, rgb: [51, 153, 255]},
+              {index: 0.2, rgb: [102, 204, 255]},
+              {index: 0.3, rgb: [153, 204, 255]},
+              {index: 0.4, rgb: [204, 204, 255]},
+              {index: 0.5, rgb: [255, 255, 255]},
+              {index: 0.6, rgb: [255, 204, 255]},
+              {index: 0.7, rgb: [255, 153, 255]},
+              {index: 0.8, rgb: [255, 102, 204]},
+              {index: 0.9, rgb: [255, 102, 102]},
+              {index: 1, rgb: [255, 0, 0]},
+            ],
+
+            rainbow: [
+              {index: 0, rgb: [150, 0, 90]},
+              {index: 0.125, rgb: [0, 0, 200]},
+              {index: 0.25, rgb: [0, 25, 255]},
+              {index: 0.375, rgb: [0, 152, 255]},
+              {index: 0.5, rgb: [44, 255, 150]},
+              {index: 0.625, rgb: [151, 255, 0]},
+              {index: 0.75, rgb: [255, 234, 0]},
+              {index: 0.875, rgb: [255, 111, 0]},
+              {index: 1, rgb: [255, 0, 0]},
+            ],
+
+            portland: [
+              {index: 0, rgb: [12, 51, 131]},
+              {index: 0.25, rgb: [10, 136, 186]},
+              {index: 0.5, rgb: [242, 211, 56]},
+              {index: 0.75, rgb: [242, 143, 56]},
+              {index: 1, rgb: [217, 30, 30]},
+            ],
+
+            blackbody: [
+              {index: 0, rgb: [0, 0, 0]},
+              {index: 0.2, rgb: [230, 0, 0]},
+              {index: 0.4, rgb: [230, 210, 0]},
+              {index: 0.7, rgb: [255, 255, 255]},
+              {index: 1, rgb: [160, 200, 255]},
+            ],
+
+            earth: [
+              {index: 0, rgb: [0, 0, 130]},
+              {index: 0.1, rgb: [0, 180, 180]},
+              {index: 0.2, rgb: [40, 210, 40]},
+              {index: 0.4, rgb: [230, 230, 50]},
+              {index: 0.6, rgb: [120, 70, 20]},
+              {index: 1, rgb: [255, 255, 255]},
+            ],
+
+            electric: [
+              {index: 0, rgb: [0, 0, 0]},
+              {index: 0.15, rgb: [30, 0, 100]},
+              {index: 0.4, rgb: [120, 0, 100]},
+              {index: 0.6, rgb: [160, 90, 0]},
+              {index: 0.8, rgb: [230, 200, 0]},
+              {index: 1, rgb: [255, 250, 220]},
+            ],
+
+            alpha: [
+              {index: 0, rgb: [255, 255, 255, 0]},
+              {index: 1, rgb: [255, 255, 255, 1]},
+            ],
+
+            viridis: [
+              {index: 0, rgb: [68, 1, 84]},
+              {index: 0.13, rgb: [71, 44, 122]},
+              {index: 0.25, rgb: [59, 81, 139]},
+              {index: 0.38, rgb: [44, 113, 142]},
+              {index: 0.5, rgb: [33, 144, 141]},
+              {index: 0.63, rgb: [39, 173, 129]},
+              {index: 0.75, rgb: [92, 200, 99]},
+              {index: 0.88, rgb: [170, 220, 50]},
+              {index: 1, rgb: [253, 231, 37]},
+            ],
+
+            inferno: [
+              {index: 0, rgb: [0, 0, 4]},
+              {index: 0.13, rgb: [31, 12, 72]},
+              {index: 0.25, rgb: [85, 15, 109]},
+              {index: 0.38, rgb: [136, 34, 106]},
+              {index: 0.5, rgb: [186, 54, 85]},
+              {index: 0.63, rgb: [227, 89, 51]},
+              {index: 0.75, rgb: [249, 140, 10]},
+              {index: 0.88, rgb: [249, 201, 50]},
+              {index: 1, rgb: [252, 255, 164]},
+            ],
+
+            magma: [
+              {index: 0, rgb: [0, 0, 4]},
+              {index: 0.13, rgb: [28, 16, 68]},
+              {index: 0.25, rgb: [79, 18, 123]},
+              {index: 0.38, rgb: [129, 37, 129]},
+              {index: 0.5, rgb: [181, 54, 122]},
+              {index: 0.63, rgb: [229, 80, 100]},
+              {index: 0.75, rgb: [251, 135, 97]},
+              {index: 0.88, rgb: [254, 194, 135]},
+              {index: 1, rgb: [252, 253, 191]},
+            ],
+
+            plasma: [
+              {index: 0, rgb: [13, 8, 135]},
+              {index: 0.13, rgb: [75, 3, 161]},
+              {index: 0.25, rgb: [125, 3, 168]},
+              {index: 0.38, rgb: [168, 34, 150]},
+              {index: 0.5, rgb: [203, 70, 121]},
+              {index: 0.63, rgb: [229, 107, 93]},
+              {index: 0.75, rgb: [248, 148, 65]},
+              {index: 0.88, rgb: [253, 195, 40]},
+              {index: 1, rgb: [240, 249, 33]},
+            ],
+
+            warm: [
+              {index: 0, rgb: [125, 0, 179]},
+              {index: 0.13, rgb: [172, 0, 187]},
+              {index: 0.25, rgb: [219, 0, 170]},
+              {index: 0.38, rgb: [255, 0, 130]},
+              {index: 0.5, rgb: [255, 63, 74]},
+              {index: 0.63, rgb: [255, 123, 0]},
+              {index: 0.75, rgb: [234, 176, 0]},
+              {index: 0.88, rgb: [190, 228, 0]},
+              {index: 1, rgb: [147, 255, 0]},
+            ],
+
+            cool: [
+              {index: 0, rgb: [125, 0, 179]},
+              {index: 0.13, rgb: [116, 0, 218]},
+              {index: 0.25, rgb: [98, 74, 237]},
+              {index: 0.38, rgb: [68, 146, 231]},
+              {index: 0.5, rgb: [0, 204, 197]},
+              {index: 0.63, rgb: [0, 247, 146]},
+              {index: 0.75, rgb: [0, 255, 88]},
+              {index: 0.88, rgb: [40, 255, 8]},
+              {index: 1, rgb: [147, 255, 0]},
+            ],
+
+            "rainbow-soft": [
+              {index: 0, rgb: [125, 0, 179]},
+              {index: 0.1, rgb: [199, 0, 180]},
+              {index: 0.2, rgb: [255, 0, 121]},
+              {index: 0.3, rgb: [255, 108, 0]},
+              {index: 0.4, rgb: [222, 194, 0]},
+              {index: 0.5, rgb: [150, 255, 0]},
+              {index: 0.6, rgb: [0, 255, 55]},
+              {index: 0.7, rgb: [0, 246, 150]},
+              {index: 0.8, rgb: [50, 167, 222]},
+              {index: 0.9, rgb: [103, 51, 235]},
+              {index: 1, rgb: [124, 0, 186]},
+            ],
+
+            bathymetry: [
+              {index: 0, rgb: [40, 26, 44]},
+              {index: 0.13, rgb: [59, 49, 90]},
+              {index: 0.25, rgb: [64, 76, 139]},
+              {index: 0.38, rgb: [63, 110, 151]},
+              {index: 0.5, rgb: [72, 142, 158]},
+              {index: 0.63, rgb: [85, 174, 163]},
+              {index: 0.75, rgb: [120, 206, 163]},
+              {index: 0.88, rgb: [187, 230, 172]},
+              {index: 1, rgb: [253, 254, 204]},
+            ],
+
+            cdom: [
+              {index: 0, rgb: [47, 15, 62]},
+              {index: 0.13, rgb: [87, 23, 86]},
+              {index: 0.25, rgb: [130, 28, 99]},
+              {index: 0.38, rgb: [171, 41, 96]},
+              {index: 0.5, rgb: [206, 67, 86]},
+              {index: 0.63, rgb: [230, 106, 84]},
+              {index: 0.75, rgb: [242, 149, 103]},
+              {index: 0.88, rgb: [249, 193, 135]},
+              {index: 1, rgb: [254, 237, 176]},
+            ],
+
+            chlorophyll: [
+              {index: 0, rgb: [18, 36, 20]},
+              {index: 0.13, rgb: [25, 63, 41]},
+              {index: 0.25, rgb: [24, 91, 59]},
+              {index: 0.38, rgb: [13, 119, 72]},
+              {index: 0.5, rgb: [18, 148, 80]},
+              {index: 0.63, rgb: [80, 173, 89]},
+              {index: 0.75, rgb: [132, 196, 122]},
+              {index: 0.88, rgb: [175, 221, 162]},
+              {index: 1, rgb: [215, 249, 208]},
+            ],
+
+            density: [
+              {index: 0, rgb: [54, 14, 36]},
+              {index: 0.13, rgb: [89, 23, 80]},
+              {index: 0.25, rgb: [110, 45, 132]},
+              {index: 0.38, rgb: [120, 77, 178]},
+              {index: 0.5, rgb: [120, 113, 213]},
+              {index: 0.63, rgb: [115, 151, 228]},
+              {index: 0.75, rgb: [134, 185, 227]},
+              {index: 0.88, rgb: [177, 214, 227]},
+              {index: 1, rgb: [230, 241, 241]},
+            ],
+
+            "freesurface-blue": [
+              {index: 0, rgb: [30, 4, 110]},
+              {index: 0.13, rgb: [47, 14, 176]},
+              {index: 0.25, rgb: [41, 45, 236]},
+              {index: 0.38, rgb: [25, 99, 212]},
+              {index: 0.5, rgb: [68, 131, 200]},
+              {index: 0.63, rgb: [114, 156, 197]},
+              {index: 0.75, rgb: [157, 181, 203]},
+              {index: 0.88, rgb: [200, 208, 216]},
+              {index: 1, rgb: [241, 237, 236]},
+            ],
+
+            "freesurface-red": [
+              {index: 0, rgb: [60, 9, 18]},
+              {index: 0.13, rgb: [100, 17, 27]},
+              {index: 0.25, rgb: [142, 20, 29]},
+              {index: 0.38, rgb: [177, 43, 27]},
+              {index: 0.5, rgb: [192, 87, 63]},
+              {index: 0.63, rgb: [205, 125, 105]},
+              {index: 0.75, rgb: [216, 162, 148]},
+              {index: 0.88, rgb: [227, 199, 193]},
+              {index: 1, rgb: [241, 237, 236]},
+            ],
+
+            oxygen: [
+              {index: 0, rgb: [64, 5, 5]},
+              {index: 0.13, rgb: [106, 6, 15]},
+              {index: 0.25, rgb: [144, 26, 7]},
+              {index: 0.38, rgb: [168, 64, 3]},
+              {index: 0.5, rgb: [188, 100, 4]},
+              {index: 0.63, rgb: [206, 136, 11]},
+              {index: 0.75, rgb: [220, 174, 25]},
+              {index: 0.88, rgb: [231, 215, 44]},
+              {index: 1, rgb: [248, 254, 105]},
+            ],
+
+            par: [
+              {index: 0, rgb: [51, 20, 24]},
+              {index: 0.13, rgb: [90, 32, 35]},
+              {index: 0.25, rgb: [129, 44, 34]},
+              {index: 0.38, rgb: [159, 68, 25]},
+              {index: 0.5, rgb: [182, 99, 19]},
+              {index: 0.63, rgb: [199, 134, 22]},
+              {index: 0.75, rgb: [212, 171, 35]},
+              {index: 0.88, rgb: [221, 210, 54]},
+              {index: 1, rgb: [225, 253, 75]},
+            ],
+
+            phase: [
+              {index: 0, rgb: [145, 105, 18]},
+              {index: 0.13, rgb: [184, 71, 38]},
+              {index: 0.25, rgb: [186, 58, 115]},
+              {index: 0.38, rgb: [160, 71, 185]},
+              {index: 0.5, rgb: [110, 97, 218]},
+              {index: 0.63, rgb: [50, 123, 164]},
+              {index: 0.75, rgb: [31, 131, 110]},
+              {index: 0.88, rgb: [77, 129, 34]},
+              {index: 1, rgb: [145, 105, 18]},
+            ],
+
+            salinity: [
+              {index: 0, rgb: [42, 24, 108]},
+              {index: 0.13, rgb: [33, 50, 162]},
+              {index: 0.25, rgb: [15, 90, 145]},
+              {index: 0.38, rgb: [40, 118, 137]},
+              {index: 0.5, rgb: [59, 146, 135]},
+              {index: 0.63, rgb: [79, 175, 126]},
+              {index: 0.75, rgb: [120, 203, 104]},
+              {index: 0.88, rgb: [193, 221, 100]},
+              {index: 1, rgb: [253, 239, 154]},
+            ],
+
+            temperature: [
+              {index: 0, rgb: [4, 35, 51]},
+              {index: 0.13, rgb: [23, 51, 122]},
+              {index: 0.25, rgb: [85, 59, 157]},
+              {index: 0.38, rgb: [129, 79, 143]},
+              {index: 0.5, rgb: [175, 95, 130]},
+              {index: 0.63, rgb: [222, 112, 101]},
+              {index: 0.75, rgb: [249, 146, 66]},
+              {index: 0.88, rgb: [249, 196, 65]},
+              {index: 1, rgb: [232, 250, 91]},
+            ],
+
+            turbidity: [
+              {index: 0, rgb: [34, 31, 27]},
+              {index: 0.13, rgb: [65, 50, 41]},
+              {index: 0.25, rgb: [98, 69, 52]},
+              {index: 0.38, rgb: [131, 89, 57]},
+              {index: 0.5, rgb: [161, 112, 59]},
+              {index: 0.63, rgb: [185, 140, 66]},
+              {index: 0.75, rgb: [202, 174, 88]},
+              {index: 0.88, rgb: [216, 209, 126]},
+              {index: 1, rgb: [233, 246, 171]},
+            ],
+
+            "velocity-blue": [
+              {index: 0, rgb: [17, 32, 64]},
+              {index: 0.13, rgb: [35, 52, 116]},
+              {index: 0.25, rgb: [29, 81, 156]},
+              {index: 0.38, rgb: [31, 113, 162]},
+              {index: 0.5, rgb: [50, 144, 169]},
+              {index: 0.63, rgb: [87, 173, 176]},
+              {index: 0.75, rgb: [149, 196, 189]},
+              {index: 0.88, rgb: [203, 221, 211]},
+              {index: 1, rgb: [254, 251, 230]},
+            ],
+
+            "velocity-green": [
+              {index: 0, rgb: [23, 35, 19]},
+              {index: 0.13, rgb: [24, 64, 38]},
+              {index: 0.25, rgb: [11, 95, 45]},
+              {index: 0.38, rgb: [39, 123, 35]},
+              {index: 0.5, rgb: [95, 146, 12]},
+              {index: 0.63, rgb: [152, 165, 18]},
+              {index: 0.75, rgb: [201, 186, 69]},
+              {index: 0.88, rgb: [233, 216, 137]},
+              {index: 1, rgb: [255, 253, 205]},
+            ],
+
+            cubehelix: [
+              {index: 0, rgb: [0, 0, 0]},
+              {index: 0.07, rgb: [22, 5, 59]},
+              {index: 0.13, rgb: [60, 4, 105]},
+              {index: 0.2, rgb: [109, 1, 135]},
+              {index: 0.27, rgb: [161, 0, 147]},
+              {index: 0.33, rgb: [210, 2, 142]},
+              {index: 0.4, rgb: [251, 11, 123]},
+              {index: 0.47, rgb: [255, 29, 97]},
+              {index: 0.53, rgb: [255, 54, 69]},
+              {index: 0.6, rgb: [255, 85, 46]},
+              {index: 0.67, rgb: [255, 120, 34]},
+              {index: 0.73, rgb: [255, 157, 37]},
+              {index: 0.8, rgb: [241, 191, 57]},
+              {index: 0.87, rgb: [224, 220, 93]},
+              {index: 0.93, rgb: [218, 241, 142]},
+              {index: 1, rgb: [227, 253, 198]},
+            ],
+          };
+        },
+        {},
+      ],
+      3: [
+        function (require, module, exports) {
+          /*
+           * Ben Postlethwaite
+           * January 2013
+           * License MIT
+           */
+          "use strict";
+
+          var colorScale = require("./colorScale");
+          var lerp = require("lerp");
+
+          module.exports = createColormap;
+
+          function createColormap(spec) {
+            /*
+             * Default Options
+             */
+            var indicies,
+              fromrgba,
+              torgba,
+              nsteps,
+              cmap,
+              colormap,
+              format,
+              nshades,
+              colors,
+              alpha,
+              i;
+
+            if (!spec) spec = {};
+
+            nshades = (spec.nshades || 72) - 1;
+            format = spec.format || "hex";
+
+            colormap = spec.colormap;
+            if (!colormap) colormap = "jet";
+
+            if (typeof colormap === "string") {
+              colormap = colormap.toLowerCase();
+
+              if (!colorScale[colormap]) {
+                throw Error(colormap + " not a supported colorscale");
+              }
+
+              cmap = colorScale[colormap];
+            } else if (Array.isArray(colormap)) {
+              cmap = colormap.slice();
+            } else {
+              throw Error("unsupported colormap option", colormap);
+            }
+
+            if (cmap.length > nshades + 1) {
+              throw new Error(
+                colormap +
+                " map requires nshades to be at least size " +
+                cmap.length
+              );
+            }
+
+            if (!Array.isArray(spec.alpha)) {
+              if (typeof spec.alpha === "number") {
+                alpha = [spec.alpha, spec.alpha];
+              } else {
+                alpha = [1, 1];
+              }
+            } else if (spec.alpha.length !== 2) {
+              alpha = [1, 1];
+            } else {
+              alpha = spec.alpha.slice();
+            }
+
+            // map index points from 0..1 to 0..n-1
+            indicies = cmap.map(function (c) {
+              return Math.round(c.index * nshades);
+            });
+
+            // Add alpha channel to the map
+            alpha[0] = Math.min(Math.max(alpha[0], 0), 1);
+            alpha[1] = Math.min(Math.max(alpha[1], 0), 1);
+
+            var steps = cmap.map(function (c, i) {
+              var index = cmap[i].index;
+
+              var rgba = cmap[i].rgb.slice();
+
+              // if user supplies their own map use it
+              if (rgba.length === 4 && rgba[3] >= 0 && rgba[3] <= 1) {
+                return rgba;
+              }
+              rgba[3] = alpha[0] + (alpha[1] - alpha[0]) * index;
+
+              return rgba;
+            });
+
+            /*
+             * map increasing linear values between indicies to
+             * linear steps in colorvalues
+             */
+            var colors = [];
+            for (i = 0; i < indicies.length - 1; ++i) {
+              nsteps = indicies[i + 1] - indicies[i];
+              fromrgba = steps[i];
+              torgba = steps[i + 1];
+
+              for (var j = 0; j < nsteps; j++) {
+                var amt = j / nsteps;
+                colors.push([
+                  Math.round(lerp(fromrgba[0], torgba[0], amt)),
+                  Math.round(lerp(fromrgba[1], torgba[1], amt)),
+                  Math.round(lerp(fromrgba[2], torgba[2], amt)),
+                  lerp(fromrgba[3], torgba[3], amt),
+                ]);
+              }
+            }
+
+            //add 1 step as last value
+            colors.push(cmap[cmap.length - 1].rgb.concat(alpha[1]));
+
+            if (format === "hex") colors = colors.map(rgb2hex);
+            else if (format === "rgbaString") colors = colors.map(rgbaStr);
+            else if (format === "float") colors = colors.map(rgb2float);
+
+            return colors;
+          }
+
+          function rgb2float(rgba) {
+            return [rgba[0] / 255, rgba[1] / 255, rgba[2] / 255, rgba[3]];
+          }
+
+          function rgb2hex(rgba) {
+            var dig,
+              hex = "#";
+            for (var i = 0; i < 3; ++i) {
+              dig = rgba[i];
+              dig = dig.toString(16);
+              hex += ("00" + dig).substr(dig.length);
+            }
+            return hex;
+          }
+
+          function rgbaStr(rgba) {
+            return "rgba(" + rgba.join(",") + ")";
+          }
+        },
+        {"./colorScale": 2, lerp: 4},
+      ],
+      4: [
+        function (require, module, exports) {
+          function lerp(v0, v1, t) {
+            return v0 * (1 - t) + v1 * t;
+          }
+          module.exports = lerp;
+        },
+        {},
+      ],
+    },
+    {},
+    [1]
+  );
+</script>
+<script>
+  function swap(data, a, b, stat) {
+    const tmp = data[a];
+    data[a] = data[b];
+    data[b] = tmp;
+    stat.copy += 3;
+  }
+
+  function gt(lhs, rhs, stat) {
+    ++stat.comp;
+    return lhs > rhs;
+  }
+
+  function toPercent(min, max, value) {
+    return (value - min) / (max - min);
+  }
+
+  function fromPercent(min, max, percent) {
+    return percent * (max - min) + min;
+  }
+
+  function showStat(stat) {
+    document.getElementById("result-comparison").innerText = stat.comp;
+    document.getElementById("result-copy").innerText = stat.copy;
+    document.getElementById("result-step").innerText = stat.step;
+  }
+
+  function generateData() {
+    const type = document.getElementById("data-type").value;
+    const len = document.getElementById("num-data").value;
+    let arr = [];
+    if (type === "random") {
+      for (let i = 0; i < len; ++i) {
+        arr.push(Math.random());
+      }
+    }
+    return arr;
+  }
+
+  function dataDrawer(canvas_, gradationFunc) {
+    let row = -1;
+    const gradation = gradationFunc;
+    const canvas = canvas_;
+    const rowHeight = 4;
+
+    function f(arr, markers) {
+      ++row;
+      const width = canvas.width / arr.length;
+      let ctx = canvas.getContext("2d");
+      if (canvas.height < (row + 1) * rowHeight) {
+        if (canvas.height * 2 > 16000) {
+          stopExecution = true;
+          return;
+        }
+        const img = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        canvas.height *= 2;
+        ctx.putImageData(img, 0, 0);
+      }
+
+      for (let i = 0; i < arr.length; ++i) {
+        const color = gradation(arr[i]);
+        ctx.fillStyle = color;
+        ctx.fillRect(i * width, row * rowHeight, width, rowHeight);
+      }
+
+      ctx.clearRect(0, (row + 1) * rowHeight, canvas.width, rowHeight + 1 + 4);
+
+      for (let i = 0; i < markers.length; ++i) {
+        ctx.fillStyle = "red";
+        ctx.beginPath();
+        ctx.moveTo(markers[i] * width + width / 2, (row + 1) * rowHeight + 1);
+        ctx.lineTo(
+          markers[i] * width + width / 2 - 2,
+          (row + 1) * rowHeight + 1 + 4
+        );
+        ctx.lineTo(
+          markers[i] * width + width / 2 + 2,
+          (row + 1) * rowHeight + 1 + 4
+        );
+        ctx.fill();
+      }
+    }
+    return f;
+  }
+
+  function getGradation(min, max) {
+    const type = document.getElementById("gradation-type").value;
+    if (type === "gray") {
+      return gradationGrayscale(min, max);
+    } else if (type == "hsl") {
+      return gradationHsl(min, max);
+    } else {
+      return gradationColormapLib(type)(min, max);
+    }
+  }
+
+  function gradationGrayscale(min_, max_) {
+    const min = min_;
+    const max = max_;
+
+    function f(value) {
+      const p = toPercent(min, max, value);
+      const c = fromPercent(0, 255, 1.0 - p);
+      return "rgb(" + c + "," + c + "," + c + ")";
+    }
+    return f;
+  }
+
+  function gradationHsl(min_, max_) {
+    const min = min_;
+    const max = max_;
+
+    function f(value) {
+      const p = toPercent(min, max, value);
+      const h = fromPercent(0, 240, 1.0 - p);
+      return "hsl(" + h + ", 100%, 50%)";
+    }
+    return f;
+  }
+
+  function gradationColormapLib(name_) {
+    const name = name_;
+    function g(min_, max_) {
+      const min = min_;
+      const max = max_;
+      const colors = window.Colormap({
+        colormap: name,
+        nshades: document.getElementById("num-data").value,
+        format: "hex",
+        alpha: 1,
+      });
+
+      function f(value) {
+        const p = toPercent(min, max, value);
+        const color = colors[Math.floor(fromPercent(0, colors.length - 1, p))];
+        return color;
+      }
+      return f;
+    }
+    return g;
+  }
+
+  function getSorter() {
+    const algo = document.getElementById("algo-type").value;
+    if (algo === "bubble") {
+      return bubbleSort;
+    } else if (algo === "simple") {
+      return simpleSort;
+    } else if (algo === "selection") {
+      return selectionSort;
+    } else if (algo === "insertion") {
+      return insertionSort;
+    } else if (algo === "shell") {
+      return shellSort;
+    } else if (algo === "quick") {
+      return quickSort;
+    }
+  }
+
+  function* bubbleSort(data, stat) {
+    const len = data.length;
+    for (let i = 0; i < len - 1; ++i) {
+      for (let j = len - 1; i < j; --j) {
+        if (gt(data[j - 1], data[j], stat)) {
+          swap(data, j - 1, j, stat);
+        }
+        ++stat.step;
+        yield {arr: data, markers: [i, j]};
+      }
+    }
+  }
+
+  function* simpleSort(data, stat) {
+    const len = data.length;
+    for (let i = 0; i < len - 1; ++i) {
+      for (let j = i + 1; j < len; ++j) {
+        if (gt(data[i], data[j], stat)) {
+          swap(data, i, j, stat);
+        }
+        ++stat.step;
+        yield {arr: data, markers: [i, j]};
+      }
+    }
+  }
+
+  function* selectionSort(data, stat) {
+    const len = data.length;
+    let minpos = 0;
+    for (let i = 0; i < len - 1; ++i) {
+      for (let j = i + 1; j < len; ++j) {
+        if (gt(data[minpos], data[j], stat)) {
+          minpos = j;
+        }
+        ++stat.step;
+        yield {arr: data, markers: [i, j]};
+      }
+      swap(data, i, minpos, stat);
+    }
+  }
+
+  function* insertionSort(data, stat) {
+    const len = data.length;
+    let minpos = 0;
+    let w;
+    for (let i = 1; i < len; ++i) {
+      w = data[i];
+      let j = i - 1;
+      while (gt(data[j], w, stat) && j >= 0) {
+        data[j + 1] = data[j];
+        --j;
+        ++stat.copy;
+        ++stat.step;
+        yield {arr: data, markers: [i, j]};
+      }
+      data[j + 1] = w;
+      ++stat.copy;
+    }
+  }
+
+  // TODO: rewrite
+  function* shellSort(data, stat) {
+    const len = data.length;
+    let h;
+    for (h = 1; h < len / 9; h = h * 3 + 1);
+    console.log("h", h);
+    for (; h > 0; h = Math.floor(h / 3)) {
+      for (let i = h; i < len; ++i) {
+        for (let j = i; j >= h && gt(data[j - h], data[j], stat); j -= h) {
+          swap(data, j, j - h, stat);
+          ++stat.step;
+          yield {arr: data, markers: [i, j, j - h]};
+        }
+      }
+    }
+  }
+
+  // TODO: rewrite
+  function* quickSort(data, stat) {
+    function median3(a, b, c) {
+      let min = a;
+      let mid = b;
+      let max = c;
+      if (min > max) {
+        let tmp = min;
+        min = max;
+        max = tmp;
+      }
+      if (min > mid) {
+        let tmp = min;
+        min = mid;
+        mid = min;
+      }
+      if (mid > max) {
+        let tmp = mid;
+        mid = max;
+        max = mid;
+      }
+      return mid;
+    }
+
+    let stack = [];
+    stack.push({first: 0, last: data.length - 1});
+
+    while (stack.length > 0) {
+      let d = stack.pop();
+      let first = d.first;
+      let last = d.last;
+
+      if (last - first <= 0) continue;
+
+      let pivot = median3(
+        data[first],
+        data[Math.floor((first + last) / 2)],
+        data[last]
+      );
+
+      let l = first;
+      let r = last;
+      while (l <= r) {
+        while (l < last && gt(data[l], pivot, stat)) ++l;
+        while (r > first && !gt(data[r], pivot, stat)) --r;
+        if (l > r) break;
+        swap(data, l, r, stat);
+        ++stat.step;
+        yield {arr: data, markers: [l, r]};
+        ++l;
+        --r;
+      }
+
+      stack.push({first: first, last: l - 1});
+      stack.push({first: l, last: last});
+    }
+  }
+
+  let stopExecution = false;
+
+  const executeStepByStep = async function () {
+    const canvas = document.getElementById("output");
+    const width = document.querySelector(".sort-main").clientWidth;
+    canvas.width = Math.min(
+      width - 20,
+      4 * document.getElementById("num-data").value
+    );
+    console.log("set #output width", width);
+    stopExecution = false;
+    document.getElementById("exec-step-by-step").setAttribute("disabled", true);
+
+    const wait = async (ms) =>
+      new Promise((resolve) => setTimeout(resolve, ms));
+
+    let stat = {copy: 0, comp: 0, step: 0};
+    let data = generateData();
+    let draw = dataDrawer(
+      canvas,
+      getGradation(Math.min(...data), Math.max(...data))
+    );
+    let iter = getSorter()(data, stat);
+    let v;
+    draw(data, []);
+    while (!(v = iter.next()).done) {
+      draw(v.value.arr, v.value.markers);
+      showStat(stat);
+      const interval = document.getElementById("step-interval").value;
+      await wait(interval);
+      if (stopExecution) break;
+    }
+    showStat(stat);
+  };
+
+  const showLegend = function () {
+    const gradation = getGradation(0, 100);
+    const canvas = document.getElementById("gradation-canvas");
+    let ctx = canvas.getContext("2d");
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const height = canvas.height;
+    const width = canvas.width / 100;
+    for (let i = 0; i < 100; ++i) {
+      ctx.fillStyle = gradation(i);
+      ctx.fillRect(i * width, 0, width, height);
+    }
+  };
+
+  window.addEventListener("load", function () {
+    const canvas = document.getElementById("output");
+    const width = document.querySelector(".sort-main").clientWidth;
+    canvas.width = width - 20;
+    console.log("set #output width", width);
+
+    document
+      .getElementById("exec-step-by-step")
+      .addEventListener("click", executeStepByStep);
+    document.getElementById("stop-btn").addEventListener("click", function () {
+      stopExecution = true;
+      document.getElementById("exec-step-by-step").removeAttribute("disabled");
+    });
+    document.getElementById("reset-btn").addEventListener("click", function () {
+      window.location.reload();
+    });
+    document.getElementById("save-btn").addEventListener("click", function () {
+      const canvas = document.getElementById("output");
+      const base64 = canvas.toDataURL("image/png");
+      window.location.href = base64;
+    });
+    document
+      .getElementById("gradation-type")
+      .addEventListener("change", showLegend);
+    showLegend();
+  });
+</script>
+<style>
+  #settings {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .sort-header {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .sort-flow {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sort-flow .sort-main {
+    flex-grow: 1;
+  }
+
+  .sort-main {
+    min-height: 400px;
+  }
+</style>
+<div class="sort-flow">
+  <div class="sort-header">
+    <h1 style="font-size: 16pt; padding: 0; margin: 0">
+      Sort Visualizer - ソートアルゴリズムを可視化
+    </h1>
+    <div id="settings">
+      <fieldset>
+        <legend>データ設定</legend>
+
+        <div>
+          <label for="num-data">データの数:</label>
+          <datalist id="num-data-list">
+            <option value="8" />
+            <option value="16" />
+            <option value="32" />
+            <option value="64" />
+            <option value="128" />
+            <option value="256" />
+            <option value="512" />
+            <option value="1024" />
+          </datalist>
+          <input type="number" id="num-data" min="1" max="1024" value="32" list="num-data-list" />
+        </div>
+
+        <div>
+          <label for="data-type">データ種類:</label>
+          <select id="data-type">
+            <option value="random">ランダム</option>
+          </select>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>アルゴリズム設定</legend>
+        <div>
+          <label for="">アルゴリズム:</label>
+          <select id="algo-type">
+            <option value="bubble">バブルソート</option>
+            <option value="simple">シンプルソート</option>
+            <option value="selection">選択ソート</option>
+            <option value="insertion">挿入ソート</option>
+            <option value="shell">シェルソート</option>
+            <option value="quick">クイックソート</option>
+          </select>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>見た目の設定</legend>
+        <div>
+          <select id="gradation-type">
+            <option value="inferno">Inferno</option>
+            <option value="hsl">虹</option>
+            <option value="gray">グレースケール</option>
+            <option value="jet">Jet</option>
+            <option value="hsv">HSV</option>
+            <option value="hot">Hot</option>
+            <option value="cool">Cool</option>
+            <option value="spring">Spring</option>
+            <option value="summer">Summer</option>
+            <option value="autumn">Autumn</option>
+            <option value="winter">Winter</option>
+            <option value="bone">Bone</option>
+            <option value="copper">Copper</option>
+            <option value="YlGnBu">YlGnBu</option>
+            <option value="greens">Greens</option>
+            <option value="YlOrRd">YlOrRd</option>
+            <option value="bluered">Bluered</option>
+            <option value="RdBu">RdBu</option>
+            <option value="picnic">Picnic</option>
+            <option value="portland">Portland</option>
+            <option value="blackbody">Blackbody</option>
+            <option value="earth">Earth</option>
+            <option value="electric">Electric</option>
+            <option value="viridis">Viridis</option>
+            <option value="magma">Magma</option>
+            <option value="plasma">Plasma</option>
+            <option value="warm">Warm</option>
+            <option value="rainbow-soft">Rainbow-soft</option>
+            <option value="bathymetry">Bathymetry</option>
+            <option value="cdom">Cdom</option>
+            <option value="chlorophyll">Chlorophyll</option>
+            <option value="density">Density</option>
+            <option value="freesurface-blue">Freesurface-blue</option>
+            <option value="freesurface-red">Freesurface-red</option>
+            <option value="oxygen">Oxygen</option>
+            <option value="par">Par</option>
+            <option value="phase">Phase</option>
+            <option value="salinity">Salinity</option>
+            <option value="temperature">Temperature</option>
+            <option value="velocity-blue">Velocity-blue</option>
+            <option value="velocity-green">Velocity-green</option>
+            <option value="cubehelix">Cubehelix</option>
+          </select>
+        </div>
+        <div>
+          <canvas id="gradation-canvas" height="20" width="100"></canvas>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>実行</legend>
+        <div>
+          <label for="step-interval">インターバル(ミリ秒):</label>
+          <br />
+          <input id="step-interval" type="number" min="10" max="10000" step="10" value="50" />
+        </div>
+        <div>
+          <button id="exec-step-by-step">実行</button>
+          <button id="stop-btn">停止</button>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>操作</legend>
+        <div>
+          <div>
+            <button id="reset-btn">リセット</button>
+          </div>
+          <div>
+            <button id="save-btn">画像を保存</button>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>実行結果</legend>
+        <div>比較回数: <span id="result-comparison"></span></div>
+        <div>コピー回数: <span id="result-copy"></span></div>
+        <div>ステップ数: <span id="result-step"></span></div>
+      </fieldset>
+    </div>
+  </div>
+  <div class="sort-main">
+    <canvas id="output" height="300" width="100" style="
+        border: 1px solid var(--text-color);
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+        display: block;
+      "></canvas>
+  </div>
+</div>
+<script>
+  // save settings to Local Storage
+  document.querySelectorAll("select, input").forEach((element) => {
+    element.addEventListener("change", (event) => {
+      localStorage.setItem("sort-" + event.target.id, event.target.value, {
+        expires: 365,
+      });
+    });
+  });
+
+  // resume settings from Local Storage
+  document.querySelectorAll("select, input").forEach((element) => {
+    const value = localStorage.getItem("sort-" + element.id);
+    if (value) {
+      element.value = value;
+    }
+  });
+</script>
