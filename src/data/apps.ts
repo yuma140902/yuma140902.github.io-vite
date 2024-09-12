@@ -42,9 +42,9 @@ export const main_apps: App[] = [
     img: imgDiffTool,
   },
   {
-    name: "CSV to LaTeX",
-    copy: "エクセルの表をLaTeX形式に変換",
-    url: "/webtools/csv2tex.html",
+    name: "Table Converter",
+    copy: "表形式のデータの相互変換",
+    url: "/apps/table/",
     badge:
       "https://img.shields.io/github/deployments/yuma140902/yuma140902.github.io/github-pages?logo=github&label=Deployment",
     outside: false,
