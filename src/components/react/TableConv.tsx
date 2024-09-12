@@ -3,12 +3,13 @@
 import { useLocalStorage } from "@uidotdev/usehooks";
 import { useState } from "react";
 
-type InputType = "csv";
+type InputType = "csv" | "json";
 
 function inputTypeSelector(ty: InputType, setTy: (ty: InputType) => void) {
   return (
     <select value={ty} onChange={(e) => setTy(e.target.value as InputType)}>
       <option value="csv">CSV</option>
+      <option value="json">JSON</option>
     </select>
   );
 }
@@ -52,8 +53,11 @@ function convert(inputType: InputType, outputType: OutputType, text: string) {
     case "csv":
       table = csvToTable(text);
       break;
+    case "json":
+      table = jsonToTable(text);
+      break;
     default:
-      throw new Error("Unknown input type: " + inputType);
+      throw new Error(`不明な入力タイプです: ${inputType}`);
   }
 
   switch (outputType) {
@@ -78,7 +82,7 @@ function convert(inputType: InputType, outputType: OutputType, text: string) {
     case "json-minify":
       return tableToJson(table, true);
     default:
-      throw new Error("Unknown output type: " + outputType);
+      throw new Error(`不明な出力タイプです: ${outputType}`);
   }
 }
 
@@ -124,6 +128,30 @@ function csvToTable(csv: string): Table {
     } else {
       table.push(row);
     }
+  }
+  return table;
+}
+
+function jsonToTable(json: string): Table {
+  const obj = JSON.parse(json);
+  let table: Table = [];
+
+  if (!(obj instanceof Array)) {
+    throw new Error("JSON が配列でありません");
+  }
+  for (const row of obj) {
+    if (!(row instanceof Array)) {
+      throw new Error("JSON が2次元配列でありません");
+    }
+    let stringRow: string[] = [];
+    for (const cell of row) {
+      if (typeof cell === "string") {
+        stringRow.push(cell);
+      } else {
+        stringRow.push(JSON.stringify(cell));
+      }
+    }
+    table.push(stringRow);
   }
   return table;
 }
