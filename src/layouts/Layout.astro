@@ -12,8 +12,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
-const description = Astro.props.description ?? Astro.props.og_description ?? 'yuma14の個人サイト: Rust、Neovim、ゲーム開発などに関する情報とツール';
-const og_description = Astro.props.og_description ?? description;
+const description = Astro.props.description ?? Astro.props.og_description ?? '';
+const og_description = Astro.props.og_description;
 const og_image = Astro.props.og_image ?? '/ogp.png';
 const og_title = Astro.props.og_title ?? title;
 const og_locale = Astro.props.og_locale ?? 'ja_JP';
@@ -50,8 +50,8 @@ const navItems: NavItem[] = [
     <link rel="icon" href="/icon-512x512.png">
     <link rel="sitemap" href="/sitemap-index.xml" />
 
-    <meta name="description" content={description}>
-    <meta property="og:description" content={og_description}>
+    {description && <meta name="description" content={description}>}
+    {og_description && <meta property="og:description" content={og_description}>}
     <meta property="og:image" content={og_image}>
     <meta property="og:title" content={og_title}>
     <meta property="og:locale" content={og_locale}>
