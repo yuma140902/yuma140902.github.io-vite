@@ -12,8 +12,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
-const description = Astro.props.description ?? Astro.props.og_description ?? '';
-const og_description = Astro.props.og_description;
+const description = Astro.props.description ?? Astro.props.og_description;
+const og_description = Astro.props.og_description ?? Astro.props.description;
 const og_image = Astro.props.og_image ?? '/ogp.png';
 const og_title = Astro.props.og_title ?? title;
 const og_locale = Astro.props.og_locale ?? 'ja_JP';
