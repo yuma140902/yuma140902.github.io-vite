@@ -206,7 +206,7 @@ export const TableConv: React.FC = () => {
     "tsv-no-quote"
   );
   const [inputText, setInputText] = useState("");
-  const debouncedInputText = useDebounce(inputText, 300);
+  const debouncedInputText = useDebounce(inputText, 100);
 
   let outputText: string = "";
   let error = false;
