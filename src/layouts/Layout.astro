@@ -4,7 +4,6 @@ import 'katex/dist/katex.min.css'
 
 interface Props {
 	title: string;
-  description?: string;
   og_description?: string;
   og_image?: string;
   og_title?: string;
@@ -12,8 +11,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
-const description = Astro.props.description ?? Astro.props.og_description;
-const og_description = Astro.props.og_description ?? Astro.props.description;
+const og_description = Astro.props.og_description;
 const og_image = Astro.props.og_image ?? '/ogp.png';
 const og_title = Astro.props.og_title ?? title;
 const og_locale = Astro.props.og_locale ?? 'ja_JP';
@@ -50,7 +48,7 @@ const navItems: NavItem[] = [
     <link rel="icon" href="/icon-512x512.png">
     <link rel="sitemap" href="/sitemap-index.xml" />
 
-    {description && <meta name="description" content={description}>}
+    {og_description && <meta name="description" content={og_description}>}
     {og_description && <meta property="og:description" content={og_description}>}
     <meta property="og:image" content={og_image}>
     <meta property="og:title" content={og_title}>

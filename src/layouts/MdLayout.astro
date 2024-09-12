@@ -7,7 +7,6 @@ interface Props {
     title: string;
     create_date?: string
     update_date?: string;
-    description?: string;
     og_description?: string;
     og_image?: string;
   }
@@ -20,7 +19,7 @@ function formatDate(date: string) {
 }
 ---
 
-<Layout title={frontmatter.title} description={frontmatter.description} 
+<Layout title={frontmatter.title}
   og_description={frontmatter.og_description} og_image={frontmatter.og_image}>
   <h1>{frontmatter.title}</h1>
   <p>
