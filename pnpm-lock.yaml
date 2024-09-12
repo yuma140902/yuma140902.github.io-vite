@@ -14,6 +14,15 @@ dependencies:
   '@astrojs/sitemap':
     specifier: ^3.1.6
     version: 3.1.6
+  '@fontsource-variable/noto-sans-jp':
+    specifier: ^5.1.0
+    version: 5.1.0
+  '@fontsource/ibm-plex-mono':
+    specifier: ^5.1.0
+    version: 5.1.0
+  '@fontsource/ibm-plex-sans-jp':
+    specifier: ^5.1.0
+    version: 5.1.0
   '@iconify-json/carbon':
     specifier: ^1.2.1
     version: 1.2.1
@@ -702,6 +711,18 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource-variable/noto-sans-jp@5.1.0:
+    resolution: {integrity: sha512-VmEW0dlHsC0tQOlZlzcrUj+9HL73pANKneMrsZD8X6Jg3XhysOYY6R2VRGO4cTYwp5iVznt1crzGUEWM+/xQuA==}
+    dev: false
+
+  /@fontsource/ibm-plex-mono@5.1.0:
+    resolution: {integrity: sha512-XKsZNyRCj6tz8zlatHmniSoLVephMD5GQG2sXgcaEb8DkUO+O61r28uTlIMEZuoZXtP4c4STvL+KUlJM5jZOEg==}
+    dev: false
+
+  /@fontsource/ibm-plex-sans-jp@5.1.0:
+    resolution: {integrity: sha512-NcQRoHmZyHw1SgKhvnTa+db29YUsnq7D25fofK81xmdPc69S8w9Nxob4yaus0NVoaUd3qcpjv53msilteAhx9g==}
+    dev: false
 
   /@iconify-json/carbon@1.2.1:
     resolution: {integrity: sha512-dIMY6OOY9LnwR3kOqAtfz4phGFG+KNfESEwSL6muCprBelSlSPpRXtdqvEEO/qWhkf5AJ9hWrOV3Egi5Z2IuKA==}
