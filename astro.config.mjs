@@ -8,10 +8,12 @@ import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
 import rehypeAutoSpacing from "./src/rehype/rehype-autospacing";
 
+import mdx from "@astrojs/mdx";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://yuma14.net",
-  integrations: [icon(), sitemap(), react()],
+  integrations: [icon(), sitemap(), react(), mdx()],
   redirects: {
     "/deploys/": "/monitor/",
     "/services/": "/monitor/",

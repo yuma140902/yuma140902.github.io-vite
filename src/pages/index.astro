@@ -1,54 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-import * as child from 'node:child_process';
-const gitBranch = child.execSync('git branch --show-current').toString().trim();
-const gitHash = child.execSync('git rev-parse --short HEAD').toString().trim();
-const buildTime = new Date().toISOString().replace(/T/, ' ');
+import Content from './_index.mdx';
 ---
 
 <Layout title="ホーム" 
   og_title="yuma14.net"
   og_description='yuma14の個人サイト: Rust、Neovim、ゲーム開発などに関する情報とツール'
 >
-  <h1>yuma14.net</h1>
-
-  <h2>コンテンツ</h2>
-
-  <dl>
-    <dt><a href="/profile/">Profile</a></dt>
-    <dd>私について</dd>
-
-    <dt><a href="/works/">Works</a></dt>
-    <dd>開発中のプロジェクト・過去のプロジェクト</dd>
-
-    <dt><a href="/apps/">ウェブアプリ</a></dt>
-    <dd>公開しているウェブアプリの一覧</dd>
-
-    <dt><a href="/monitor/">定点観測</a></dt>
-    <dd>いろいろなものの状態を 1 ヶ所からまとめて確認するためのページ</dd>
-  </dl>
-
-  <h2>更新履歴</h2>
-  <p>
-    最終更新: <time datetime={buildTime}>{buildTime}</time>
-    (ブランチ: <code>{gitBranch}</code>、コミット ID: <code>{gitHash}</code>)
-  </p>
-  <ul>
-    <li>2024/09/12 - フレームワークを Astro に変更</li>
-    <li>2024/03/19 - フレームワークを Vike に変更</li>
-    <li>2023/12/19 - Tempura v0.5.0 にアップデート</li>
-    <li>2023/10/08 - ウェブアプリ一覧を追加</li>
-    <li>2023/07/12 - 画像追加</li>
-    <li>2023/05/17 - 更新</li>
-    <li>2023/04/30 - git と cloud を削除</li>
-    <li>2023/04/29 - www を別サーバーへ移動</li>
-    <li>2023/01/31 - Nextcloud インスタンス(非公開)を追加</li>
-    <li>2023/01/31 - サーバーのスペックを強化</li>
-    <li>2022/11/18 - Gitea インスタンス (git.yuma14.net) を追加</li>
-    <li>2022/11/16 - About Me、つくったもの、WebTools、サービス一覧を追加。ダークテーマ対応</li>
-    <li>2022/11/15 - ドメイン取得</li>
-  </ul>
+  <Content />
 </Layout>
 
 <style></style>
