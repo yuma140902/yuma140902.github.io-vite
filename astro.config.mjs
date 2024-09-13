@@ -6,6 +6,7 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
+import rehypeAutoSpacing from "./src/rehype/rehype-autospacing";
 
 // https://astro.build/config
 export default defineConfig({
@@ -27,6 +28,6 @@ export default defineConfig({
     },
     syntaxHighlight: "shiki",
     remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeKatex],
+    rehypePlugins: [rehypeAutoSpacing, rehypeKatex],
   },
 });
