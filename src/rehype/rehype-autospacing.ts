@@ -60,6 +60,7 @@ export default function rehypeAutoSpacing() {
           padding = [false, false];
         }
         if (
+          partTypes[i] === "japanese" &&
           i === 0 &&
           i === parts.length - 1 &&
           index - 1 >= 0 &&
@@ -67,10 +68,11 @@ export default function rehypeAutoSpacing() {
         ) {
           // part は一つだけで、左右に兄弟要素が存在する場合
           padding = [true, true];
-        } else if (i === 0 && index - 1 >= 0) {
+        } else if (partTypes[i] === "japanese" && i === 0 && index - 1 >= 0) {
           // part が最左で、左に兄弟要素が存在する場合
           padding[0] = true;
         } else if (
+          partTypes[i] === "japanese" &&
           i === parts.length - 1 &&
           index + 1 < parent?.children?.length
         ) {
