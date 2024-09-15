@@ -6,7 +6,7 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
-import rehypeAutoSpacing from "./src/rehype/rehype-autospacing";
+import rehypeTextAutospace from "rehype-text-autospace";
 
 import mdx from "@astrojs/mdx";
 
@@ -30,6 +30,6 @@ export default defineConfig({
     },
     syntaxHighlight: "shiki",
     remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeAutoSpacing, rehypeKatex],
+    rehypePlugins: [rehypeTextAutospace, rehypeKatex],
   },
 });

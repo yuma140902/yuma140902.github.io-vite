@@ -62,6 +62,9 @@ dependencies:
   rehype-katex:
     specifier: ^7.0.1
     version: 7.0.1
+  rehype-text-autospace:
+    specifier: ^1.0.0
+    version: 1.0.0
   remark-math:
     specifier: ^6.0.0
     version: 6.0.0
@@ -4123,6 +4126,12 @@ packages:
       '@types/hast': 3.0.4
       hast-util-to-html: 9.0.2
       unified: 11.0.5
+    dev: false
+
+  /rehype-text-autospace@1.0.0:
+    resolution: {integrity: sha512-ALc+9IGF2U+e4Kw2xsDa8uzIlCnQ9AOaZUv31g3guwjLBqrf6MRdWF6g3dpEUsnYAmZRxiEs4/2XG1CdUVOuPQ==}
+    dependencies:
+      unist-util-visit: 5.0.0
     dev: false
 
   /rehype@13.0.1:
