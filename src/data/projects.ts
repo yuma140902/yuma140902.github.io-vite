@@ -3,9 +3,11 @@ import type { Technology } from './technology_enum';
 export function getSinceUntilText(since?: string, until?: string): string {
   if (until && since) {
     return `${since} ～ ${until}`;
-  } else if (since) {
+  }
+  if (since) {
     return `${since} ～`;
-  } else if (until) {
+  }
+  if (until) {
     return `～ ${until}`;
   }
   return '';

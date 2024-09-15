@@ -136,11 +136,11 @@ function jsonToTable(json: string): Table {
   const obj = JSON.parse(json);
   const table: Table = [];
 
-  if (!(obj instanceof Array)) {
+  if (!Array.isArray(obj)) {
     throw new Error('JSON が配列でありません');
   }
   for (const row of obj) {
-    if (!(row instanceof Array)) {
+    if (!Array.isArray(row)) {
       throw new Error('JSON が2次元配列でありません');
     }
     const stringRow: string[] = [];
@@ -182,6 +182,7 @@ function tableToLatex(table: Table, hline: boolean, tabular: boolean): string {
   }
 
   output += table
+    // biome-ignore lint: lint/style/useTemplate
     .map((row) => row.join(' & ') + ' \\\\' + (hline ? ' \\hline' : ''))
     .join('\n');
 
@@ -212,7 +213,7 @@ export const TableConv: React.FC = () => {
   let error = false;
   try {
     outputText = convert(inputType, outputType, debouncedInputText);
-  } catch (e: any) {
+  } catch (e) {
     error = true;
     outputText = (e as Error).message;
   }
@@ -227,6 +228,7 @@ export const TableConv: React.FC = () => {
           onChange={(e) => setInputText(e.target.value)}
           rows={10}
           autoComplete="on"
+          // biome-ignore lint: lint/a11y/noAutofocus
           autoFocus
           spellCheck="false"
           style={{ resize: 'vertical' }}
@@ -241,7 +243,7 @@ export const TableConv: React.FC = () => {
           readOnly
           style={{ resize: 'vertical' }}
           className={error ? 'bd-error text-error' : ''}
-          onClick={(e) => e.currentTarget.select()}
+          onFocus={(e) => e.currentTarget.select()}
         />
       </div>
     </form>
