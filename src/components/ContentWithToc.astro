@@ -17,6 +17,8 @@
 
 <script>
   import { init } from 'tocbot'
+
+  let generated_ids = 0;
  
   init({
     tocSelector: '.toc-body',
@@ -24,7 +26,18 @@
     activeLinkClass: 'toc-link-active',
     listClass: 'toc-list',
     linkClass: 'toc-link',
-    headingSelector: 'h2, h3, h4, h5, h6'
+    headingSelector: 'h2, h3, h4, h5, h6',
+    scrollSmoothOffset: -50,
+    headingsOffset: 50,
+    headingObjectCallback: (o, elm) => {
+      console.log(o);
+      if (!elm.id) {
+        const id =  `toc-${generated_ids++}`;
+        (o as {id: string}).id = id;
+        elm.id = id;
+      }
+      return o;
+    }
   })
 </script>
 
