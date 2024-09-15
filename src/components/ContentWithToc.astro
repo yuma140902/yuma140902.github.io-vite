@@ -30,9 +30,8 @@
     scrollSmoothOffset: -50,
     headingsOffset: 50,
     headingObjectCallback: (o, elm) => {
-      console.log(o);
       if (!elm.id) {
-        const id =  `toc-${generated_ids++}`;
+        const id =  `toc-generated-${generated_ids++}`;
         (o as {id: string}).id = id;
         elm.id = id;
       }
