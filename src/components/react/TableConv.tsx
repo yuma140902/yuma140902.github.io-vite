@@ -182,7 +182,7 @@ function tableToLatex(table: Table, hline: boolean, tabular: boolean): string {
   }
 
   output += table
-    // biome-ignore lint: lint/style/useTemplate
+    // biome-ignore lint/style/useTemplate:
     .map((row) => row.join(' & ') + ' \\\\' + (hline ? ' \\hline' : ''))
     .join('\n');
 
@@ -228,7 +228,7 @@ export const TableConv: React.FC = () => {
           onChange={(e) => setInputText(e.target.value)}
           rows={10}
           autoComplete="on"
-          // biome-ignore lint: lint/a11y/noAutofocus
+          // biome-ignore lint/a11y/noAutofocus:
           autoFocus
           spellCheck="false"
           style={{ resize: 'vertical' }}
