@@ -6,12 +6,12 @@ import Layout from './Layout.astro';
 interface Props {
   frontmatter: {
     title: string;
-    create_date?: string
+    create_date?: string;
     update_date?: string;
     og_description?: string;
     og_image?: string;
     no_toc?: boolean;
-  }
+  };
 }
 
 const { frontmatter } = Astro.props;

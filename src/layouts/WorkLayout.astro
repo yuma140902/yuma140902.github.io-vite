@@ -1,31 +1,37 @@
 ---
-import Layout from './Layout.astro'
-import { projects, getSinceUntilText, type Project, old_projects, scrap_projects } from '../data/projects'
 import { Icon } from 'astro-icon/components';
 import Badge from '../components/Badge.astro';
-import Link from '../components/Link.astro';
 import ContentWithToc from '../components/ContentWithToc.astro';
+import Link from '../components/Link.astro';
+import {
+  type Project,
+  getSinceUntilText,
+  old_projects,
+  projects,
+  scrap_projects,
+} from '../data/projects';
+import Layout from './Layout.astro';
 
 /* プロジェクトの詳細ページで用いるレイアウト */
 interface Props {
   frontmatter: {
     // プロジェクトの名前。src/data/projects.ts に定義されているものと一致させる
-    name: string,
-    no_toc?: boolean
-  }
+    name: string;
+    no_toc?: boolean;
+  };
 }
 
 const { frontmatter } = Astro.props;
 function findProject(name: string): Project | undefined {
-  let pj = projects.find(pj => pj.name === name);
+  let pj = projects.find((pj) => pj.name === name);
   if (pj) {
     return pj;
   }
-  pj = old_projects.find(pj => pj.name === name);
+  pj = old_projects.find((pj) => pj.name === name);
   if (pj) {
     return pj;
   }
-  pj = scrap_projects.find(pj => pj.name === name);
+  pj = scrap_projects.find((pj) => pj.name === name);
   return pj;
 }
 const pj = findProject(frontmatter.name);

@@ -1,9 +1,9 @@
 /* 表形式のデータの相互変換を行うウェブアプリ */
 
-import { useDebounce, useLocalStorage } from "@uidotdev/usehooks";
-import { useState } from "react";
+import { useDebounce, useLocalStorage } from '@uidotdev/usehooks';
+import { useState } from 'react';
 
-type InputType = "csv" | "json";
+type InputType = 'csv' | 'json';
 
 function inputTypeSelector(ty: InputType, setTy: (ty: InputType) => void) {
   return (
@@ -15,16 +15,16 @@ function inputTypeSelector(ty: InputType, setTy: (ty: InputType) => void) {
 }
 
 type OutputType =
-  | "csv-no-quote"
-  | "csv-quote"
-  | "tsv-no-quote"
-  | "tsv-quote"
-  | "latex"
-  | "latex-hline"
-  | "latex-tabular"
-  | "latex-tabular-hline"
-  | "json"
-  | "json-minify";
+  | 'csv-no-quote'
+  | 'csv-quote'
+  | 'tsv-no-quote'
+  | 'tsv-quote'
+  | 'latex'
+  | 'latex-hline'
+  | 'latex-tabular'
+  | 'latex-tabular-hline'
+  | 'json'
+  | 'json-minify';
 
 function outputTypeSelector(ty: OutputType, setTy: (ty: OutputType) => void) {
   return (
@@ -50,10 +50,10 @@ type Table = string[][];
 function convert(inputType: InputType, outputType: OutputType, text: string) {
   let table: Table;
   switch (inputType) {
-    case "csv":
+    case 'csv':
       table = csvToTable(text);
       break;
-    case "json":
+    case 'json':
       table = jsonToTable(text);
       break;
     default:
@@ -61,25 +61,25 @@ function convert(inputType: InputType, outputType: OutputType, text: string) {
   }
 
   switch (outputType) {
-    case "csv-no-quote":
-      return tableToCsv(table, ",", false);
-    case "csv-quote":
-      return tableToCsv(table, ",", true);
-    case "tsv-no-quote":
-      return tableToCsv(table, "\t", false);
-    case "tsv-quote":
-      return tableToCsv(table, "\t", true);
-    case "latex":
+    case 'csv-no-quote':
+      return tableToCsv(table, ',', false);
+    case 'csv-quote':
+      return tableToCsv(table, ',', true);
+    case 'tsv-no-quote':
+      return tableToCsv(table, '\t', false);
+    case 'tsv-quote':
+      return tableToCsv(table, '\t', true);
+    case 'latex':
       return tableToLatex(table, false, false);
-    case "latex-hline":
+    case 'latex-hline':
       return tableToLatex(table, true, false);
-    case "latex-tabular":
+    case 'latex-tabular':
       return tableToLatex(table, false, true);
-    case "latex-tabular-hline":
+    case 'latex-tabular-hline':
       return tableToLatex(table, true, true);
-    case "json":
+    case 'json':
       return tableToJson(table, false);
-    case "json-minify":
+    case 'json-minify':
       return tableToJson(table, true);
     default:
       throw new Error(`不明な出力タイプです: ${outputType}`);
@@ -87,33 +87,33 @@ function convert(inputType: InputType, outputType: OutputType, text: string) {
 }
 
 function csvToTable(csv: string): Table {
-  const lines = csv.split("\n", -1);
-  const delimiter = csv.includes("\t") ? "\t" : ",";
+  const lines = csv.split('\n', -1);
+  const delimiter = csv.includes('\t') ? '\t' : ',';
 
-  let state: "inside-quote" | "outside-quote" = "outside-quote";
+  let state: 'inside-quote' | 'outside-quote' = 'outside-quote';
 
-  let table: Table = [];
+  const table: Table = [];
   for (const line of lines) {
-    state = "outside-quote";
-    let row = [];
+    state = 'outside-quote';
+    const row = [];
     let startIdx = 0;
 
     // サロゲートペアを考慮して1文字ずつ分割
     const chars = Array.from(line);
 
     for (let i = 0; i < chars.length; ++i) {
-      if (chars[i] === '"' && chars[i - 1] !== "\\") {
-        if (state === "inside-quote") {
-          state = "outside-quote";
+      if (chars[i] === '"' && chars[i - 1] !== '\\') {
+        if (state === 'inside-quote') {
+          state = 'outside-quote';
         } else {
-          state = "inside-quote";
+          state = 'inside-quote';
           // 開始の " をスキップ
           ++startIdx;
         }
-      } else if (chars[i] === delimiter && state === "outside-quote") {
+      } else if (chars[i] === delimiter && state === 'outside-quote') {
         // 終了の " をスキップ
         const end = chars[i - 1] === '"' ? i - 1 : i;
-        row.push(chars.slice(startIdx, end).join(""));
+        row.push(chars.slice(startIdx, end).join(''));
         startIdx = i + 1;
       }
     }
@@ -121,7 +121,7 @@ function csvToTable(csv: string): Table {
     // 終了の " をスキップ
     const end =
       chars[chars.length - 1] === '"' ? chars.length - 1 : chars.length;
-    row.push(chars.slice(startIdx, end).join(""));
+    row.push(chars.slice(startIdx, end).join(''));
 
     if (row.length === 1 && row[0].length === 0) {
       table.push([]);
@@ -134,18 +134,18 @@ function csvToTable(csv: string): Table {
 
 function jsonToTable(json: string): Table {
   const obj = JSON.parse(json);
-  let table: Table = [];
+  const table: Table = [];
 
   if (!(obj instanceof Array)) {
-    throw new Error("JSON が配列でありません");
+    throw new Error('JSON が配列でありません');
   }
   for (const row of obj) {
     if (!(row instanceof Array)) {
-      throw new Error("JSON が2次元配列でありません");
+      throw new Error('JSON が2次元配列でありません');
     }
-    let stringRow: string[] = [];
+    const stringRow: string[] = [];
     for (const cell of row) {
-      if (typeof cell === "string") {
+      if (typeof cell === 'string') {
         stringRow.push(cell);
       } else {
         stringRow.push(JSON.stringify(cell));
@@ -157,10 +157,10 @@ function jsonToTable(json: string): Table {
 }
 
 function tableToCsv(table: Table, delimiter: string, quote: boolean): string {
-  const q = quote ? '"' : "";
+  const q = quote ? '"' : '';
   return table
     .map((row) => row.map((cell) => q + cell + q).join(delimiter))
-    .join("\n");
+    .join('\n');
 }
 
 function tableToLatex(table: Table, hline: boolean, tabular: boolean): string {
@@ -168,25 +168,25 @@ function tableToLatex(table: Table, hline: boolean, tabular: boolean): string {
     .map((row) => row.length)
     .reduce((a, b) => Math.max(a, b), 0);
 
-  let output = "";
+  let output = '';
   if (tabular) {
-    output += "\\begin{tabular}{";
+    output += '\\begin{tabular}{';
     for (let i = 0; i < maxCols; ++i) {
-      output += "c";
+      output += 'c';
     }
-    output += "}";
+    output += '}';
     if (hline) {
-      output += " \\hline";
+      output += ' \\hline';
     }
-    output += "\n";
+    output += '\n';
   }
 
   output += table
-    .map((row) => row.join(" & ") + " \\\\" + (hline ? " \\hline" : ""))
-    .join("\n");
+    .map((row) => row.join(' & ') + ' \\\\' + (hline ? ' \\hline' : ''))
+    .join('\n');
 
   if (tabular) {
-    output += "\n\\end{tabular}";
+    output += '\n\\end{tabular}';
   }
 
   return output;
@@ -198,17 +198,17 @@ function tableToJson(table: Table, minify: boolean): string {
 
 export const TableConv: React.FC = () => {
   const [inputType, setInputType] = useLocalStorage<InputType>(
-    "apps-table-input-type",
-    "csv"
+    'apps-table-input-type',
+    'csv',
   );
   const [outputType, setOutputType] = useLocalStorage<OutputType>(
-    "apps-table-output-type",
-    "tsv-no-quote"
+    'apps-table-output-type',
+    'tsv-no-quote',
   );
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState('');
   const debouncedInputText = useDebounce(inputText, 100);
 
-  let outputText: string = "";
+  let outputText = '';
   let error = false;
   try {
     outputText = convert(inputType, outputType, debouncedInputText);
@@ -229,7 +229,7 @@ export const TableConv: React.FC = () => {
           autoComplete="on"
           autoFocus
           spellCheck="false"
-          style={{ resize: "vertical" }}
+          style={{ resize: 'vertical' }}
         />
       </div>
       <div className="col-12 col-6-md">
@@ -239,8 +239,8 @@ export const TableConv: React.FC = () => {
           value={outputText}
           rows={10}
           readOnly
-          style={{ resize: "vertical" }}
-          className={error ? "bd-error text-error" : ""}
+          style={{ resize: 'vertical' }}
+          className={error ? 'bd-error text-error' : ''}
           onClick={(e) => e.currentTarget.select()}
         />
       </div>

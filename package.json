@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "biome check .",
-    "lint:write": "biome check -write ."
+    "lint:write": "biome check . --write"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
