@@ -33,6 +33,7 @@
     "rehype-text-autospace": "^1.0.0",
     "remark-math": "^6.0.0",
     "sharp": "^0.33.5",
+    "tocbot": "^4.29.0",
     "typescript": "^5.6.2",
     "unist-util-visit": "^5.0.0"
   },

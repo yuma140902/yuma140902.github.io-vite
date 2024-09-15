@@ -4,12 +4,14 @@ import { projects, getSinceUntilText, type Project, old_projects, scrap_projects
 import { Icon } from 'astro-icon/components';
 import Badge from '../components/Badge.astro';
 import Link from '../components/Link.astro';
+import ContentWithToc from '../components/ContentWithToc.astro';
 
 /* プロジェクトの詳細ページで用いるレイアウト */
 interface Props {
   frontmatter: {
     // プロジェクトの名前。src/data/projects.ts に定義されているものと一致させる
     name: string,
+    no_toc?: boolean
   }
 }
 
@@ -51,7 +53,13 @@ const pj = findProject(frontmatter.name);
     </ul>
   </details>}
   <hr/>
-  <slot />
+  {
+  frontmatter.no_toc ? 
+  <slot /> :
+  <ContentWithToc>
+    <slot />
+  </ContentWithToc>
+  }
 </Layout>
 
 <style>

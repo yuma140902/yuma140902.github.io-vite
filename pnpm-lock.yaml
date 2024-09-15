@@ -74,6 +74,9 @@ dependencies:
   sharp:
     specifier: ^0.33.5
     version: 0.33.5
+  tocbot:
+    specifier: ^4.29.0
+    version: 4.29.0
   typescript:
     specifier: ^5.6.2
     version: 5.6.2
@@ -4578,6 +4581,10 @@ packages:
     engines: {node: '>=8.0'}
     dependencies:
       is-number: 7.0.0
+    dev: false
+
+  /tocbot@4.29.0:
+    resolution: {integrity: sha512-E+8+lceJpWHJYKq+qFHbi+gmFdXZeOAliHFdgiIAUo68cr8ClReXAx7h9e3TcDM0kw9PSnBn3GAZEpRmRLZ93g==}
     dev: false
 
   /trim-lines@3.0.1:

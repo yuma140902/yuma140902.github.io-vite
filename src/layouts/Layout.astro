@@ -73,7 +73,7 @@ const navItems: NavItem[] = [
       </nav>
     </header>
     <main>
-		<slot />
+      <slot />
     </main>
     <footer>
       <div class="narrow-menu">
@@ -122,6 +122,7 @@ header {
   backdrop-filter: blur(10px);
   border-bottom: solid 1px #ffffff;
   background-color: #ffffff80;
+  height: var(--header-height);
 }
 .narrow-menu {
   display: none;
@@ -171,6 +172,7 @@ h1, h2, h3, h4, h5, h6 {
 :root {
   --font-family-sans: 'Noto Sans JP Variable', sans-serif;
   --font-family-mono: 'IBM Plex Mono', monospace;
+  --header-height: 5rem;
 }
 pre {
   line-height: 1.2;
