@@ -12,6 +12,6 @@ import MdLayout from '../../layouts/MdLayout.astro';
 }}>
   <p>未完成のままやめてしまったもの。下に行くほど古い。</p>
 
-  <div> {scrap_projects.map(pj => <Project pj={pj}/>)} </div>
+  <div> {scrap_projects.map(pj => <Project pj={pj} showDate/>)} </div>
 </MdLayout>
 

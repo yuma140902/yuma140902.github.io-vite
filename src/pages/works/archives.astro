@@ -13,6 +13,6 @@ import MdLayout from '../../layouts/MdLayout.astro';
 }}>
   <p>過去のプロジェクト。下に行くほど古い。</p>
 
-  <div> {old_projects.map(pj => <Project pj={pj}/>)} </div>
+  <div> {old_projects.map(pj => <Project pj={pj} showDate/>)} </div>
 </MdLayout>
 

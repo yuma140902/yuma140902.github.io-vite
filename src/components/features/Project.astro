@@ -1,24 +1,31 @@
 ---
 import { Icon } from 'astro-icon/components';
-import type { Project } from '../../data/projects';
+import { getSinceUntilText, type Project } from '../../data/projects';
 import Badge from '../Badge.astro';
 
 interface Props {
   pj: Project;
+  showDate?: boolean;
 }
 
-const { pj } = Astro.props;
+const { pj, showDate } = Astro.props;
+const dateText = showDate ? getSinceUntilText(pj.since, pj.until) : undefined;
 ---
 
 <div class="pj-root">
   <div class="pj-title-wrapper">
     {pj.repo && <a href={pj.repo} class="repo"><Icon name="simple-icons:github" title="GitHub" size="1.25em"/></a>}
     <h3>{pj.name}</h3>
-    <span>
+    <span class="badges">
       {pj.technologies?.map(t => 
         <Badge t={t} />
       )}
     </span>
+    { (dateText && dateText.length > 0) &&
+    <span class="date">
+      {dateText}
+    </span>
+    }
   </div>
   <p>
     {pj.description}
@@ -29,7 +36,6 @@ const { pj } = Astro.props;
 <style>
 h3 {
   display: inline;
-  padding-right: 1rem;
 }
 .pj-title-wrapper {
   margin-bottom: 0.7em;
@@ -52,5 +58,13 @@ a.details-link::before {
   bottom: 0;
   left: 0;
   right: 0;
+}
+span.badges {
+  padding-left: 1rem;
+}
+span.date {
+  padding-left: 1rem;
+  color: var(--color-grey);
+  font-size: 1.4rem;
 }
 </style>
