@@ -440,13 +440,6 @@ export const projects: Project[] = [
     technologies: ['lua'],
   },
   {
-    name: 'gallery-viewer',
-    description: 'gallery-dlが生成したメタデータを表示する',
-    repo: 'https://github.com/yuma140902/gallery-viewer',
-    since: '2023年2月',
-    technologies: ['rust', 'ts', 'tauri'],
-  },
-  {
     name: 'regend',
     description: '正規表現をε-NFAおよびDFAに変換する',
     repo: 'https://github.com/yuma140902/regend',
@@ -464,6 +457,13 @@ export const projects: Project[] = [
 ];
 
 export const old_projects: Project[] = [
+  {
+    name: 'gallery-viewer',
+    description: 'gallery-dlが生成したメタデータを表示する',
+    repo: 'https://github.com/yuma140902/gallery-viewer',
+    since: '2023年2月',
+    technologies: ['rust', 'ts', 'tauri'],
+  },
   {
     name: 'WebTools',
     description:
