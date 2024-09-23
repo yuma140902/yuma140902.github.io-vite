@@ -548,7 +548,7 @@ export const old_projects: Project[] = [
   },
   {
     name: 'RustyCraft',
-    description: 'Reverie Engineのデモとして作られたMinecraft風ゲーム(？)',
+    description: 'Reverie Engineのデモとして作られたMinecraft風ゲーム',
     repo: 'https://github.com/yuma140902/RustyCraft',
     since: '2021年8月',
     until: '2021年10月',
@@ -619,7 +619,7 @@ export const old_projects: Project[] = [
   {
     name: 'MCResourcePackUtil',
     description:
-      ' Minecraftのテクスチャを読み込み、一括でフィルターをかけてリソースパック化するソフト。 というのは建前で、実は https://resourcepack.net/traditional-beauty-resource-pack/#gsc.tab=0 TraditionalBeauty というリソースパックを再現するためのソフト。本家はもう更新されていないが、このソフトを使うと(1.6.1以降の)任意のバージョンのMinecraftに対してTraditionalBeautyとほぼ同等のリソースパックを生成できる。',
+      ' Minecraftのテクスチャを読み込み、一括でフィルターをかけてリソースパック化するソフト',
     repo: 'https://github.com/yuma140902/MCResourcePackUtil',
     since: '2020年9月',
     until: '2023年6月',
@@ -634,7 +634,7 @@ export const old_projects: Project[] = [
   {
     name: 'ProconHelper',
     description:
-      ' 競プロ用のソフト。「コンパイル→stdin→stdoutの確認」のイテレーションを高速に回すことができる。 https://github.com/kyuridenamida/atcoder-tools AtCoder Tools などの専門のツールには敵わないが、「この一問だけ普段使わない言語で解きたい」等の場合に役立つ。',
+      ' 競プロ用のソフト。「コンパイル→stdin→stdoutの確認」のイテレーションを高速に回すことができる',
     repo: 'https://github.com/yuma140902/ProconHelper',
     since: '2020年3月',
     until: '2021年4月',
@@ -725,14 +725,14 @@ export const old_projects: Project[] = [
   {
     name: 'SmallViewer',
     description:
-      '画像を小さいウィンドウで表示できるソフト\n\n資料を表示しておくのに便利',
+      '画像を小さいウィンドウで表示できるソフト。資料を表示しておくのに便利',
     since: '2019年8月',
     technologies: ['csharp', 'winforms'],
   },
   {
     name: 'YumaLib',
     description:
-      'MinecraftのMOD。いわゆる前提MOD。\n\n色々MODを作るつもりだったので用意したが、そうならなかったのでUpToDateModに吸収された。',
+      'MinecraftのMOD。いわゆる前提MOD。色々MODを作るつもりだったので用意したが、そうならなかったのでUpToDateModに吸収された。',
     repo: 'https://github.com/yuma140902/YumaLib',
     since: '2019年7月',
     technologies: ['java', 'minecraft'],
@@ -757,7 +757,7 @@ export const old_projects: Project[] = [
   },
   {
     name: 'MetisCas',
-    description: '方程式を解いてくれるツール\n\nLaTeX記法で入力できる',
+    description: '方程式を解いてくれるツール。LaTeX記法で入力できる',
     since: '2019年6月',
     technologies: ['csharp', 'wpf'],
   },
@@ -798,8 +798,7 @@ export const old_projects: Project[] = [
   },
   {
     name: 'HundredsOfOres',
-    description:
-      'MinecraftのMOD。\n\nポスター発表をして何らかの賞をもらった記憶がある。今思うと謎',
+    description: 'MinecraftのMOD',
     since: '2018年9月',
     until: '2018年10月',
     repo: 'https://github.com/yuma140902/HundredsOfOres',
@@ -807,8 +806,7 @@ export const old_projects: Project[] = [
   },
   {
     name: 'MiningMod',
-    description:
-      'MinecraftのMOD。多分一番最初に作ったやつ。\n\nこの頃が一番楽しかった気がする。',
+    description: 'MinecraftのMOD。おそらく一番最初に作ったもの。',
     since: '2018年7月',
     until: '2018年10月',
     repo: 'https://github.com/yuma140902/MiningMod',
@@ -885,7 +883,7 @@ export const old_projects: Project[] = [
   {
     name: 'HealthyNotification',
     description:
-      'ユーザーの健康を気遣い、30秒ごとに瞬きをするように通知するソフト(ドライアイ防止)\n\n瞬きくらい自分でできるよ',
+      'ユーザーの健康を気遣い、30秒ごとに瞬きをするように通知するネタソフト(ドライアイ防止)',
     since: '2017年10月',
     technologies: ['csharp', 'winforms'],
   },
@@ -918,8 +916,7 @@ export const old_projects: Project[] = [
   },
   {
     name: '英読郎',
-    description:
-      '英文を色分けすると速く読めると聞いたので作った。\n\n効果は不明',
+    description: '英文を色分けすると速く読めると聞いたので作った',
     since: '2017年4月',
     until: '2017年5月',
     technologies: ['csharp', 'wpf'],
@@ -1008,8 +1005,7 @@ export const old_projects: Project[] = [
   },
   {
     name: 'MyUtils3',
-    description:
-      ' 小物のプログラムシリーズ Counter , OnTimeRunner - cronみたいなやつ ',
+    description: ' 小物のプログラムシリーズ',
     since: '2016年8月',
     until: '2017年1月',
     technologies: ['csharp', 'winforms'],
@@ -1092,8 +1088,7 @@ export const scrap_projects: Project[] = [
   },
   {
     name: 'sort_visualizer',
-    description:
-      ' GTKでソートビジュアライザを作りたかった webtools/sort.html WebToolsのSort Visualizerになった',
+    description: ' GTKでソートビジュアライザを作りたかった',
     since: '2022年12月',
     technologies: ['gtk'],
   },
@@ -1188,14 +1183,13 @@ export const scrap_projects: Project[] = [
   },
   {
     name: 'Star',
-    description: 'いい感じのMODになるはずだった',
+    description: '',
     since: '2021年4月',
     technologies: ['java', 'minecraft'],
   },
   {
     name: 'ReverieViewer',
-    description:
-      ' 画像ビューアを作りたかった 2年後にgallery-viewerとして完成させた',
+    description: ' 画像ビューアを作りたかった',
     since: '2021年2月',
     technologies: ['electron'],
   },
@@ -1250,7 +1244,7 @@ export const scrap_projects: Project[] = [
   {
     name: 'nabla',
     description:
-      ' https://nablagame.com/ ナブラ演算子ゲーム が遊べるサイトを作りたかった',
+      '[ナブラ演算子ゲーム](https://nablagame.com/)が遊べるサイトを作りたかった',
     since: '2019年9月',
     technologies: ['angular'],
   },
@@ -1283,7 +1277,7 @@ export const scrap_projects: Project[] = [
   {
     name: 'Numeron',
     description:
-      ' https://ja.wikipedia.org/wiki/Numer0n Numer0n のソルバーを作りたかった',
+      '[Numer0n](https://ja.wikipedia.org/wiki/Numer0n)のソルバーを作りたかった',
     since: '2019年3月',
     technologies: ['java'],
   },
@@ -1308,7 +1302,7 @@ export const scrap_projects: Project[] = [
   },
   {
     name: 'IllustTags',
-    description: '5年の時を経てgallery-viewerになった',
+    description: '',
     since: '2018年10月',
     technologies: ['csharp', 'winforms'],
   },
