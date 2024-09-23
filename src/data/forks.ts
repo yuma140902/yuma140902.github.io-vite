@@ -25,8 +25,7 @@ export const forks: ForkType[] = [
     },
     description:
       "Snippet plugin for vim/nvim that supports LSP/VSCode's snippet format.",
-    change:
-      " <Article> <code> {'<'}cmd{'>'} </code> マッピングの無い古いVimで動作するようにした </Article> ",
+    change: '`cmd` マッピングが無い古いバージョンの Vim で動作するようにした',
   },
   {
     name: 'ctrlp-grep',
@@ -40,7 +39,7 @@ export const forks: ForkType[] = [
     },
     description: 'grep your source code via ctrlp.vim!',
     change:
-      'grepコマンドのコマンドライン引数が正しくないと思われるので変更した',
+      'grep コマンドのコマンドライン引数が正しくないと思われるので変更した',
   },
   {
     name: 'nvim-dap-projects',
@@ -70,7 +69,7 @@ export const forks: ForkType[] = [
     description:
       'Simple session management for Neovim with git branching, autoloading and Telescope support',
     change:
-      'フォーク元は`fnameescape`を使用しており、Windowsではセッションの削除ができないという問題があった。これを修正した。',
+      'フォーク元は `fnameescape` を使用しており、Windows ではセッションの削除ができないという問題があった。これを修正した。',
   },
   {
     name: 'egui_node_graph',
@@ -84,7 +83,7 @@ export const forks: ForkType[] = [
     },
     description: 'Build your node graph applications in Rust, using egui',
     change:
-      'eguiのバージョンを上げた。またワークスペース構成をやめて自分のプロジェクトに導入しやすくした',
+      'egui のバージョンを上げた。またワークスペース構成をやめて自分のプロジェクトに導入しやすくした',
   },
   {
     name: 'neosolarized.nvim',
@@ -97,7 +96,6 @@ export const forks: ForkType[] = [
       branch: 'main',
     },
     description: 'Truecolor solarized theme for neovim in Lua using colorbuddy',
-    change:
-      ' <Article> <code>Normal < /code>と<code>NormalNC</code > の色を同じにした </Article> ',
+    change: '`Normal` と `NormalNC` の色を同じにした',
   },
 ];
