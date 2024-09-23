@@ -382,7 +382,7 @@ export const projects: Project[] = [
     repo: 'https://github.com/yuma140902/web-image-editor',
     since: '2023年9月',
     url: '/works/web-image-editor/',
-    technologies: ['ts', 'ts', 'opencv', 'ts'],
+    technologies: ['ts', 'opencv'],
   },
   {
     name: 'LMML Music Macro Language',
