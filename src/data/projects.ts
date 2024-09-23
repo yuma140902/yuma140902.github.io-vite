@@ -377,14 +377,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: 'LibJsonModel',
-    description: 'Minecraft の MOD 開発のためのライブラリ',
-    repo: 'https://github.com/yuma140902/LibJsonModel',
-    url: '/works/libjsonmodel/',
-    since: '2023年7月',
-    technologies: ['java', 'minecraft'],
-  },
-  {
     name: 'Web Image Editor',
     description: 'ブラウザ上で動作する画像エディタ',
     repo: 'https://github.com/yuma140902/web-image-editor',
@@ -400,6 +392,28 @@ export const projects: Project[] = [
     since: '2023年11月',
     url: '/works/lmml/',
     technologies: ['rust'],
+  },
+  {
+    name: 'rehype-text-autospace',
+    description: '日本語と英語の間に間隔を開ける rehype プラグイン',
+    repo: 'https://github.com/yuma140902/rehype-text-autospace',
+    since: '2024年9月',
+    url: '/works/rehype-text-autospace/',
+    technologies: ['ts'],
+    releases: [
+      {
+        date: '2024/09/15',
+        version: 'v1.0.0',
+      },
+    ],
+  },
+  {
+    name: 'LibJsonModel',
+    description: 'Minecraft の MOD 開発のためのライブラリ',
+    repo: 'https://github.com/yuma140902/LibJsonModel',
+    url: '/works/libjsonmodel/',
+    since: '2023年7月',
+    technologies: ['java', 'minecraft'],
   },
   {
     name: 'LaTeXのテンプレート集',
