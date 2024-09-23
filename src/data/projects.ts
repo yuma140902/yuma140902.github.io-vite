@@ -37,6 +37,14 @@ export const projects: Project[] = [
     technologies: ['rust', 'opengl'],
     releases: [
       {
+        date: '2024/09/19',
+        version: 'v0.1.0',
+      },
+      {
+        date: '2024/09/17',
+        version: 'v0.0.8',
+      },
+      {
         date: '2024/06/04',
         version: 'v0.0.7',
       },
