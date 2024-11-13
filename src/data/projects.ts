@@ -121,6 +121,14 @@ export const projects: Project[] = [
     technologies: ['rust'],
     releases: [
       {
+        date: '2024/09/04',
+        version: 'v0.5.2',
+      },
+      {
+        date: '2024/09/04',
+        version: 'v0.5.1',
+      },
+      {
         date: '2023/12/18',
         version: 'v0.5.0',
       },
@@ -392,6 +400,40 @@ export const projects: Project[] = [
     since: '2023年11月',
     url: '/works/lmml/',
     technologies: ['rust'],
+    releases: [
+      {
+        date: '2024/11/14',
+        version: 'v0.5.4',
+      },
+      {
+        date: '2024/09/04',
+        version: 'v0.5.2',
+      },
+      {
+        date: '2024/05/12',
+        version: 'v0.5.1',
+      },
+      {
+        date: '2023/11/17',
+        version: 'v0.5.0',
+      },
+      {
+        date: '2023/11/17',
+        version: 'v0.4.0',
+      },
+      {
+        date: '2023/11/17',
+        version: 'v0.3.0',
+      },
+      {
+        date: '2023/11/16',
+        version: 'v0.2.0',
+      },
+      {
+        date: '2023/11/16',
+        version: 'v0.1.0',
+      },
+    ],
   },
   {
     name: 'rehype-text-autospace',
@@ -401,6 +443,10 @@ export const projects: Project[] = [
     url: '/works/rehype-text-autospace/',
     technologies: ['ts'],
     releases: [
+      {
+        date: '2024/11/14',
+        version: 'v1.0.1',
+      },
       {
         date: '2024/09/15',
         version: 'v1.0.0',
@@ -444,6 +490,10 @@ export const projects: Project[] = [
     since: '2022年7月',
     technologies: ['rust'],
     releases: [
+      {
+        date: '2024/11/14',
+        version: 'v0.3.1',
+      },
       {
         date: '2023/02/14',
         version: 'v0.3.0',
