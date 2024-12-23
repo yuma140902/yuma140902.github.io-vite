@@ -32,6 +32,9 @@ dependencies:
   '@iconify-json/simple-icons':
     specifier: ^1.2.17
     version: 1.2.17
+  '@iconify-json/twemoji':
+    specifier: ^1.2.2
+    version: 1.2.2
   '@react-three/drei':
     specifier: ^9.120.4
     version: 9.120.4(@react-three/fiber@8.17.10)(@types/react@18.3.18)(@types/three@0.168.0)(react-dom@18.3.1)(react@18.3.1)(three@0.168.0)
@@ -1040,6 +1043,12 @@ packages:
 
   /@iconify-json/simple-icons@1.2.17:
     resolution: {integrity: sha512-1vXbM6a6HV2rwXxu8ptD2OYhqrqX0ZZRepOg7nIjkvKlKq90Iici4X++A8h36bEVlV2wGjqx8uVYB0pwnPZVSw==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
+  /@iconify-json/twemoji@1.2.2:
+    resolution: {integrity: sha512-ckWEY5KhIQgdFd9VGvfhecTtYUx3ihXycwlZcEws87LxuvIThMHNBCblrQQ5afhbGMfg21dF+z9F+ODMRDYHMg==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: false
