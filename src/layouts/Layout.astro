@@ -92,7 +92,7 @@ const navItems: NavItem[] = [
 </html>
 
 <script is:inline>
-  const count = 50;
+  const count = Math.max(10, Math.floor(window.innerWidth * window.innerHeight / 20000));
   const wind_x = 0.0;
   const period = 30;
   const canvas = document.getElementById('snow');
