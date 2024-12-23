@@ -6,7 +6,7 @@ name: xanadu
 [![Crates.io Version](https://img.shields.io/crates/v/xanadu)](https://crates.io/crates/xanadu)
 [![docs.rs](https://img.shields.io/docsrs/xanadu?logo=docsdotrs)](https://docs.rs/xanadu/latest/xanadu/)
 
-Rust 製の [Entity Component System (ECS)](https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%B3%E3%83%86%E3%82%A3%E3%83%86%E3%82%A3%E3%83%BB%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E3%83%BB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0) ライブラリ。
+Rust 製の Entity Component System (ECS) ライブラリです。Qiita に[関連記事](https://qiita.com/yuma140902/items/4580f2632d507fd53071)があります。
 
 勉強のために開発しているものであり、実用には耐えません。
 
@@ -16,15 +16,7 @@ Xanadu と他の ECS ライブラリの比較です。あまり厳密なベン�
 
 ![xanadu と他の ECS ライブラリのパフォーマンスの比較](../../images/xanadu_bench.svg)
 
-| Number of entities | 10^2 (ns) | 10^3 (μs) | 10^4 (μs) | 10^5 (μs) |
-| ------------------ | --------- | --------- | --------- | --------- |
-| xanadu             |       184 |      1.39 |      19.4 |       452 |
-| bevy_ecs           |       242 |      2.01 |      25.7 |       546 |
-| specs              |      2380 |     10.03 |      43.3 |       610 |
-| game_objects_vec   |       156 |      2.71 |      40.2 |      1002 |
-| game_objects_hash  |       252 |      3.38 |     181.2 |      1948 |
-
-*図・表: エンティティー数と処理時間の関係*
+*図: エンティティー数と処理時間の関係*
 
 **環境**
 
