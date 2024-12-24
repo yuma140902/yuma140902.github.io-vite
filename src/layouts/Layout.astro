@@ -138,7 +138,7 @@ const navItems: NavItem[] = [
   function moveSnow(snow) {
     snow.x +=
       wind_x * snow.size * 0.5 +
-      Math.sin(snow.y / period + snow.d) * snow.size * 0.1;
+      Math.sin(snow.y / period + snow.d) / snow.size;
     snow.y += snow.size * 0.2;
 
     if (snow.y > canvas.height) {
