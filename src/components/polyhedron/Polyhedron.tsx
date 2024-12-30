@@ -10,7 +10,6 @@ function Model(props: {
   position: [number, number, number];
   geometry: THREE.BufferGeometry;
   rotation: THREE.Vector3;
-  hover_color?: string;
 }) {
   const meshRef = useRef<THREE.Mesh>(null);
   const [active, setActive] = useState<boolean>(false);
@@ -86,15 +85,12 @@ function Model(props: {
         }}
       >
         {active || hovered ? (
-          <meshLambertMaterial
-            color={props.hover_color ?? '#dfdfdf'}
-            flatShading={true}
-          />
+          <meshLambertMaterial color="#dfdfdf" flatShading={true} />
         ) : (
-          <meshBasicMaterial color="#090a0c" />
+          <meshBasicMaterial color="white" />
         )}
         {active || hovered ? undefined : (
-          <Edges lineWidth={1} threshold={15} color="white" />
+          <Edges lineWidth={1} threshold={15} color="black" />
         )}
       </mesh>
     </>
@@ -128,19 +124,16 @@ export const Polyhedron: React.FC = () => {
         position={[-4, 0, 0]}
         rotation={new THREE.Vector3(1, 0, 0.1)}
         geometry={new THREE.TetrahedronGeometry()}
-        hover_color="#9C4343"
       />
       <Model
         position={[-2, 0, 0]}
         rotation={new THREE.Vector3(1, 0, 0.2)}
         geometry={new THREE.BoxGeometry()}
-        hover_color="#945333"
       />
       <Model
         position={[0, 0, 0]}
         rotation={new THREE.Vector3(1, 0, 0.3)}
         geometry={new THREE.OctahedronGeometry()}
-        hover_color="#439E99"
       />
       <Model
         position={[2, 0, 0]}
@@ -151,7 +144,6 @@ export const Polyhedron: React.FC = () => {
         position={[4, 0, 0]}
         rotation={new THREE.Vector3(1, 0, 0.5)}
         geometry={new THREE.IcosahedronGeometry()}
-        hover_color="#406499"
       />
       <JEasings />
     </Canvas>

@@ -26,7 +26,7 @@ export default defineConfig({
   },
   markdown: {
     shikiConfig: {
-      theme: 'one-dark-pro',
+      theme: 'one-light',
       wrap: true,
     },
     syntaxHighlight: 'shiki',
