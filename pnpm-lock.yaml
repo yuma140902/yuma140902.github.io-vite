@@ -21,8 +21,8 @@ dependencies:
     specifier: ^5.1.0
     version: 5.1.0
   '@fontsource/ibm-plex-mono':
-    specifier: ^5.1.0
-    version: 5.1.0
+    specifier: ^5.1.1
+    version: 5.1.1
   '@fontsource/ibm-plex-sans-jp':
     specifier: ^5.1.0
     version: 5.1.0
@@ -1024,8 +1024,8 @@ packages:
     resolution: {integrity: sha512-VmEW0dlHsC0tQOlZlzcrUj+9HL73pANKneMrsZD8X6Jg3XhysOYY6R2VRGO4cTYwp5iVznt1crzGUEWM+/xQuA==}
     dev: false
 
-  /@fontsource/ibm-plex-mono@5.1.0:
-    resolution: {integrity: sha512-XKsZNyRCj6tz8zlatHmniSoLVephMD5GQG2sXgcaEb8DkUO+O61r28uTlIMEZuoZXtP4c4STvL+KUlJM5jZOEg==}
+  /@fontsource/ibm-plex-mono@5.1.1:
+    resolution: {integrity: sha512-1aayqPe/ZkD3MlvqpmOHecfA3f2B8g+fAEkgvcCd3lkPP0pS1T0xG5Zmn2EsJQqr1JURtugPUH+5NqvKyfFZMQ==}
     dev: false
 
   /@fontsource/ibm-plex-sans-jp@5.1.0:
