@@ -19,7 +19,7 @@
     "@astrojs/sitemap": "^3.2.1",
     "@fontsource-variable/noto-sans-jp": "^5.1.0",
     "@fontsource/ibm-plex-mono": "^5.1.0",
-    "@fontsource/ibm-plex-sans-jp": "^5.1.0",
+    "@fontsource/ibm-plex-sans-jp": "^5.1.1",
     "@iconify-json/carbon": "^1.2.5",
     "@iconify-json/simple-icons": "^1.2.17",
     "@react-three/drei": "^9.120.4",
