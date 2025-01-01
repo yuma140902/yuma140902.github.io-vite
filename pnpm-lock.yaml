@@ -24,8 +24,8 @@ dependencies:
     specifier: ^5.1.0
     version: 5.1.0
   '@fontsource/ibm-plex-sans-jp':
-    specifier: ^5.1.0
-    version: 5.1.0
+    specifier: ^5.1.1
+    version: 5.1.1
   '@iconify-json/carbon':
     specifier: ^1.2.5
     version: 1.2.5
@@ -1028,8 +1028,8 @@ packages:
     resolution: {integrity: sha512-XKsZNyRCj6tz8zlatHmniSoLVephMD5GQG2sXgcaEb8DkUO+O61r28uTlIMEZuoZXtP4c4STvL+KUlJM5jZOEg==}
     dev: false
 
-  /@fontsource/ibm-plex-sans-jp@5.1.0:
-    resolution: {integrity: sha512-NcQRoHmZyHw1SgKhvnTa+db29YUsnq7D25fofK81xmdPc69S8w9Nxob4yaus0NVoaUd3qcpjv53msilteAhx9g==}
+  /@fontsource/ibm-plex-sans-jp@5.1.1:
+    resolution: {integrity: sha512-2hZUtBrHpdqK0ITx7fBS6AQZ335ca4PTXGLURYojJsNPwzDSrQfjLb9v2Y/Gp6sj2Vf0NomiKyw4ZaLvqZIKkw==}
     dev: false
 
   /@iconify-json/carbon@1.2.5:
