@@ -107,8 +107,8 @@ devDependencies:
     specifier: ^3.0.4
     version: 3.0.4
   octokit:
-    specifier: ^4.0.2
-    version: 4.0.2
+    specifier: ^4.0.3
+    version: 4.0.3
   vitest:
     specifier: ^2.1.8
     version: 2.1.8
@@ -4873,8 +4873,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /octokit@4.0.2:
-    resolution: {integrity: sha512-wbqF4uc1YbcldtiBFfkSnquHtECEIpYD78YUXI6ri1Im5OO2NLo6ZVpRdbJpdnpZ05zMrVPssNiEo6JQtea+Qg==}
+  /octokit@4.0.3:
+    resolution: {integrity: sha512-kfqH80Yuuux4fLbZ4SvObjCvVu89U0eCh5+fulh6tr/hJkDYS1inXDGnNJDOp312GANMEhWWMLYmjQR8MvSSMQ==}
     engines: {node: '>= 18'}
     dependencies:
       '@octokit/app': 15.1.1
